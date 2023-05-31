@@ -1,0 +1,56 @@
+[General commands]
+#Note that here we'll use the 1,000 bootstrapped trees and run treePL on each of them.
+#We can then later summarize results and calculate confidence intervals (CIs) on the calibated nodes.
+treefile = results_treePL_calibration/output_iqtree/iqtree_bootstrap_trees.tree
+#Update numsites value when final supermatrix is ready for phylogeny inference; IQ-TREE logs this value in the file iqtree_bootstrap_logfile.log.
+numsites = 13278
+thorough
+#For this run on the set of 1,000 bootstrap trees, use multiple threads to speed up the analyses.
+#Note that this seems not to work on the Naturalis highmem cluster...
+nthreads = 47
+
+[Calibration]
+#Set stem age of Brassicales using a representatative of sister family Malvaceae (here PAFTOL_014331 = Macrohasseltia macroterantha) and a random Brassicaceae (here S1408 = Eruca vesicaria)
+#for use of fossil †Dressiantha bicarpellata dated @ 93.6–89.3 Ma (Gandolfo  et al., 1998).
+mrca = BRASSICALES_STEM PAFTOL_014331 S1408
+min = BRASSICALES_STEM 89.3
+max = BRASSICALES_STEM 93.6
+
+#Set crown age of Akaniaceae using two known family genera: Akania (here HYZL = Akania bidwillii) and Bretschneidera (here S1384 = Bretschneidera sinensis)
+#for use of fossil †Akania sp. dated @ 62-61 Ma (Iglesias et al., 2007).
+#mrca = AKANIACEAEA_CROWN S1384 HYZL
+#min = AKANIACEAEA_CROWN 61
+#max = AKANIACEAEA_CROWN 62
+
+#Set stem age of Brassicaceae using a representative sister family Cleomaceae  (here PAFTOL_019361 = Cleome albescens) and a random Brassicaceae (here S1408 = Eruca vesicaria)
+#for use of fossil †Palaeocleome lakensis @ 55.8 to 48.6 Ma (Chandler, 1962).
+#mrca = BRASSICACEAE_STEM PAFTOL_019361 S1408
+#min = BRASSICACEAE_STEM 48.6
+#max = BRASSICACEAE_STEM 55.8
+
+#Set stem are of tribe Thlaspideae using a representative of the tribe (here S1376 = Thlaspi arvense) and a representative of the sister tribe Eutremeae (here S0416 = Eutrema edwardsii)
+#for use of fossil †Thlaspi primaevum dated @ ca. 32 Ma (Becker, 1961; Lielke et al., 2012).
+#mrca = THLASPIDEAE_STEM S0416 S1376
+#min = THLASPIDEAE_STEM 29
+#max = THLASPIDEAE_STEM 33
+
+#Note: so far excluded the use of fossil Capparidoxylon holleisii, because treePL seems unable to find a convergent solution when this calibration is included.
+#mrca = CAPPARACEAEA_CROWN S1386 PAFTOL_019361
+#min = CAPPARACEAEA_CROWN 16.3
+#max = CAPPARACEAEA_CROWN 16.3
+
+[Best optimization parameters]
+#The following values were taken from the prime analysis ran before.
+opt = 2
+moredetail
+optad = 1
+moredetailad
+optcvad = 1
+moredetailcvad
+
+[Best smoothing value]
+#The following value was taken from the CV analysis ran before.
+smooth = 10
+
+[Output file of dating step]
+outfile = results_treePL_calibration/output_treePL_dating/treePL_calibrated_phylogeny.tre
