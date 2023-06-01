@@ -356,3 +356,26 @@ AD_and_LH_tribe_summary_upd<- AD_and_LH_tribe_summary_upd[!grepl("Outgroup", AD_
 #Write results to Excel for export and print in publication.
 library(openxlsx)
 write.xlsx(AD_and_LH_tribe_summary_upd, '2m.hybphaser_results_LH_and_AD_summary_by_tribe.xlsx')
+
+
+### STEP 5: CREATE AN OVERVIEW OF LIKELY HYBRIDS AND ROGUE TAXA TO BE EXCLUDED FROM ADDITIONAL BRASSITOL ANALYSIS IN NEXT STEP
+
+#Add details on rogue taxa for subsetting later.
+rogue_tribes<-c("Anastaticeae", "Biscutelleae", "Cochlearieae", "Iberideae I", "Iberideae II", "Megacarpaeeae")
+rogue_samples<-tab_het_ad$sample[tab_het_ad$Tribe %in% rogue_tribes]
+
+#Add details on likely hybrids for subsetting later.
+#Although rather arbitrary, we will select all samples in the upper 50% of LH and AD ranges.
+sample_hybrid_LH<-tab_het_ad$sample[tab_het_ad$locus_heterozygosity > median(tab_het_ad$locus_heterozygosity)]
+sample_hybrid_AD<-tab_het_ad$sample[tab_het_ad$allele_divergence > median(tab_het_ad$allele_divergence)]
+
+#Create a vector which is the sum of the above vectors.
+samples_to_remove<-sort(unique(c(rogue_samples, sample_hybrid_LH, sample_hybrid_AD)))
+#Note that this means we'll remove about half of all samples in our later analyses excluding possible hybrids and rogue taxa.
+
+#Export this vector for later use.
+write.table(samples_to_remove, file = "2n.list_of_likely_hybrids_and_rogue_taxa.txt",
+            row.names = F,
+            col.names= F,
+            sep="\t",
+            quote = FALSE)
