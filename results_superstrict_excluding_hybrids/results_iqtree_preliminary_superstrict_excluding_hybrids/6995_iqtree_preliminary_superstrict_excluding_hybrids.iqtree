@@ -1,0 +1,293 @@
+IQ-TREE 2.2.2 COVID-edition built Sep 20 2022
+
+Input file name: 6995_taper_preliminary_superstrict_excluding_hybrids.fasta
+Type of analysis: tree reconstruction
+Random seed number: 149605
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 85 sequences with 150 nucleotide sites
+Number of constant sites: 73 (= 48.6667% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 73 (= 48.6667% of all sites)
+Number of parsimony informative sites: 56
+Number of distinct site patterns: 109
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: GTR+F+R4
+
+Rate parameter R:
+
+  A-C: 1.0159
+  A-G: 3.9024
+  A-T: 1.5548
+  C-G: 0.9888
+  C-T: 3.7102
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.2868
+  pi(C) = 0.1768
+  pi(G) = 0.2425
+  pi(T) = 0.2939
+
+Rate matrix Q:
+
+  A    -1.041    0.1181    0.6223    0.3005
+  C    0.1915    -1.066    0.1577    0.7171
+  G    0.7358     0.115    -1.044    0.1933
+  T    0.2932    0.4313    0.1595    -0.884
+
+Model of rate heterogeneity: FreeRate with 4 categories
+Site proportion and rates:  (0.5596,0.1115) (0.03337,0.2689) (0.2871,1.187) (0.12,4.901)
+
+ Category  Relative_rate  Proportion
+  1         0.1115         0.5596
+  2         0.2689         0.03337
+  3         1.187          0.2871
+  4         4.901          0.12
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -1650.4657 (s.e. 154.5105)
+Unconstrained log-likelihood (without tree): -668.2652
+Number of free parameters (#branches + #model parameters): 181
+Akaike information criterion (AIC) score: 3662.9314
+Corrected Akaike information criterion (AICc) score: 69546.9314
+Bayesian information criterion (BIC) score: 4207.8564
+
+**************************** WARNING ****************************
+Number of parameters (K, model parameters and branch lengths): 181
+Sample size (n, alignment length): 150
+
+Given that K>=n, the parameter estimates might be inaccurate.
+Thus, phylogenetic estimates should be interpreted with caution.
+
+Ideally, it is desirable that n >> K. When selecting optimal models,
+1. use AIC or BIC if n > 40K;
+2. use AICc or BIC if 40K >= n > K;
+3. be extremely cautious if n <= K
+
+To improve the situation (3), consider the following options:
+  1. Increase the sample size (n)
+  2. Decrease the number of parameters (K) to be estimated. If
+     possible:
+     a. Remove the least important sequences from the alignment
+     b. Specify some of the parameter values for the substitution
+        model (e.g., the nucleotide or amino acid frequencies)
+     c. Specify some of the parameter values for the rates-across-
+        sites model (e.g., the shape parameter for the discrete
+        Gamma distribution, the proportion of invariable sites, or
+        the rates of change for different rate categories under
+        the FreeRate model)
+
+Reference:
+Burnham KR, Anderson DR (2002). Model Selection and Multimodel
+Inference: A Practical Information-Theoretic Approach. Springer,
+New York.
+************************ END OF WARNING ***********************
+
+Total tree length (sum of branch lengths): 2.2375
+Sum of internal branch lengths: 0.9595 (42.8840% of tree length)
+
+WARNING: 35 near-zero internal branches (<0.0067) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'CRNC' is drawn at root
+
++---------------------CRNC
+|
+|            +**HYZL
++------------|
+|            +----------------MYZV
+|
+|                                                                +--SRR6441723
+|                                                             +--|
+|                                                             |  |  +--S1201sl
+|                                                             |  +**|
+|                                                             |     +--S1332
+|                                                          +**|
+|                                                          |  |        +-----ERR2789774
+|                                                          |  |     +--|
+|                                                          |  |     |  +----S0558
+|                                                          |  |  +--|
+|                                                          |  |  |  +--S0742
+|                                                          |  +--|
+|                                                          |     +---S0412sl
+|                                                       +**|
+|                                                       |  |        +----S0281
+|                                                       |  |     +--|
+|                                                       |  |     |  |              +--S0303
+|                                                       |  |     |  |           +**|
+|                                                       |  |     |  |           |  |  +----S1249
+|                                                       |  |     |  |           |  +**|
+|                                                       |  |     |  |           |     +--S1266sl
+|                                                       |  |     |  |        +--|
+|                                                       |  |     |  |        |  |        +--S0322
+|                                                       |  |     |  |        |  |     +**|
+|                                                       |  |     |  |        |  |     |  |  +**S0620
+|                                                       |  |     |  |        |  |     |  +--|
+|                                                       |  |     |  |        |  |     |     +**S0748
+|                                                       |  |     |  |        |  |  +**|
+|                                                       |  |     |  |        |  |  |  +**S0724sl
+|                                                       |  |     |  |        |  +**|
+|                                                       |  |     |  |        |     |  +**S0430
+|                                                       |  |     |  |        |     +**|
+|                                                       |  |     |  |        |        +**S1269
+|                                                       |  |     |  |     +--|
+|                                                       |  |     |  |     |  |  +---S0888
+|                                                       |  |     |  |     |  +--|
+|                                                       |  |     |  |     |     |  +---S1110
+|                                                       |  |     |  |     |     +**|
+|                                                       |  |     |  |     |        +-----S1315
+|                                                       |  |     |  |  +**|
+|                                                       |  |     |  |  |  +**S1260
+|                                                       |  |     |  +--|
+|                                                       |  |     |     +---S0308
+|                                                       |  |  +**|
+|                                                       |  |  |  |  +**S0720
+|                                                       |  |  |  +--|
+|                                                       |  |  |     +**S0795
+|                                                       |  +--|
+|                                                       |     |     +**S0760
+|                                                       |     |  +**|
+|                                                       |     |  |  +**S1462
+|                                                       |     +--|
+|                                                       |        |  +**S0770
+|                                                       |        +--|
+|                                                       |           |    +**S1083
+|                                                       |           +----|
+|                                                       |                +--S1498
+|                                                    +--|
+|                                                    |  +--S0756
+|                                                 +**|
+|                                                 |  |              +--S0055
+|                                                 |  |           +**|
+|                                                 |  |           |  +**S1375
+|                                                 |  |        +--|
+|                                                 |  |        |  |  +---S0427
+|                                                 |  |        |  +**|
+|                                                 |  |        |     |   +--S1235sl
+|                                                 |  |        |     +---|
+|                                                 |  |        |         +--S1460
+|                                                 |  |     +--|
+|                                                 |  |     |  |                       +**S0293
+|                                                 |  |     |  |                    +**|
+|                                                 |  |     |  |                    |  +----S_670
+|                                                 |  |     |  |                 +--|
+|                                                 |  |     |  |                 |  +**S0400
+|                                                 |  |     |  |              +**|
+|                                                 |  |     |  |              |  +**S1227
+|                                                 |  |     |  |           +**|
+|                                                 |  |     |  |           |  |  +--S0643
+|                                                 |  |     |  |           |  +**|
+|                                                 |  |     |  |           |     +--S1369
+|                                                 |  |     |  |        +**|
+|                                                 |  |     |  |        |  +**S0405
+|                                                 |  |     |  |     +**|
+|                                                 |  |     |  |     |  +--S1278
+|                                                 |  |     |  |  +--|
+|                                                 |  |     |  |  |  +--S1370
+|                                                 |  |     |  +--|
+|                                                 |  |     |     +--S0641
+|                                                 |  |  +**|
+|                                                 |  |  |  |  +**S1211
+|                                                 |  |  |  +--|
+|                                                 |  |  |     +--SRR8528357
+|                                                 |  +--|
+|                                                 |     +--S1381
+|                                              +**|
+|                                              |  |              +**S0289
+|                                              |  |           +**|
+|                                              |  |           |  +**S1239
+|                                              |  |        +**|
+|                                              |  |        |  |        +--S0299
+|                                              |  |        |  |     +--|
+|                                              |  |        |  |     |  +--S1251
+|                                              |  |        |  |  +--|
+|                                              |  |        |  |  |  |     +**S0624
+|                                              |  |        |  |  |  |  +**|
+|                                              |  |        |  |  |  |  |  +**S1475
+|                                              |  |        |  |  |  +**|
+|                                              |  |        |  |  |     +--S0645sl
+|                                              |  |        |  +**|
+|                                              |  |        |     |           +--S0673
+|                                              |  |        |     |        +--|
+|                                              |  |        |     |        |  +--S1539
+|                                              |  |        |     |  +-----|
+|                                              |  |        |     |  |     +--S0894
+|                                              |  |        |     +**|
+|                                              |  |        |        +--S1250sl
+|                                              |  |     +--|
+|                                              |  |     |  +--S0417
+|                                              |  |  +--|
+|                                              |  |  |  +**S1405
+|                                              |  +**|
+|                                              |     |              +--S0735
+|                                              |     |         +----|
+|                                              |     |         |    |  +--S1180
+|                                              |     |         |    +**|
+|                                              |     |         |       +**S1223
+|                                              |     |      +--|
+|                                              |     |      |  +--S1100
+|                                              |     +------|
+|                                              |            +--S1148
+|                                           +**|
+|                                           |  |        +**S0292
+|                                           |  |     +--|
+|                                           |  |     |  +**S1366
+|                                           |  |  +--|
+|                                           |  |  |  +**S1449
+|                                           |  +--|
+|                                           |     +--S0906
+|                                        +--|
+|                                        |  |  +--S1120
+|                                        |  +--|
+|                                        |     +---S1214sl
+|                                     +**|
+|                                     |  |     +--S0552sl
+|                                     |  |  +--|
+|                                     |  |  |  |  +--S0758
+|                                     |  |  |  +--|
+|                                     |  |  |     +**S0960
+|                                     |  +--|
+|                                     |     |     +--S0771
+|                                     |     |  +--|
+|                                     |     |  |  +--S1129sl
+|                                     |     +**|
+|                                     |        |  +**S0959
+|                                     |        +--|
+|                                     |           +--S1189
+|                                +----|
+|                                |    +-------S1376
+|                             +--|
+|                             |  +--S1052sl
++-----------------------------|
+                              +--S0294
+
+Tree in newick format:
+
+(CRNC:0.1408893038,(HYZL:0.0000022505,MYZV:0.1086026855):0.0859175874,((((((((((((SRR6441723:0.0211709790,(S1201sl:0.0138844625,S1332:0.0136368747):0.0000022799):0.0150766842,(((ERR2789774:0.0408142163,S0558:0.0312947784):0.0200665024,S0742:0.0156568978):0.0067148728,S0412sl:0.0294587062):0.0075666113):0.0059103128,(((S0281:0.0369714786,(((((S0303:0.0226232190,(S1249:0.0330418401,S1266sl:0.0075588161):0.0000029233):0.0000029032,(((S0322:0.0209312080,(S0620:0.0000011987,S0748:0.0000011987):0.0067424553):0.0000027625,S0724sl:0.0000023242):0.0000023822,(S0430:0.0000011987,S1269:0.0000011987):0.0000025034):0.0000024955):0.0068391287,(S0888:0.0285838797,(S1110:0.0276706199,S1315:0.0412867043):0.0000027556):0.0073127261):0.0068592169,S1260:0.0000027112):0.0066498763,S0308:0.0288378257):0.0079198747):0.0139234448,(S0720:0.0000011987,S0795:0.0000011987):0.0071914698):0.0066346330,((S0760:0.0000011987,S1462:0.0000011987):0.0000024390,(S0770:0.0000029163,(S1083:0.0000022978,S1498:0.0067709346):0.0365726911):0.0067478691):0.0070558968):0.0069071587):0.0000024060,S0756:0.0141352480):0.0068027796,(((((S0055:0.0142038482,S1375:0.0000022264):0.0065694501,(S0427:0.0276565935,(S1235sl:0.0067827395,S1460:0.0072614602):0.0289602871):0.0033891352):0.0140685968,((((((((S0293:0.0000011987,S_670:0.0366187624):0.0000022750,S0400:0.0000023528):0.0066830952,S1227:0.0066660228):0.0000027165,(S0643:0.0066775236,S1369:0.0066716137):0.0000029445):0.0000028797,S0405:0.0000011987):0.0000027254,S1278:0.0068654426):0.0000029273,S1370:0.0138240264):0.0138829517,S0641:0.0216825684):0.0142405064):0.0072105107,(S1211:0.0000022692,SRR8528357:0.0222383887):0.0134662231):0.0000030799,S1381:0.0070539872):0.0142631092):0.0000025337,(((((S0289:0.0000011987,S1239:0.0000011987):0.0000022594,(((S0299:0.0123620440,S1251:0.0216231865):0.0071924019,((S0624:0.0000011987,S1475:0.0000011987):0.0000022539,S0645sl:0.0069174667):0.0000021993):0.0138884470,(((S0673:0.0135676353,S1539:0.0220540414):0.0072730783,S0894:0.0151457164):0.0380793777,S1250sl:0.0141021479):0.0000026084):0.0000023508):0.0000023003,S0417:0.0140098637):0.0201472001,S1405:0.0000025941):0.0092965041,(((S0735:0.0067705660,(S1180:0.0066894374,S1223:0.0000011987):0.0000028552):0.0325332676,S1100:0.0169140705):0.0234830474,S1148:0.0153626254):0.0481043863):0.0065500137):0.0000023813,(((S0292:0.0000011987,S1366:0.0000011987):0.0072593470,S1449:0.0064198671):0.0213484093,S0906:0.0070461457):0.0069546619):0.0063885573,(S1120:0.0220193008,S1214sl:0.0293923702):0.0147000650):0.0074634910,((S0552sl:0.0212421081,(S0758:0.0110769981,S0960:0.0000032322):0.0102950240):0.0141331765,((S0771:0.0172516118,S1129sl:0.0153242976):0.0172859256,(S0959:0.0000011987,S1189:0.0135863677):0.0207240506):0.0007475969):0.0075615393):0.0000028965,S1376:0.0550084726):0.0312147011,S1052sl:0.0136246322):0.0192600504,S0294:0.0112017560):0.1906455765);
+
+TIME STAMP
+----------
+
+Date and time: Fri Jun  2 08:27:49 2023
+Total CPU time used: 395.532 seconds (0h:6m:35s)
+Total wall-clock time used: 269.855 seconds (0h:4m:29s)
+

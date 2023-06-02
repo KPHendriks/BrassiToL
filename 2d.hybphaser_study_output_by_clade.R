@@ -371,10 +371,10 @@ sample_hybrid_AD<-tab_het_ad$sample[tab_het_ad$allele_divergence > median(tab_he
 
 #Create a vector which is the sum of the above vectors.
 samples_to_remove<-sort(unique(c(rogue_samples, sample_hybrid_LH, sample_hybrid_AD)))
-#Note that this means we'll remove about half of all samples in our later analyses excluding possible hybrids and rogue taxa.
+#Note that this means we'll remove over half of all samples in our later analyses excluding possible hybrids and rogue taxa.
 
 #Export this vector for later use.
-write.table(samples_to_remove, file = "2n.list_of_likely_hybrids_and_rogue_taxa.txt",
+write.table(samples_to_remove, file = "2n.list_of_hybrids_and_rogue_taxa.txt",
             row.names = F,
             col.names= F,
             sep="\t",

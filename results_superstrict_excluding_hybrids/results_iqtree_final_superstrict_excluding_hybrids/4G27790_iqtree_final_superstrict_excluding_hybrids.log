@@ -1,0 +1,441 @@
+IQ-TREE multicore version 2.2.2 COVID-edition for Linux 64-bit built Sep 20 2022
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams, Ly Trong Nhan.
+
+Host:    netdc-bms-c11f (AVX2, FMA3, 377 GB RAM)
+Command: /home/kasper.hendriks/iqtree-2.2.2-Linux/bin/iqtree2 -s 4G27790_taper_final_superstrict_excluding_hybrids.fasta -B 1000 -nm 1000 -m GTR+F+R -nt AUTO --prefix 4G27790_iqtree_final_superstrict_excluding_hybrids
+Seed:    521798 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Jun  2 09:34:17 2023
+Kernel:  AVX+FMA - auto-detect threads (56 CPU cores detected)
+
+Reading alignment file 4G27790_taper_final_superstrict_excluding_hybrids.fasta ... Fasta format detected
+Reading fasta file: done in 0.000947952 secs using 99.69% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.00271201 secs using 1416% CPU
+Alignment has 100 sequences with 367 columns, 273 distinct patterns
+184 parsimony-informative, 60 singleton sites, 123 constant sites
+               Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.00565696 secs using 1326% CPU
+   1  PAFTOL_019361    0.54%    passed     48.91%
+   2  S0055            0.27%    passed     98.65%
+   3  S0196sl         24.52%    passed     89.39%
+   4  S0281            0.54%    passed     90.86%
+   5  S0282            0.00%    passed     97.43%
+   6  S0289            0.00%    passed     80.07%
+   7  S0292            0.00%    passed     82.18%
+   8  S0293           26.70%    passed     73.29%
+   9  S0294            2.72%    passed     63.66%
+  10  S0299            0.27%    passed     77.78%
+  11  S0308            0.54%    passed     93.63%
+  12  S0320            3.27%    passed     99.40%
+  13  S0335            0.00%    passed     88.68%
+  14  S0400            0.00%    passed     99.02%
+  15  S0405            7.90%    passed     97.82%
+  16  S0407sl          0.00%    passed     97.28%
+  17  S0412sl         22.34%    passed     80.42%
+  18  S0417            2.45%    passed     93.33%
+  19  S0419            0.82%    passed     98.57%
+  20  S0427            0.00%    passed     87.50%
+  21  S0478           24.80%    passed     80.73%
+  22  S0552sl          0.82%    passed     93.04%
+  23  S0558            0.00%    passed     81.22%
+  24  S0624            0.00%    passed     92.26%
+  25  S0641            0.00%    passed     92.90%
+  26  S0643           28.07%    passed     68.47%
+  27  S0645sl          0.54%    passed     94.52%
+  28  S0673            0.00%    passed     98.55%
+  29  S0689            0.54%    passed     98.24%
+  30  S0690           19.89%    passed     74.81%
+  31  S0735            0.27%    passed     60.93%
+  32  S0742            0.27%    passed     90.77%
+  33  S0748            0.00%    passed     62.09%
+  34  S0756            0.00%    passed     99.02%
+  35  S0765            1.09%    passed     98.63%
+  36  S0771            1.09%    passed     99.19%
+  37  S0795            2.18%    passed     96.45%
+  38  S0827            0.00%    passed     67.40%
+  39  S0888            0.00%    passed     89.50%
+  40  S0894            9.26%    passed     86.70%
+  41  S0906            0.27%    passed     94.39%
+  42  S0952            0.00%    passed     97.44%
+  43  S0960            1.09%    passed     99.35%
+  44  S1083            0.00%    passed     94.40%
+  45  S1102            1.09%    passed     98.11%
+  46  S1120            0.27%    passed     97.97%
+  47  S1128            1.91%    passed     95.86%
+  48  S1129sl          1.63%    passed     92.23%
+  49  S1148            0.00%    passed     45.34%
+  50  S1177            0.82%    passed     96.68%
+  51  S1180            0.00%    passed     58.90%
+  52  S1201sl          0.00%    passed     95.61%
+  53  S1211            0.00%    passed     94.47%
+  54  S1214sl          0.00%    passed     72.29%
+  55  S1223            2.72%    passed     60.68%
+  56  S1227            0.00%    passed     99.83%
+  57  S1235sl          0.00%    passed     93.55%
+  58  S1238sl          0.00%    passed     99.74%
+  59  S1239            2.45%    passed     87.50%
+  60  S1245            0.27%    passed     94.66%
+  61  S1249            0.00%    passed     64.66%
+  62  S1250sl          0.00%    passed     76.24%
+  63  S1251            0.00%    passed     94.35%
+  64  S1260            0.00%    passed     93.71%
+  65  S1269           32.97%    passed     84.79%
+  66  S1278            0.00%    passed     97.60%
+  67  S1315            0.27%    passed     94.14%
+  68  S1332            0.00%    passed     54.73%
+  69  S1366            0.00%    passed     95.97%
+  70  S1369            0.00%    passed     99.29%
+  71  S1370            0.00%    passed     96.05%
+  72  S1375            0.27%    passed     94.70%
+  73  S1381            0.00%    passed     96.93%
+  74  S1405            1.63%    passed     84.26%
+  75  S1422            2.45%    passed     84.33%
+  76  S1449            0.54%    passed     94.55%
+  77  S1451            0.00%    passed     97.67%
+  78  S1460            0.27%    passed     98.89%
+  79  S1462            0.82%    passed     98.03%
+  80  S1475            0.00%    passed     94.32%
+  81  S1498            0.00%    passed     94.40%
+  82  S1539            0.27%    passed     96.66%
+  83  S_670            0.00%    passed     90.35%
+  84  SRR8528336       0.27%    passed     81.21%
+  85  SRR8528341       0.00%    passed     80.73%
+  86  SRR8528343       0.00%    passed     97.03%
+  87  SRR8528347       0.00%    passed     81.31%
+  88  SRR8528350       0.00%    passed     99.77%
+  89  SRR8528354       0.00%    passed     71.34%
+  90  SRR8528359       0.00%    passed     86.79%
+  91  SRR8528361       0.00%    passed     86.99%
+  92  SRR8528365       0.00%    passed     96.26%
+  93  SRR8528370       0.00%    passed     98.53%
+  94  SRR8528372       0.54%    passed     92.89%
+  95  SRR8528379       0.00%    passed     98.80%
+  96  SRR8528381       0.00%    passed     36.91%
+  97  SRR8528384       0.00%    passed     98.68%
+  98  SRR8528389       0.00%    passed     73.31%
+  99  SRR8528391       0.00%    passed     95.40%
+ 100  SRR8528400       0.82%    passed     99.40%
+****  TOTAL            2.35%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+Checking for duplicate sequences: done in 0.0110819 secs using 1358% CPU
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.049 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 521798)...
+
+NOTE: 4 MB RAM (0 GB) is required!
+Measuring multi-threading efficiency up to 56 CPU cores
+Increase to 10 rounds for branch lengths
+403 trees examined
+Threads: 1 / Time: 56.072 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -9579
+Threads: 2 / Time: 85.448 sec / Speedup: 0.656 / Efficiency: 33% / LogL: -9579
+Determining AUTO threadcount: done in 141.521 secs using 117.9% CPU
+BEST NUMBER OF THREADS: 1
+
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -6232.940
+2. Current log-likelihood: -6043.725
+3. Current log-likelihood: -6041.082
+4. Current log-likelihood: -6039.618
+5. Current log-likelihood: -6038.530
+6. Current log-likelihood: -6037.774
+7. Current log-likelihood: -6037.270
+8. Current log-likelihood: -6036.955
+9. Current log-likelihood: -6036.746
+10. Current log-likelihood: -6036.596
+11. Current log-likelihood: -6036.480
+12. Current log-likelihood: -6036.378
+Optimal log-likelihood: -6036.268
+Rate parameters:  A-C: 1.41606  A-G: 3.09512  A-T: 1.06983  C-G: 1.56374  C-T: 5.22436  G-T: 1.00000
+Base frequencies:  A: 0.299  C: 0.202  G: 0.274  T: 0.225
+Site proportion and rates:  (0.442,0.132) (0.060,0.426) (0.396,1.420) (0.102,3.459)
+Parameters optimization took 12 rounds (2.105 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.100486 secs using 99.88% CPU
+Computing ML distances took 0.100875 sec (of wall-clock time) 0.100754 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.000822067 secs using 99.99% CPU
+Constructing RapidNJ tree: done in 0.00169587 secs using 100% CPU
+Computing RapidNJ tree took 0.002718 sec (of wall-clock time) 0.002717 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -6080.319
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 1.753 second
+Computing log-likelihood of 98 initial trees ... 1.680 seconds
+Current best score: -6030.108
+
+Do NNI search on 20 best initial trees
+Optimizing NNI: done in 0.584558 secs using 67.8% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -6025.012
+Optimizing NNI: done in 0.43547 secs using 96.33% CPU
+Optimizing NNI: done in 0.410394 secs using 100% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 3: -6023.280
+Optimizing NNI: done in 0.462022 secs using 100% CPU
+Optimizing NNI: done in 0.374385 secs using 100% CPU
+Optimizing NNI: done in 0.358011 secs using 100% CPU
+Optimizing NNI: done in 0.32728 secs using 100% CPU
+Optimizing NNI: done in 0.422706 secs using 99.99% CPU
+Optimizing NNI: done in 0.387325 secs using 100% CPU
+Optimizing NNI: done in 0.338482 secs using 95.27% CPU
+Iteration 10 / LogL: -6026.390 / Time: 0h:2m:32s
+Optimizing NNI: done in 0.321613 secs using 100% CPU
+Optimizing NNI: done in 0.366741 secs using 100% CPU
+Optimizing NNI: done in 0.447452 secs using 100% CPU
+Optimizing NNI: done in 0.331759 secs using 100% CPU
+Optimizing NNI: done in 0.408869 secs using 96.09% CPU
+Optimizing NNI: done in 0.400552 secs using 100% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 16: -6022.575
+Optimizing NNI: done in 0.445968 secs using 99.25% CPU
+Optimizing NNI: done in 0.326022 secs using 99.98% CPU
+Optimizing NNI: done in 0.453726 secs using 86.78% CPU
+Optimizing NNI: done in 0.397167 secs using 100% CPU
+Iteration 20 / LogL: -6029.582 / Time: 0h:2m:36s
+Finish initializing candidate tree set (20)
+Current best tree score: -6022.575 / CPU time: 12.426
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Optimizing NNI: done in 0.519979 secs using 88.45% CPU
+Optimizing NNI: done in 0.486513 secs using 100% CPU
+Optimizing NNI: done in 0.577112 secs using 88.86% CPU
+Optimizing NNI: done in 0.336769 secs using 95.27% CPU
+Optimizing NNI: done in 0.391328 secs using 100% CPU
+Optimizing NNI: done in 0.386741 secs using 100% CPU
+Optimizing NNI: done in 0.567902 secs using 100% CPU
+Optimizing NNI: done in 0.473602 secs using 98.23% CPU
+Optimizing NNI: done in 0.55423 secs using 83.21% CPU
+Optimizing NNI: done in 0.788531 secs using 67.2% CPU
+Iteration 30 / LogL: -6023.613 / Time: 0h:2m:41s (0h:7m:59s left)
+Optimizing NNI: done in 0.485051 secs using 83.01% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 31: -6021.928
+Optimizing NNI: done in 0.654228 secs using 63.31% CPU
+Optimizing NNI: done in 0.496519 secs using 99.99% CPU
+Optimizing NNI: done in 0.423888 secs using 100% CPU
+UPDATE BEST LOG-LIKELIHOOD: -6021.926
+Optimizing NNI: done in 0.357055 secs using 86.51% CPU
+Optimizing NNI: done in 0.721373 secs using 60.04% CPU
+Optimizing NNI: done in 0.575077 secs using 74.56% CPU
+Optimizing NNI: done in 0.783453 secs using 62.69% CPU
+Optimizing NNI: done in 0.442664 secs using 99.99% CPU
+Optimizing NNI: done in 0.515143 secs using 80.59% CPU
+Iteration 40 / LogL: -6038.166 / Time: 0h:2m:47s (0h:6m:30s left)
+Optimizing NNI: done in 0.468984 secs using 86.59% CPU
+Optimizing NNI: done in 0.479065 secs using 79.96% CPU
+Optimizing NNI: done in 0.927644 secs using 59.07% CPU
+Optimizing NNI: done in 0.546564 secs using 80.24% CPU
+Optimizing NNI: done in 0.483426 secs using 88.15% CPU
+Optimizing NNI: done in 0.555033 secs using 94.25% CPU
+Optimizing NNI: done in 0.694514 secs using 71.48% CPU
+Optimizing NNI: done in 0.612784 secs using 78.52% CPU
+Optimizing NNI: done in 0.608819 secs using 75.1% CPU
+Optimizing NNI: done in 0.826816 secs using 69.75% CPU
+Iteration 50 / LogL: -6023.807 / Time: 0h:2m:53s (0h:4m:47s left)
+Log-likelihood cutoff on original alignment: -6053.457
+Optimizing NNI: done in 0.487188 secs using 75.65% CPU
+Optimizing NNI: done in 0.785859 secs using 60.79% CPU
+Optimizing NNI: done in 0.587522 secs using 84.34% CPU
+Optimizing NNI: done in 0.423852 secs using 100% CPU
+Optimizing NNI: done in 0.448425 secs using 99.99% CPU
+Optimizing NNI: done in 0.411675 secs using 100% CPU
+Optimizing NNI: done in 0.430074 secs using 96.11% CPU
+Optimizing NNI: done in 0.424449 secs using 99.37% CPU
+Optimizing NNI: done in 0.455385 secs using 100% CPU
+Optimizing NNI: done in 0.475758 secs using 100% CPU
+Iteration 60 / LogL: -6039.524 / Time: 0h:2m:59s (0h:3m:36s left)
+Optimizing NNI: done in 0.381095 secs using 100% CPU
+Optimizing NNI: done in 0.469426 secs using 100% CPU
+Optimizing NNI: done in 0.420096 secs using 100% CPU
+Optimizing NNI: done in 0.554672 secs using 92.78% CPU
+Optimizing NNI: done in 0.662644 secs using 64.94% CPU
+Optimizing NNI: done in 0.807341 secs using 59.93% CPU
+Optimizing NNI: done in 0.604108 secs using 82.76% CPU
+Optimizing NNI: done in 0.857868 secs using 61.23% CPU
+Optimizing NNI: done in 0.209504 secs using 99.97% CPU
+Optimizing NNI: done in 0.850322 secs using 57.86% CPU
+Iteration 70 / LogL: -6023.369 / Time: 0h:3m:5s (0h:2m:44s left)
+Optimizing NNI: done in 0.869093 secs using 53.02% CPU
+Optimizing NNI: done in 0.58107 secs using 86.82% CPU
+Optimizing NNI: done in 0.475207 secs using 90.73% CPU
+Optimizing NNI: done in 0.674021 secs using 75.63% CPU
+Optimizing NNI: done in 0.792485 secs using 55.74% CPU
+Optimizing NNI: done in 0.916144 secs using 49.71% CPU
+Optimizing NNI: done in 0.650307 secs using 68.57% CPU
+Optimizing NNI: done in 0.753474 secs using 68.15% CPU
+Optimizing NNI: done in 0.676249 secs using 64.51% CPU
+Optimizing NNI: done in 0.357645 secs using 100% CPU
+Iteration 80 / LogL: -6030.919 / Time: 0h:3m:12s (0h:2m:4s left)
+Optimizing NNI: done in 0.410828 secs using 100% CPU
+Optimizing NNI: done in 0.408118 secs using 99.99% CPU
+Optimizing NNI: done in 0.364682 secs using 98.89% CPU
+Optimizing NNI: done in 0.380205 secs using 99.94% CPU
+Optimizing NNI: done in 0.452239 secs using 90.09% CPU
+Optimizing NNI: done in 0.475182 secs using 94.51% CPU
+Optimizing NNI: done in 0.577653 secs using 97.19% CPU
+Optimizing NNI: done in 0.589294 secs using 69.33% CPU
+Optimizing NNI: done in 0.425555 secs using 92.48% CPU
+Optimizing NNI: done in 0.825389 secs using 66.21% CPU
+Iteration 90 / LogL: -6024.146 / Time: 0h:3m:18s (0h:1m:31s left)
+Optimizing NNI: done in 0.361752 secs using 100% CPU
+Optimizing NNI: done in 0.41318 secs using 100% CPU
+Optimizing NNI: done in 0.353327 secs using 100% CPU
+Optimizing NNI: done in 0.461245 secs using 100% CPU
+Optimizing NNI: done in 0.481698 secs using 100% CPU
+Optimizing NNI: done in 0.43499 secs using 99.44% CPU
+Optimizing NNI: done in 0.669005 secs using 99.99% CPU
+Optimizing NNI: done in 0.390016 secs using 100% CPU
+Optimizing NNI: done in 0.453407 secs using 100% CPU
+Optimizing NNI: done in 0.776631 secs using 63.89% CPU
+Iteration 100 / LogL: -6023.326 / Time: 0h:3m:23s (0h:1m:3s left)
+Log-likelihood cutoff on original alignment: -6053.457
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+Optimizing NNI: done in 0.438482 secs using 99.99% CPU
+Optimizing NNI: done in 0.355625 secs using 100% CPU
+Optimizing NNI: done in 0.36935 secs using 100% CPU
+Optimizing NNI: done in 0.447787 secs using 99.98% CPU
+Optimizing NNI: done in 0.753347 secs using 64.39% CPU
+Optimizing NNI: done in 0.43375 secs using 100% CPU
+Optimizing NNI: done in 0.569243 secs using 84.46% CPU
+Optimizing NNI: done in 0.625608 secs using 84.65% CPU
+Optimizing NNI: done in 0.47297 secs using 100% CPU
+Optimizing NNI: done in 0.372255 secs using 100% CPU
+Iteration 110 / LogL: -6021.928 / Time: 0h:3m:28s (0h:2m:52s left)
+Optimizing NNI: done in 0.410998 secs using 100% CPU
+Optimizing NNI: done in 0.62006 secs using 72.16% CPU
+Optimizing NNI: done in 0.340577 secs using 100% CPU
+Optimizing NNI: done in 0.333336 secs using 100% CPU
+Optimizing NNI: done in 0.325677 secs using 99.88% CPU
+Optimizing NNI: done in 0.478882 secs using 100% CPU
+Optimizing NNI: done in 0.460815 secs using 100% CPU
+Optimizing NNI: done in 0.394049 secs using 100% CPU
+Optimizing NNI: done in 0.465673 secs using 100% CPU
+Optimizing NNI: done in 0.445794 secs using 100% CPU
+Iteration 120 / LogL: -6023.326 / Time: 0h:3m:33s (0h:2m:23s left)
+Optimizing NNI: done in 0.779132 secs using 58.88% CPU
+Optimizing NNI: done in 0.675552 secs using 54.95% CPU
+Optimizing NNI: done in 0.610063 secs using 69.79% CPU
+Optimizing NNI: done in 0.511163 secs using 87.48% CPU
+Optimizing NNI: done in 0.728129 secs using 72.64% CPU
+Optimizing NNI: done in 0.408944 secs using 93.38% CPU
+Optimizing NNI: done in 0.491338 secs using 99.63% CPU
+Optimizing NNI: done in 0.340694 secs using 94.11% CPU
+Optimizing NNI: done in 0.41219 secs using 100% CPU
+Optimizing NNI: done in 0.60498 secs using 64.93% CPU
+Iteration 130 / LogL: -6022.988 / Time: 0h:3m:39s (0h:1m:58s left)
+Optimizing NNI: done in 0.620722 secs using 64.73% CPU
+Optimizing NNI: done in 0.559038 secs using 82.83% CPU
+TREE SEARCH COMPLETED AFTER 132 ITERATIONS / Time: 0h:3m:40s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -6021.926
+2. Current log-likelihood: -6021.877
+3. Current log-likelihood: -6021.834
+4. Current log-likelihood: -6021.793
+5. Current log-likelihood: -6021.753
+6. Current log-likelihood: -6021.715
+7. Current log-likelihood: -6021.675
+8. Current log-likelihood: -6021.635
+9. Current log-likelihood: -6021.595
+10. Current log-likelihood: -6021.553
+11. Current log-likelihood: -6021.510
+12. Current log-likelihood: -6021.467
+13. Current log-likelihood: -6021.421
+14. Current log-likelihood: -6021.375
+15. Current log-likelihood: -6021.327
+16. Current log-likelihood: -6021.278
+17. Current log-likelihood: -6021.227
+18. Current log-likelihood: -6021.175
+19. Current log-likelihood: -6021.122
+20. Current log-likelihood: -6021.068
+21. Current log-likelihood: -6021.013
+22. Current log-likelihood: -6020.956
+23. Current log-likelihood: -6020.898
+24. Current log-likelihood: -6020.839
+25. Current log-likelihood: -6020.779
+26. Current log-likelihood: -6020.718
+27. Current log-likelihood: -6020.656
+28. Current log-likelihood: -6020.592
+29. Current log-likelihood: -6020.528
+30. Current log-likelihood: -6020.462
+31. Current log-likelihood: -6020.394
+32. Current log-likelihood: -6020.326
+33. Current log-likelihood: -6020.256
+34. Current log-likelihood: -6020.183
+35. Current log-likelihood: -6020.109
+36. Current log-likelihood: -6020.032
+37. Current log-likelihood: -6019.953
+38. Current log-likelihood: -6019.871
+39. Current log-likelihood: -6019.787
+40. Current log-likelihood: -6019.698
+41. Current log-likelihood: -6019.606
+42. Current log-likelihood: -6019.511
+43. Current log-likelihood: -6019.413
+44. Current log-likelihood: -6019.311
+45. Current log-likelihood: -6019.208
+46. Current log-likelihood: -6019.106
+47. Current log-likelihood: -6019.005
+48. Current log-likelihood: -6018.911
+49. Current log-likelihood: -6018.824
+50. Current log-likelihood: -6018.746
+51. Current log-likelihood: -6018.680
+52. Current log-likelihood: -6018.624
+53. Current log-likelihood: -6018.575
+54. Current log-likelihood: -6018.537
+55. Current log-likelihood: -6018.504
+56. Current log-likelihood: -6018.476
+57. Current log-likelihood: -6018.453
+58. Current log-likelihood: -6018.433
+59. Current log-likelihood: -6018.415
+60. Current log-likelihood: -6018.399
+61. Current log-likelihood: -6018.384
+62. Current log-likelihood: -6018.370
+63. Current log-likelihood: -6018.358
+64. Current log-likelihood: -6018.346
+65. Current log-likelihood: -6018.336
+66. Current log-likelihood: -6018.326
+Optimal log-likelihood: -6018.311
+Rate parameters:  A-C: 1.44648  A-G: 3.24349  A-T: 1.10405  C-G: 1.61202  C-T: 5.25857  G-T: 1.00000
+Base frequencies:  A: 0.299  C: 0.202  G: 0.274  T: 0.225
+Site proportion and rates:  (0.433,0.105) (0.355,1.056) (0.201,2.541) (0.011,6.249)
+Parameters optimization took 66 rounds (9.590 sec)
+BEST SCORE FOUND : -6018.311
+Creating bootstrap support values...
+Split supports printed to NEXUS file 4G27790_iqtree_final_superstrict_excluding_hybrids.splits.nex
+Total tree length: 3.161
+
+Total number of iterations: 132
+CPU time used for tree search: 64.373 sec (0h:1m:4s)
+Wall-clock time used for tree search: 76.398 sec (0h:1m:16s)
+Total CPU time used: 244.215 sec (0h:4m:4s)
+Total wall-clock time used: 230.368 sec (0h:3m:50s)
+
+Computing bootstrap consensus tree...
+Reading input file 4G27790_iqtree_final_superstrict_excluding_hybrids.splits.nex...
+100 taxa and 679 splits.
+Consensus tree written to 4G27790_iqtree_final_superstrict_excluding_hybrids.contree
+Reading input trees file 4G27790_iqtree_final_superstrict_excluding_hybrids.contree
+Log-likelihood of consensus tree: -6018.312
+
+Analysis results written to: 
+  IQ-TREE report:                4G27790_iqtree_final_superstrict_excluding_hybrids.iqtree
+  Maximum-likelihood tree:       4G27790_iqtree_final_superstrict_excluding_hybrids.treefile
+  Likelihood distances:          4G27790_iqtree_final_superstrict_excluding_hybrids.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          4G27790_iqtree_final_superstrict_excluding_hybrids.splits.nex
+  Consensus tree:                4G27790_iqtree_final_superstrict_excluding_hybrids.contree
+  Screen log file:               4G27790_iqtree_final_superstrict_excluding_hybrids.log
+
+ALISIM COMMAND
+--------------
+--alisim simulated_MSA -t 4G27790_iqtree_final_superstrict_excluding_hybrids.treefile -m "GTR{1.44648,3.24349,1.10405,1.61202,5.25857}+F{0.298979,0.201516,0.274475,0.22503}+R4{0.432995,0.104798,0.355072,1.05573,0.200834,2.5414,0.0110999,6.24899}" --length 367
+
+Date and Time: Fri Jun  2 09:38:08 2023

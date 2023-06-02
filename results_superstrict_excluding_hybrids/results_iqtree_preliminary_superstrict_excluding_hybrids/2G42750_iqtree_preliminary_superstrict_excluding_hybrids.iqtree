@@ -1,0 +1,178 @@
+IQ-TREE 2.2.2 COVID-edition built Sep 20 2022
+
+Input file name: 2G42750_taper_preliminary_superstrict_excluding_hybrids.fasta
+Type of analysis: tree reconstruction
+Random seed number: 72893
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 43 sequences with 243 nucleotide sites
+Number of constant sites: 114 (= 46.9136% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 114 (= 46.9136% of all sites)
+Number of parsimony informative sites: 82
+Number of distinct site patterns: 156
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: GTR+F+R4
+
+Rate parameter R:
+
+  A-C: 0.9154
+  A-G: 3.4107
+  A-T: 0.9916
+  C-G: 0.6896
+  C-T: 2.5984
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.185
+  pi(C) = 0.2512
+  pi(G) = 0.2752
+  pi(T) = 0.2886
+
+Rate matrix Q:
+
+  A    -1.244    0.1966    0.8027    0.2447
+  C    0.1449   -0.9485    0.1623    0.6413
+  G    0.5398    0.1481   -0.9347    0.2468
+  T    0.1569    0.5582    0.2354   -0.9505
+
+Model of rate heterogeneity: FreeRate with 4 categories
+Site proportion and rates:  (0.4394,0.1132) (0.06356,0.2283) (0.4236,1.519) (0.0734,3.981)
+
+ Category  Relative_rate  Proportion
+  1         0.1132         0.4394
+  2         0.2283         0.06356
+  3         1.519          0.4236
+  4         3.981          0.0734
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -2107.1133 (s.e. 124.1084)
+Unconstrained log-likelihood (without tree): -1129.0556
+Number of free parameters (#branches + #model parameters): 97
+Akaike information criterion (AIC) score: 4408.2266
+Corrected Akaike information criterion (AICc) score: 4539.3439
+Bayesian information criterion (BIC) score: 4747.0536
+
+Total tree length (sum of branch lengths): 1.4955
+Sum of internal branch lengths: 0.3828 (25.5996% of tree length)
+
+WARNING: 7 near-zero internal branches (<0.0041) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'S0289' is drawn at root
+
++------------S0289
+|
+|  +---------S0299
++--|
+|  +--SRR8528347
+|
+|  +----------------S0320
++**|
+   |                               +---------------------------S0558
+   |                            +--|
+   |                            |  |           +-------------S1052sl
+   |                            |  +-----------|
+   |                            |              +--SRR8528391
+   |                         +--|
+   |                         |  +----------S0689
+   |                     +---|
+   |                     |   +--------------------SRR8528359
+   |                 +---|
+   |                 |   |                           +-----S0756
+   |                 |   |                 +---------|
+   |                 |   |                 |         +--SRR8528343
+   |                 |   |              +--|
+   |                 |   |              |  |        +---S0763
+   |                 |   |              |  |     +--|
+   |                 |   |              |  |     |  +**S_670
+   |                 |   |              |  |  +--|
+   |                 |   |              |  |  |  +-----S1369
+   |                 |   |              |  +--|
+   |                 |   |              |     +-------S1370
+   |                 |   |           +**|
+   |                 |   |           |  +-------S1375
+   |                 |   |        +--|
+   |                 |   |        |  +-------S1235sl
+   |                 |   |     +--|
+   |                 |   |     |  +-----SRR8528350
+   |                 |   |  +--|
+   |                 |   |  |  +------S1381
+   |                 |   +--|
+   |                 |      +-------SRR8528357
+   |           +-----|
+   |           |     |                     +--S0959
+   |           |     |                 +---|
+   |           |     |                 |   +------------S1189
+   |           |     |              +**|
+   |           |     |              |  |               +-----------------S1332
+   |           |     |              |  +---------------|
+   |           |     |              |                  +**SRR8528361
+   |           |     |           +--|
+   |           |     |           |  +--------------SRR8528389
+   |           |     |        +**|
+   |           |     |        |  +-----SRR8528341
+   |           |     |     +--|
+   |           |     |     |  |                       +**S1128
+   |           |     |     |  |  +--------------------|
+   |           |     |     |  |  |                    +**S1129sl
+   |           |     |     |  +--|
+   |           |     |     |     +---------S1201sl
+   |           |     |  +--|
+   |           |     |  |  |             +----S1449
+   |           |     |  |  |  +----------|
+   |           |     |  |  |  |          +---------------SRR8528336
+   |           |     |  |  +**|
+   |           |     |  |     |  +---------SRR8528372
+   |           |     |  |     +--|
+   |           |     |  |        |        +-----SRR8528379
+   |           |     |  |        |  +-----|
+   |           |     |  |        |  |     +--SRR8528400
+   |           |     |  |        +--|
+   |           |     |  |           +-------------------------SRR8528384
+   |           |     +--|
+   |           |        +-------------------SRR8528365
+   |     +-----|
+   |     |     |        +-----S0827
+   |     |     |     +--|
+   |     |     |     |  +-----------SRR8528354
+   |     |     |  +**|
+   |     |     |  |  |         +-----S1539
+   |     |     |  |  +---------|
+   |     |     |  |            +-----------SRR8528370
+   |     |     +--|
+   |     |        +-------------S1451
+   |  +**|
+   |  |  +--S0624
+   +--|
+      +--S0645sl
+
+Tree in newick format:
+
+(S0289:0.0349500732,(S0299:0.0261750614,SRR8528347:0.0085695017):0.0083378686,(S0320:0.0447839077,((((((((S0558:0.0741525034,(S1052sl:0.0373049824,SRR8528391:0.0092035846):0.0337910874):0.0054722245,S0689:0.0307670417):0.0061517808,SRR8528359:0.0555318756):0.0109119666,(((((((S0756:0.0159343363,SRR8528343:0.0054906528):0.0262359801,(((S0763:0.0127427784,S_670:0.0000022625):0.0042216830,S1369:0.0173709252):0.0044068403,S1370:0.0216293147):0.0083678897):0.0043030752,S1375:0.0220102907):0.0000026215,S1235sl:0.0215289022):0.0042126123,SRR8528350:0.0170642887):0.0043017088,S1381:0.0187855246):0.0042721123,SRR8528357:0.0216910035):0.0089302618):0.0115951268,(((((((S0959:0.0053081971,S1189:0.0359706555):0.0117733375,(S1332:0.0480545981,SRR8528361:0.0036928797):0.0427290525):0.0000022647,SRR8528389:0.0405485007):0.0042474194,SRR8528341:0.0172568542):0.0000022662,((S1128:0.0000011256,S1129sl:0.0000011256):0.0548135055,S1201sl:0.0266900498):0.0086939965):0.0052657326,((S1449:0.0148811863,SRR8528336:0.0433067833):0.0295344190,(SRR8528372:0.0264965284,((SRR8528379:0.0172507004,SRR8528400:0.0085775587):0.0167014796,SRR8528384:0.0696291957):0.0057554429):0.0096137516):0.0028377374):0.0088311592,SRR8528365:0.0541793960):0.0080737883):0.0161912845,(((S0827:0.0172457514,SRR8528354:0.0314654782):0.0085177696,(S1539:0.0171037346,SRR8528370:0.0316189290):0.0268119777):0.0000021655,S1451:0.0371527784):0.0086084963):0.0165400527,S0624:0.0071484405):0.0022590485,S0645sl:0.0085609508):0.0043272312):0.0000021613);
+
+TIME STAMP
+----------
+
+Date and time: Fri Jun  2 07:52:46 2023
+Total CPU time used: 138.105 seconds (0h:2m:18s)
+Total wall-clock time used: 144.705 seconds (0h:2m:24s)
+
