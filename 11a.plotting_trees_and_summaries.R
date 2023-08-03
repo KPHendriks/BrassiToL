@@ -18,24 +18,12 @@ library(phytools)
 library(sf)
 library(rnaturalearth)
 library(rnaturalearthdata)
+library(TreeDist)
+library(phangorn)
 
 
 #READ IN METADATA ----
 metadata<-read.csv("2e.metadata.csv", header=T, stringsAsFactors=FALSE, fileEncoding="latin1")
-
-##TEMP CHECK NEW 1000SP BRASSITOL
-tree_species_1000sp<-read.tree(file = "BrassiToL_supermatrix.timetree.nwk")
-tip_labels<-unique(c(tree_species_1000sp$tip.label))
-tree_IQ_TREE_supermatrix_calibrated<-tree_species_1000sp
-plot_tree_IQ_TREE_supermatrix_large<-ggtree(tree_IQ_TREE_supermatrix_calibrated,  aes(color="black"), size=0.25) %<+% annotations +
-  scale_color_manual(values = c("black","#00BFC4"), na.value = "black")+
-  geom_tiplab(aes(label=tribe), size=1, offset = 0.008, color = "black")+
-  geom_tiplab(aes(label=Library_ID2), size=1, offset = 0.001, color = "black") +
-  geom_tiplab(aes(label=species_genus_type), fontface='bold.italic', size=1, offset = 0.02, color = "black") +
-  geom_tiplab(aes(label=not_species_genus_type), fontface='italic', size=1, offset = 0.02, color = "black")
-ggsave(filename = "tree_species_1000sp.pdf", plot_tree_IQ_TREE_supermatrix_large + theme(legend.position="none"),
-       width = 8, height = 40)
-
 
 
 #READ IN PHYLOGENETIC RESULTS ----
@@ -229,6 +217,13 @@ plot(cbind(tree_IQ_TREE_supermatrix_calibrated_ingroups@data$gCF,tree_IQ_TREE_su
 #(Re)rooting the tree is not needed in this case, because the tree was already rooted to S1321 in IQ-TREE.
 
 
+##ML nuclear excluding hybrids ----
+
+#Read in the IQ-TREE version of this same tree (but excluding hybrids) with cGF and sCF concordance factors.
+tree_IQ_TREE_supermatrix_excluding_hybrids_concordance_factors<-read.tree(file = "9b.IQ-TREE_supermatrix_supermatrix_excluding_hybrids_with_concordance_factors.tree")
+#Add the concordance factors to the calibrated tree, such that all tree node annotations are held within a single tree object.
+
+
 ##ML plastome ----
 
 #Read in the ML IQ-TREE that was calibrated in treePL. This tree was already rooted to S1321 in IQ-TREE.
@@ -285,7 +280,13 @@ branch_support_compared<-rbind(cbind(tree_ASTRALIII_inclusive_astral_annotations
 
 
 # ANNOTATIONS DATAFRAME ----
-tip_labels<-unique(c(tree_ASTRALIII_inclusive$tip.label, tree_ASTRALIII_strict$tip.label, tree_ASTRALIII_superstrict$tip.label, tree_ASTRAL_Pro$tip.label, tree_IQ_TREE_supermatrix_concordance_factors$tip.label, tree_IQ_TREE_chloroplast_calibrated@phylo$tip.label))
+tip_labels<-unique(c(tree_ASTRALIII_inclusive$tip.label, 
+                     tree_ASTRALIII_strict$tip.label, 
+                     tree_ASTRALIII_superstrict$tip.label, 
+                     tree_ASTRAL_Pro$tip.label, 
+                     tree_IQ_TREE_supermatrix_concordance_factors$tip.label, 
+                     tree_IQ_TREE_chloroplast_calibrated@phylo$tip.label,
+                     tree_IQ_TREE_supermatrix_excluding_hybrids_concordance_factors$tip.label))
 # tip_labels<-tree_IQ_TREE_supermatrix_calibrated@phylo$tip.label
 annotations<-data.frame(Library_ID=tip_labels)
 
@@ -757,6 +758,39 @@ plot_tree_IQ_TREE_supermatrix_large_circular<-gheatmap(plot_tree_IQ_TREE_superma
 
 ggsave(filename = "results_plots_phylogenies/plot_tree_IQ_TREE_supermatrix_large_circular_for_print.pdf", plot_tree_IQ_TREE_supermatrix_large_circular + theme(legend.position="none"),
        width = 10, height = 10)
+
+
+##ML nuclear excluding hybrids ----
+
+#Create a plot of the phylogeny with branch lengths.
+plot_tree_IQ_TREE_supermatrix_excluding_hybrids_large<-ggtree(tree_IQ_TREE_supermatrix_excluding_hybrids_concordance_factors,  aes(color="black"), size=0.25) %<+% annotations +
+  scale_color_manual(values = c("black","#00BFC4"), na.value = "black")+
+  geom_nodelab(aes(x=branch, label=c(rep("", length(tree_IQ_TREE_supermatrix_excluding_hybrids_concordance_factors$tip.label)),tree_IQ_TREE_supermatrix_excluding_hybrids_concordance_factors$node.label)), vjust=-.3, size=1.2, color = "black")
+
+#And a second plot with the annotations.
+#We do this because ggtree cannot properly add annotations to a tree that has branch lengths, so we need to be creative here.
+plot_tree_IQ_TREE_supermatrix_excluding_hybrids_large_annotations<-ggtree(tree_IQ_TREE_supermatrix_excluding_hybrids_concordance_factors,  aes(color="black"), size=0.25, branch.length = "none") %<+% annotations +
+  scale_color_manual(values = c("grey","grey"), na.value = "black") +
+  geom_tiplab(aes(label=tribe), size=1, offset = 1, color = "black") +
+  geom_tiplab(aes(label=Library_ID2),  size=1, offset = 6, color = "black")
+plot_tree_IQ_TREE_supermatrix_excluding_hybrids_large_annotations<-gheatmap(plot_tree_IQ_TREE_supermatrix_excluding_hybrids_large_annotations, data = annotations[,c("Lineages_Nikolov_et_al"), drop=F], offset=0.5, colnames=F)+
+  scale_fill_manual(values=c("transparent", "orange", "lightblue","green","pink","yellow"), na.translate = F)
+plot_tree_IQ_TREE_supermatrix_excluding_hybrids_large_annotations<-plot_tree_IQ_TREE_supermatrix_excluding_hybrids_large_annotations +
+  geom_tiplab(aes(label=species_genus_type), fontface='bold.italic', size=1, offset = 3, color = "black") +
+  geom_tiplab(aes(label=not_species_genus_type), fontface='italic', size=1, offset = 3, color = "black")
+  
+#Combine the above two plots.
+plot_tree_IQ_TREE_supermatrix_excluding_hybrids_large_combined<-
+  cowplot::plot_grid(plot_tree_IQ_TREE_supermatrix_excluding_hybrids_large,
+                     plot_tree_IQ_TREE_supermatrix_excluding_hybrids_large_annotations,
+                     nrow = 1)
+
+#And save for publication.
+ggsave(filename = "results_plots_phylogenies/plot_tree_IQ_TREE_supermatrix_excluding_hybrids_large.pdf", plot_tree_IQ_TREE_supermatrix_excluding_hybrids_large_combined + theme(legend.position="none"),
+       width = 18, height = 10)
+
+
+  
 
 
 ##ML plastome ----
@@ -1628,113 +1662,321 @@ ggplot(data=gene_recovery[gene_recovery$collection_year!="" & !is.na(gene_recove
   theme_classic()
 
 
-#PLOT COPHYLOGENY FOR EACH SUPERTRIBE ---- 
-#note: script based on suggestions taken from https://yulab-smu.top/treedata-book/chapter2.html
 
-##Aethionemeae (tribe) ----
+#PLOT COPHYLOGENY ---- 
 
-#Subset the species trees to samples from this tribe. Include an outgroup.
-tree_IQ_TREE_supermatrix_calibrated_Aethionemeae<-keep.tip(tree_IQ_TREE_supermatrix_calibrated@phylo, which(tree_IQ_TREE_supermatrix_calibrated@phylo$tip.label %in% c(annotations$Library_ID[annotations$tribe=="Aethionemeae"], "PAFTOL_019361")))
-tree_IQ_TREE_chloroplast_calibrated_Aethionemeae<-keep.tip(tree_IQ_TREE_chloroplast_calibrated@phylo, which(tree_IQ_TREE_chloroplast_calibrated@phylo$tip.label %in% c(annotations_cp$Library_ID[annotations_cp$tribe=="Aethionemeae"], "MK637687")))
+##Load metadata ----
+metadata<-read.csv("2e.metadata.csv", header=T, stringsAsFactors=FALSE, fileEncoding="latin1")
 
-#Replace the tip labels with species names, and outgroup with genus name. Drop any duplicates.
-tree_IQ_TREE_supermatrix_calibrated_Aethionemeae$tip.label<-annotations$species[match(tree_IQ_TREE_supermatrix_calibrated_Aethionemeae$tip.label, annotations$Library_ID)]
-tree_IQ_TREE_supermatrix_calibrated_Aethionemeae$tip.label[which(tree_IQ_TREE_supermatrix_calibrated_Aethionemeae$tip.label=="Cleome albescens")]<-"Cleome"
-tree_IQ_TREE_supermatrix_calibrated_Aethionemeae<-drop.tip(tree_IQ_TREE_supermatrix_calibrated_Aethionemeae, which(duplicated(tree_IQ_TREE_supermatrix_calibrated_Aethionemeae$tip.label)))
+##Species trees ----
 
-tree_IQ_TREE_chloroplast_calibrated_Aethionemeae$tip.label<-annotations_cp$species[match(tree_IQ_TREE_chloroplast_calibrated_Aethionemeae$tip.label, annotations_cp$Library_ID)]
-tree_IQ_TREE_chloroplast_calibrated_Aethionemeae$tip.label[which(tree_IQ_TREE_chloroplast_calibrated_Aethionemeae$tip.label=="Cleome lutea")]<-"Cleome"
-tree_IQ_TREE_chloroplast_calibrated_Aethionemeae<-drop.tip(tree_IQ_TREE_chloroplast_calibrated_Aethionemeae, which(duplicated(tree_IQ_TREE_chloroplast_calibrated_Aethionemeae$tip.label)))
+#Load tree files.
 
-#Add data for padded tip labels.
-tree_IQ_TREE_supermatrix_calibrated_Aethionemeae_data<-data.frame(label=tree_IQ_TREE_supermatrix_calibrated_Aethionemeae$tip.label,
-              newlabel=label_pad(tree_IQ_TREE_supermatrix_calibrated_Aethionemeae$tip.label, pad="."))
+#Load nuclear species tree.
+tree_n<-read.beast(file = "10f.treePL_supermatrix_approach_calibrated.tree")
+tree_n<-tree_n@phylo
 
-tree_IQ_TREE_chloroplast_calibrated_Aethionemeae_data<-data.frame(label=tree_IQ_TREE_chloroplast_calibrated_Aethionemeae$tip.label,
-                                                                  newlabel=label_pad(tree_IQ_TREE_chloroplast_calibrated_Aethionemeae$tip.label, pad=".", justify = "left"))
-#Create ggtrees.
-cophylogeny_n<-ggtree(tree_IQ_TREE_supermatrix_calibrated_Aethionemeae) %<+% tree_IQ_TREE_supermatrix_calibrated_Aethionemeae_data +
-  geom_tiplab(aes(label=newlabel), align=TRUE,  family='mono', linetype = "dotted", linesize = .7)+
-  theme(legend.position="none")
-  
-cophylogeny_cp<-ggtree(tree_IQ_TREE_chloroplast_calibrated_Aethionemeae) %<+% tree_IQ_TREE_chloroplast_calibrated_Aethionemeae_data +
-  geom_tiplab(aes(label=newlabel), align=TRUE,  family='mono', linetype = "dotted", linesize = .7)+
-  theme(legend.position="none")
+#Load chloroplast species tree.
+#note the following tree was calibrated
+tree_cp<-read.beast(file = "7.chloroplast_treePL_BS_analysis_TreeAnnotator_EDITED.tre")
+tree_cp<-tree_cp@phylo
 
-#Reverse x-axis for plastome tree and
-#set offset to make the tree on the right-hand side of the first tree
-cophylogeny_cp$data$x <- max(cophylogeny_n$data$x) - cophylogeny_cp$data$x + max(cophylogeny_n$data$x) + 80
+##Prune trees to tribal level.
 
-cophylogeny_cp %<+%  tree_IQ_TREE_chloroplast_calibrated_Aethionemeae_data +
-  geom_tiplab(aes(label=newlabel), align=TRUE,  family='mono', linetype = "dotted", linesize = .7)+
-  theme(legend.position="none")
+#For the nuclear species tree.
 
-pp <- cophylogeny_n + 
-  geom_tree(data=cophylogeny_cp_data) %<+% tree_IQ_TREE_chloroplast_calibrated_Aethionemeae_data +
-  geom_tiplab(aes(label=newlabel), align=TRUE,  family='mono', linetype = "dotted", linesize = .7)+
-  theme(legend.position="none")
-pp
+#Get a vector of all tribe names corresponding to the tip labels.
+tree_n_tribes<-metadata$Tribe[match(tree_n$tip.label, metadata$Library_ID)]
+#First prune all tips that are outgroups, except Cleomaceae, the sister family to the Brassicaceae.
+tips_to_drop_outgroups_n<-tree_n_tribes[grepl("Outgroup_", tree_n_tribes) & !grepl("Outgroup_Cleomaceae", tree_n_tribes)]
+tips_to_drop_outgroups_n<-which(metadata$Tribe[match(tree_n$tip.label, metadata$Library_ID)] %in% tips_to_drop_outgroups_n)
+#Now drop outgroup tips.
+tree_n<-drop.tip(tree_n, tip = tips_to_drop_outgroups_n)
+#Also drop tips if from tribe "Brassiceae II", which is not a formal tribe but used here for polyphyly of the Brassiceae.
+tree_n<-drop.tip(tree_n, tip = which(metadata$Tribe[match(tree_n$tip.label, metadata$Library_ID)] == "Brassiceae II"))
+#Now we will subset to a single, randomly chosen representative for each tribe.
+tips_unique_tribes_to_keep_n<-unique(ave(seq_along(metadata$Tribe[match(tree_n$tip.label, metadata$Library_ID)] ), metadata$Tribe[match(tree_n$tip.label, metadata$Library_ID)] , FUN = function(x) if(length(x) > 1) head(sample(x), 1) else x))
+tips_unique_tribes_to_drop_n<-which(!(1:length(tree_n$tip.label) %in% tips_unique_tribes_to_keep_n))
+tree_n<-drop.tip(tree_n, tip = tips_unique_tribes_to_drop_n)
+#Finally, change tip label names to tribe names.
+tree_n$tip.label<-metadata$Tribe[match(tree_n$tip.label, metadata$Library_ID)]
 
-dd <- bind_rows(cophylogeny_n_data, cophylogeny_cp_data) %>% 
-  filter(!is.na(label))
+#For the chloroplast species tree.
+#Get a vector of all tribe names corresponding to the tip labels.
+tree_cp_tribes<-metadata$Tribe[match(tree_cp$tip.label, metadata$Library_ID)]
+#First prune all tips that are outgroups, except Cleomaceae, the sister family to the Brassicaceae.
+tips_to_drop_outgroups_cp<-tree_cp_tribes[grepl("Outgroup_", tree_cp_tribes) & !grepl("Outgroup_Cleomaceae", tree_cp_tribes) | is.na(tree_cp_tribes)]
+tips_to_drop_outgroups_cp<-which(metadata$Tribe[match(tree_cp$tip.label, metadata$Library_ID)] %in% tips_to_drop_outgroups_cp)
+#Now drop outgroup tips.
+tree_cp<-drop.tip(tree_cp, tip = tips_to_drop_outgroups_cp)
+#Also drop tips if from tribe "Brassiceae II", which is not a formal tribe but used here for polyphyly of the Brassiceae.
+tree_cp<-drop.tip(tree_cp, tip = which(metadata$Tribe[match(tree_cp$tip.label, metadata$Library_ID)] == "Brassiceae II"))
+#Now we will subset to a single, randomly chosen representative for each tribe.
+tips_unique_tribes_to_keep_cp<-unique(ave(seq_along(metadata$Tribe[match(tree_cp$tip.label, metadata$Library_ID)] ), metadata$Tribe[match(tree_cp$tip.label, metadata$Library_ID)] , FUN = function(x) if(length(x) > 1) head(sample(x), 1) else x))
+tips_unique_tribes_to_drop_cp<-which(!(1:length(tree_cp$tip.label) %in% tips_unique_tribes_to_keep_cp))
+tree_cp<-drop.tip(tree_cp, tip = tips_unique_tribes_to_drop_cp)
+#Finally, change tip label names to tribe names.
+tree_cp$tip.label<-metadata$Tribe[match(tree_cp$tip.label, metadata$Library_ID)]
 
-cophylogeny_n_plus_lines<-cophylogeny_n + 
-  geom_line(aes(x, y, group=label), data=dd, color='grey')
+#Both trees need to have exactly the same tip labels, so we need to further prune them.
+tribes_in_both_trees<-intersect(tree_n$tip.label, tree_cp$tip.label)
+tree_n<-drop.tip(tree_n, tip = which(!tree_n$tip.label %in% tribes_in_both_trees))
+tree_cp<-drop.tip(tree_cp, tip = which(!tree_cp$tip.label %in% tribes_in_both_trees))
+
+#Remove any spaces in tip label names with underscores for the below script to work properly.
+tree_n$tip.label[which(grepl(" trib. nov.", tree_n$tip.label))]<-paste0(sapply(strsplit(tree_n$tip.label, " "), "[", 1), "_",sapply(strsplit(tree_n$tip.label, " "), "[", 2), "_", sapply(strsplit(tree_n$tip.label, " "), "[", 3))[which(grepl(" trib. nov.", tree_n$tip.label))]
+tree_n$tip.label[which(grepl(" ", tree_n$tip.label))]<-paste0(sapply(strsplit(tree_n$tip.label, " "), "[", 1), "_",sapply(strsplit(tree_n$tip.label, " "), "[", 2))[which(grepl(" ", tree_n$tip.label))]
+tree_cp$tip.label[which(grepl(" trib. nov.", tree_cp$tip.label))]<-paste0(sapply(strsplit(tree_cp$tip.label, " "), "[", 1), "_",sapply(strsplit(tree_cp$tip.label, " "), "[", 2), "_", sapply(strsplit(tree_cp$tip.label, " "), "[", 3))[which(grepl(" trib. nov.", tree_cp$tip.label))]
+tree_cp$tip.label[which(grepl(" ", tree_cp$tip.label))]<-paste0(sapply(strsplit(tree_cp$tip.label, " "), "[", 1), "_",sapply(strsplit(tree_cp$tip.label, " "), "[", 2))[which(grepl(" ", tree_cp$tip.label))]
+
+#Check that exactly the same tip labels are now in both tree.
+#The following line should result only in TRUE values.
+tree_n$tip.label %in% tree_cp$tip.label
+
+# tree_n_untangle<-untangle(tree_n, "reorder")
+
+#Reorder tips to be consitent with the descending order in FigTree and ggtree used above.
+tip.order.n<-c("Outgroup_Cleomaceae","Aethionemeae","Dontostemoneae","Chorisporeae","Shehbazieae","Hesperideae","Euclidieae","Anchonieae","Buniadeae","Arabideae","Stevenieae","Alysseae","Asperuginoideae_trib._nov.","Cardamineae","Lepidieae","Descurainieae","Smelowskieae","Yinshanieae","Erysimeae","Malcolmieae","Physarieae","Arabidopsideae_trib._nov.","Oreophytoneae","Alyssopsideae","Turritideae","Camelineae_I","Microlepidieae","Hemilophieae_trib._nov.","Crucihimalayeae","Boechereae","Halimolobeae","Megacarpaeeae","Biscutelleae","Anastaticeae","Iberideae_I","Notothlaspideae","Heliophileae","Chamireae","Iberideae_II","Subularieae","Asteae","Eudemeae","Cremolobeae","Schizopetaleae","Aphragmeae","Kernereae","Cochlearieae","Conringieae","Coluteocarpeae","Plagiolobeae","Calepineae","Thlaspideae","Eutremeae","Schrenkielleae_trib._nov.","Fourraeeae","Brassiceae","Isatideae","Thelypodieae","Sisymbrieae")
+tree_n<-ape::rotateConstr(tree_n, tip.order.n)
+
+tip.order.cp<-c("Outgroup_Cleomaceae","Aethionemeae","Descurainieae","Smelowskieae","Yinshanieae","Lepidieae","Cardamineae","Stevenieae","Physarieae","Halimolobeae","Boechereae","Hemilophieae_trib._nov.","Crucihimalayeae","Microlepidieae","Alyssopsideae","Erysimeae","Malcolmieae","Turritideae","Oreophytoneae","Camelineae_I","Arabidopsideae_trib._nov.","Dontostemoneae","Shehbazieae","Chorisporeae","Buniadeae","Hesperideae","Anchonieae","Euclidieae","Asperuginoideae_trib._nov.","Biscutelleae","Cochlearieae","Iberideae_II","Iberideae_I","Anastaticeae","Megacarpaeeae","Aphragmeae","Conringieae","Coluteocarpeae","Plagiolobeae","Notothlaspideae","Chamireae","Heliophileae","Schizopetaleae","Kernereae","Asteae","Subularieae","Cremolobeae","Eudemeae","Alysseae","Arabideae","Thlaspideae","Calepineae","Eutremeae","Schrenkielleae_trib._nov.","Fourraeeae","Isatideae","Sisymbrieae","Thelypodieae","Brassiceae")
+tree_cp<-ape::rotateConstr(tree_cp, tip.order.cp)
+
+#Create the cophylogeny using phytools.
+brassitol_cophylo<-cophylo(tree_n,
+                           tree_cp,
+                           rotate = F)
+
+#Open the pdf printer.
+pdf(file = "12.brassitol_cophylogeny.pdf",
+    width = 14,
+    height = 10)
+
+#Plot the cophylogeny.
+plot(brassitol_cophylo,
+     link.type="curved",
+     link.lwd=4,
+     link.lty="solid",
+     link.col=make.transparent("red", 0.25))
+
+#Close the pdf printer.
+dev.off()
 
 
 
+#PLOT BRANCH LENGTH AND SUPPORT VERSUS AGE ---- 
 
-#Combine plots using cowplot package.
-ggsave(cowplot::plot_grid(cophylogeny_n_plus_lines,
-                          cophylogeny_cp +
-                            scale_x_reverse(),
-                          rel_widths = c(2,1)),
-       file = "results_plots_phylogenies/cophylogeny_Aethionemeae.pdf")
+##Load metadata
+metadata<-read.csv("2e.metadata.csv", header=T, stringsAsFactors=FALSE, fileEncoding="latin1")
+
+#Load again tree files.
+
+#Load nuclear species tree.
+#note the following tree was not calibrated
+# tree_n<-read.tree(file = "9b.IQ-TREE_supermatrix_approach.tree")
+tree_n<-tree_IQ_TREE_supermatrix_calibrated
+tree_n@data$mean_edge_height<-tree_n@data$height-0.5*tree_n@data$length
+
+#Load chloroplast species tree.
+#note the following tree was calibrated
+tree_cp<-tree_IQ_TREE_chloroplast_calibrated
+tree_cp@data$mean_edge_height<-tree_cp@data$height-0.5*tree_cp@data$length
+
+#Create a dataframe that lists all edges from the two BrassiToLs with their height (i.e., age) and support.
+brassitol_edges_sCF<-data.frame(tree=c(rep("nuclear", length(tree_n@data$height)),
+                                   rep("plastome", length(tree_cp@data$height))),
+                                metric=c(rep("sCF", length(tree_n@data$height)),
+                                       rep("sCF", length(tree_cp@data$height))),
+                                edge_height_mean=c(tree_n@data$mean_edge_height,
+                                                   tree_cp@data$mean_edge_height),
+                                edge_length=c(tree_n@data$length,
+                                              tree_cp@data$length),
+                                support=c(as.numeric(tree_n@data$sCF),
+                                          as.numeric(tree_cp@data$sCF)))
+brassitol_edges_gCF<-data.frame(tree=c(rep("nuclear", length(tree_n@data$height))),
+                                metric=c(rep("gCF", length(tree_n@data$height))),
+                                edge_height_mean=tree_n@data$mean_edge_height,
+                                edge_length=tree_n@data$length,
+                                support=as.numeric(tree_n@data$gCF))
+brassitol_edges<-rbind(brassitol_edges_sCF,
+                       brassitol_edges_gCF)
+
+#Remove any edges with a negative length; these are the terminal branches for which mean height could not be calculated in the above
+#way, and for which there will be no node support values.
+brassitol_edges<-brassitol_edges[brassitol_edges$edge_height_mean>0, ]
+
+#Highlight edges associated with the onset of the Brassicaceae family and it's supertribes.
+#This is between 30 and 14 mya for the nuclear dataset.
+brassitol_edges$family_onset<-NA
+brassitol_edges$family_onset[brassitol_edges$tree=="nuclear" & 
+                               brassitol_edges$edge_height_mean>14 & 
+                               brassitol_edges$edge_height_mean<30]<- 
+  "family_onset"
+
+#This is between 25 and 8 mya for the plastome dataset.
+brassitol_edges$family_onset[brassitol_edges$tree=="plastome" & 
+                               brassitol_edges$edge_height_mean>8 & 
+                               brassitol_edges$edge_height_mean<25]<- 
+  "family_onset"
+
+#Name the other edges, too.
+brassitol_edges$family_onset[is.na(brassitol_edges$family_onset)]<-"other"
 
 
-
-
-#PLOT GLOBAL SAMPLING ---- 
-
-#Download a world map.
-world <- ne_countries(scale = "medium", returnclass = "sf")
-class(world)
-
-#Here's the list of countries in the world object.
-world$name
-
-#Check this against the list of countries in our sampling and update the names we used to correspond to the ones used in the world object.
-#Exclude outgroups, as we want to highlight the sampling of ingroup taxa here.
-countries_sampled<-data.frame(countries_sampled=sort(unique(annotations$country[annotations$genus %in% list_of_Brassicaceae_ingroup_genera])),
-                              country_world_object=NA)
-countries_sampled$country_world_object<-world$name[match(countries_sampled$countries_sampled,world$name)]
-
-#So we need to make some updates.
-#Great Britain->United Kingdom
-#Madeira->Portugal
-#USA->United States of America
-
-annotations$country[annotations$country=="Great Britain"]<-"United Kingdom"
-annotations$country[annotations$country=="Madeira"]<-"Portugal"
-annotations$country[annotations$country=="USA"]<-"United States"
-
-#We add a vector to the world object of the same length but with numbers of samples for each of these countries.
-world$BrassiToL_sampling<-rep(NA, length(world$name))
-
-#Loop through the counties and find the number of occurrences from our sampling overview.
-#Again only focus on ingroup taxa.
-for (c in 1:length(world$name)){
-  world$BrassiToL_sampling[c]<-sum(annotations$country[annotations$genus %in% list_of_Brassicaceae_ingroup_genera]==world$name[c])
-}
-
-#Take a look at this dataset to see if anything is missing.
-cbind(world$name, world$BrassiToL_sampling, world$BrassiToL_sampling>0)
-
-ggplot(data = world) +
-  geom_sf(aes(fill = BrassiToL_sampling>0)) +
-  scale_fill_manual(values = c("transparent", "darkgrey"))+
+#Plot results in an easy to interpret way.
+brassitol_edge_height_support<-ggplot(data=brassitol_edges, aes(x=-1*edge_height_mean, y=support))+
+  geom_point(size=2, shape = 21, colour = "black", fill = "white")+
+  geom_point(data=brassitol_edges[brassitol_edges$family_onset=="family_onset",], size=2, shape = 21, colour = "black", fill = "black")+
+  facet_grid(rows = vars(metric),
+             cols = vars(tree),
+             scales='free')+
+  ylim(c(0,100))+
+  stat_summary(fun.data=mean_cl_normal, size = 0.4, color = "transparent") +
+  geom_smooth(method='lm', formula= y~x, color="darkgreen", size=0.4)+
   theme_bw()
 
+brassitol_edge_length_support<-ggplot(data=brassitol_edges, aes(x=edge_length, y=support))+
+  geom_point(size=2, shape = 21, colour = "black", fill = "white")+
+  geom_point(data=brassitol_edges[brassitol_edges$family_onset=="family_onset",], size=2, shape = 21, colour = "black", fill = "black")+
+  facet_grid(rows = vars(metric),
+             cols = vars(tree),
+             scales='free')+
+  ylim(c(0,100))+
+  stat_summary(fun.data=mean_cl_normal, size = 0.4, color = "transparent") +
+  geom_smooth(method='lm', formula= y~x, color="darkgreen", size=0.4)+
+  theme_bw()
+
+brassitol_edge_support<-plot_grid(brassitol_edge_height_support,
+          brassitol_edge_length_support,
+          nrow=2,
+          ncol=1,
+          labels= c("A", "B"))
+
+#Save plots for publication.
+ggsave(filename = "13.brassitol_edge_support.pdf", 
+       brassitol_edge_support + theme(legend.position="none"),
+       width = 8, height = 10)
 
 
+#TREE SIMILARITY NUCLEAR VS. PLASTOME ---- 
+
+##Load metadata
+metadata<-read.csv("2e.metadata.csv", header=T, stringsAsFactors=FALSE, fileEncoding="latin1")
+
+#Load again tree files.
+tree_n<-tree_IQ_TREE_supermatrix_calibrated@phylo
+tree_cp<-tree_IQ_TREE_chloroplast_calibrated@phylo
+
+#Get all tribes present in the two BrassiToLs.
+tribes<-
+  sort(unique(metadata$Tribe[match(unique(c(tree_n$tip.label, tree_cp$tip.label)),
+                     metadata$Library_ID)]))
+#Remove 'tribes' from outgroups and tribes with numbers because polyphyletic.
+tribes<-
+  tribes[!grepl("Outgroup_", tribes)]
+tribes<-
+  tribes[!tribes %in% c("Brassiceae I", "Brassiceae II", "Camelineae I", "Camelineae III", "Iberideae I", "Iberideae II")]
+
+#Create a dataframe to store results.
+brassitol_tree_distances_n_vs_cp<-
+  data.frame(Tribe=tribes,
+             tips_n=NA,
+             tips_cp=NA,
+             tips_shared=NA,
+             dist_RF_classic=NA,
+             dist_RF_gen=NA)
+
+#Loop through the tribes.
+
+for (t in 1:length(tribes)){
+  #Select the t-th tribe.
+  tribe<-
+    tribes[t]
+
+  #Subset both trees to the tips that belong to a tribe.
+  tree_n_tribe<-
+    keep.tip(tree_n,
+           which(metadata$Tribe[match(tree_n$tip.label, metadata$Library_ID)]==tribe)
+    )
+  tree_cp_tribe<-
+    keep.tip(tree_cp,
+             which(metadata$Tribe[match(tree_cp$tip.label, metadata$Library_ID)]==tribe)
+    )
+  
+  #Store number of tips.
+  tree_n_tribe_no_tips<-
+    length(tree_n_tribe$tip.label)
+  tree_cp_tribe_no_tips<-
+    length(tree_cp_tribe$tip.label)
+  
+  #Rename tip labels to the genus.
+  tree_n_tribe$tip.label<-
+    metadata$Name[match(tree_n_tribe$tip.label, metadata$Library_ID)]
+  tree_cp_tribe$tip.label<-
+    metadata$Name[match(tree_cp_tribe$tip.label, metadata$Library_ID)]
+  
+  #Find the species present in both BrassiToLs.
+  species_matching<-
+    intersect(tree_n_tribe$tip.label, tree_cp_tribe$tip.label)
+  
+  #Only continue if number of shared species is > 3.
+  if(length(species_matching)!=0){
+    if(length(species_matching)>3){
+    #Subset both BrassiToLs to the matching species.
+    tree_n_tribe<-
+      keep.tip(tree_n_tribe,
+               which(tree_n_tribe$tip.label %in% species_matching))
+    tree_cp_tribe<-
+      keep.tip(tree_cp_tribe,
+               which(tree_cp_tribe$tip.label %in% species_matching))
+    
+    #Remove duplicates by removing a random tip from each duplicate.
+    tree_n_tribe<-
+      drop.tip(tree_n_tribe,
+               which(duplicated(tree_n_tribe$tip.label)))
+    tree_cp_tribe<-
+      drop.tip(tree_cp_tribe,
+               which(duplicated(tree_cp_tribe$tip.label)))
+    
+    #Calculate two useful distance metrics.
+    dist_RF_classic<-TreeDist::RobinsonFoulds(tree_n_tribe,
+                                              tree_cp_tribe)
+    dist_RF_gen<-TreeDist::TreeDistance(tree_n_tribe,
+                                        tree_cp_tribe)
+    }
+  }
+  
+  #Store results in dataframe.
+  brassitol_tree_distances_n_vs_cp$Tribe[t]<-
+    tribe
+  brassitol_tree_distances_n_vs_cp$tips_n[t]<-
+    tree_n_tribe_no_tips
+  brassitol_tree_distances_n_vs_cp$tips_cp[t]<-
+    tree_cp_tribe_no_tips
+  brassitol_tree_distances_n_vs_cp$tips_shared[t]<-
+    length(species_matching)
+  if(length(species_matching)!=0){
+    if(length(species_matching)>3){
+    brassitol_tree_distances_n_vs_cp$dist_RF_classic[t]<-
+      dist_RF_classic
+    brassitol_tree_distances_n_vs_cp$dist_RF_gen[t]<-
+      dist_RF_gen
+    }
+  }
+}
+
+#Save table with results for publication.
+write.table(brassitol_tree_distances_n_vs_cp,
+            file = "14.brassitol_tree_distances_n_vs_cp.csv")
+
+#Calculate some summary statistics for publication.
+mean(brassitol_tree_distances_n_vs_cp$dist_RF_gen,
+     na.rm = T)
+median(brassitol_tree_distances_n_vs_cp$dist_RF_gen,
+     na.rm = T)
+min(brassitol_tree_distances_n_vs_cp$dist_RF_gen,
+    na.rm = T)
+max(brassitol_tree_distances_n_vs_cp$dist_RF_gen,
+    na.rm = T)
+sum(!(is.na(brassitol_tree_distances_n_vs_cp$dist_RF_gen)))
 

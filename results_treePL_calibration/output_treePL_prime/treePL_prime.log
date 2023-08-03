@@ -1,0 +1,100 @@
+set thorough: true (MAY TAKE A WHILE)
+PRIMING the optimization parameters and then exiting
+finished reading config file
+using system clock for random number seed = 1650284690
+tiny branch length at S0612. setting to 7.5312547e-05
+tiny branch length at S1040. setting to 7.5312547e-05
+tiny branch length at internal node. setting to 7.5312547e-05
+tiny branch length at internal node. setting to 7.5312547e-05
+tiny branch length at internal node. setting to 7.5312547e-05
+tiny branch length at internal node. setting to 7.5312547e-05
+tiny branch length at internal node. setting to 7.5312547e-05
+tiny branch length at internal node. setting to 7.5312547e-05
+tiny branch length at internal node. setting to 7.5312547e-05
+tiny branch length at internal node. setting to 7.5312547e-05
+tiny branch length at internal node. setting to 7.5312547e-05
+tiny branch length at internal node. setting to 7.5312547e-05
+tiny branch length at internal node. setting to 7.5312547e-05
+tiny branch length at internal node. setting to 7.5312547e-05
+tiny branch length at internal node. setting to 7.5312547e-05
+tiny branch length at internal node. setting to 7.5312547e-05
+tiny branch length at internal node. setting to 7.5312547e-05
+tiny branch length at internal node. setting to 7.5312547e-05
+tiny branch length at internal node. setting to 7.5312547e-05
+tiny branch length at internal node. setting to 7.5312547e-05
+setting BRASSICALES_STEM min: 89.3
+setting BRASSICALES_STEM max: 93.6
+preorder prep
+calculating character durations
+setting min and max
+setting up all constraints
+getting feasible start dates
+start rate 0.0068792186
+numparams:399
+initial calc: 1236952.5
+LF SIM
+exit siman: 51129.206
+now priming regular
+nfeval: 79 rc: Linear search failed
+ final: 51128.059 diff: 1.1466933
+setting NLOPT: LD_LBFGS 
+result: 3
+ final: 16247.277 diff: 34881.929
+setting NLOPT: LD_TNEWTON_PRECOND_RESTART
+result: 3
+ final: 16247.134 diff: 34882.071
+setting NLOPT: LD_MMA
+result: 4
+ final: 51128.037 diff: 1.1686869
+setting NLOPT: LD_VAR2 
+result: 3
+ final: 16247.507 diff: 34881.698
+setting NLOPT : LN_SBPLX 
+result: 5
+ final: 40620.339 diff: 10508.866
+----
+now priming AD
+nfeval: 66 rc: Linear search failed
+ final: 51129.206 diff: 0
+setting NLOPT: LD_LBFGS 
+result: 3
+ final: 16247.119 diff: 34882.087
+setting NLOPT: LD_TNEWTON_PRECOND_RESTART
+result: 3
+ final: 16247.107 diff: 34882.098
+setting NLOPT: LD_MMA
+result: 3
+ final: 51128.037 diff: 1.1687444
+setting NLOPT: LD_VAR2 
+result: 3
+ final: 16247.659 diff: 34881.547
+setting NLOPT : LN_SBPLX 
+result: 5
+ final: 40620.339 diff: 10508.866
+----
+now priming CV (AD)
+nfeval: 10000 rc: Maximum number of function evaluations reached
+ final: 40556.207 diff: 10572.998
+setting NLOPT parallel : LD_LBFGS 
+result: 3
+ final: 9823.8366 diff: 41305.369
+setting NLOPT parallel : LD_TNEWTON_PRECOND_RESTART
+result: 5
+ final: 35376.513 diff: 15752.693
+setting NLOPT parallel : LD_MMA
+result: 3
+ final: 20721.901 diff: 30407.304
+setting NLOPT parallel : LD_VAR2 
+result: 3
+ final: 13162.415 diff: 37966.79
+setting NLOPT parallel : LN_SBPLX 
+result: 5
+ final: 36292.654 diff: 14836.551
+best: 2(1) bestad: 2 (1) bestcv: 1 (1)
+PLACE THE LINES BELOW IN THE CONFIGURATION FILE
+opt = 2
+moredetail
+optad = 2
+moredetailad
+optcvad = 1
+moredetailcvad

@@ -1,0 +1,1563 @@
+IQ-TREE 2.1.3 COVID-edition built Apr 21 2021
+
+Input file name: results_assessment_saturation_and_clocklikeliness/input_gene_alignments_cleaned/6041_cleaned.fasta
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 992460
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 354 sequences with 696 nucleotide sites
+Number of constant sites: 209 (= 30.0287% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 209 (= 30.0287% of all sites)
+Number of parsimony informative sites: 398
+Number of distinct site patterns: 631
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: GTR+F+R4
+
+Rate parameter R:
+
+  A-C: 1.1996
+  A-G: 3.9084
+  A-T: 0.9019
+  C-G: 0.9976
+  C-T: 3.9689
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.2977
+  pi(C) = 0.1952
+  pi(G) = 0.2296
+  pi(T) = 0.2775
+
+Rate matrix Q:
+
+  A   -0.9404    0.1593    0.6107    0.1703
+  C     0.243    -1.148    0.1559    0.7495
+  G    0.7916    0.1325    -1.113    0.1888
+  T    0.1827    0.5272    0.1563   -0.8661
+
+Model of rate heterogeneity: FreeRate with 4 categories
+Site proportion and rates:  (0.4096,0.07096) (0.2415,0.584) (0.2767,1.881) (0.07222,4.285)
+
+ Category  Relative_rate  Proportion
+  1         0.07096        0.4096
+  2         0.584          0.2415
+  3         1.881          0.2767
+  4         4.285          0.07222
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -19784.6871 (s.e. 762.4586)
+Unconstrained log-likelihood (without tree): -4428.1874
+Number of free parameters (#branches + #model parameters): 719
+Akaike information criterion (AIC) score: 41007.3742
+Corrected Akaike information criterion (AICc) score: 1076367.3742
+Bayesian information criterion (BIC) score: 44275.4806
+
+**************************** WARNING ****************************
+Number of parameters (K, model parameters and branch lengths): 719
+Sample size (n, alignment length): 696
+
+Given that K>=n, the parameter estimates might be inaccurate.
+Thus, phylogenetic estimates should be interpreted with caution.
+
+Ideally, it is desirable that n >> K. When selecting optimal models,
+1. use AIC or BIC if n > 40K;
+2. use AICc or BIC if 40K >= n > K;
+3. be extremely cautious if n <= K
+
+To improve the situation (3), consider the following options:
+  1. Increase the sample size (n)
+  2. Decrease the number of parameters (K) to be estimated. If
+     possible:
+     a. Remove the least important sequences from the alignment
+     b. Specify some of the parameter values for the substitution
+        model (e.g., the nucleotide or amino acid frequencies)
+     c. Specify some of the parameter values for the rates-across-
+        sites model (e.g., the shape parameter for the discrete
+        Gamma distribution, the proportion of invariable sites, or
+        the rates of change for different rate categories under
+        the FreeRate model)
+
+Reference:
+Burnham KR, Anderson DR (2002). Model Selection and Multimodel
+Inference: A Practical Information-Theoretic Approach. Springer,
+New York.
+************************ END OF WARNING ***********************
+
+Total tree length (sum of branch lengths): 5.3710
+Sum of internal branch lengths: 1.4603 (27.1888% of tree length)
+
+WARNING: 139 near-zero internal branches (<0.0014) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'S0941' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--S0941
+|
+|        +--S0946
+|     +--| (99)
+|     |  |        +--S0949
+|     |  |     +**| (74)
+|     |  |     |  |  +--ERR2789774
+|     |  |     |  +--| (75)
+|     |  |     |     +--S0728sl
+|     |  |  +**| (82)
+|     |  |  |  +--SRR8528342
+|     |  +**| (90)
+|     |     +**S1424
+|  +**| (85)
+|  |  |                                                                           +--S1114-2
+|  |  |                                                                        +--| (100)
+|  |  |                                                                        |  +--S0655sl
+|  |  |                                                                    +---| (100)
+|  |  |                                                                    |   |                    +--S0403sl
+|  |  |                                                                    |   |                 +--| (100)
+|  |  |                                                                    |   |                 |  +--S1182
+|  |  |                                                                    |   |              +--| (100)
+|  |  |                                                                    |   |              |  +--S1428
+|  |  |                                                                    |   |           +--| (100)
+|  |  |                                                                    |   |           |  |  +--S0654
+|  |  |                                                                    |   |           |  +--| (100)
+|  |  |                                                                    |   |           |     +--S0156
+|  |  |                                                                    |   |        +--| (71)
+|  |  |                                                                    |   |        |  +--S0691
+|  |  |                                                                    |   |     +--| (73)
+|  |  |                                                                    |   |     |  |  +--S0450
+|  |  |                                                                    |   |     |  +**| (57)
+|  |  |                                                                    |   |     |     +-----S0555
+|  |  |                                                                    |   |  +--| (78)
+|  |  |                                                                    |   |  |  +--S0642
+|  |  |                                                                    |   +**| (77)
+|  |  |                                                                    |      +--S0436
+|  |  |                                                                 +--| (86)
+|  |  |                                                                 |  |                                                        +--S0385
+|  |  |                                                                 |  |                                                     +**| (68)
+|  |  |                                                                 |  |                                                     |  |  +---S1339
+|  |  |                                                                 |  |                                                     |  +--| (72)
+|  |  |                                                                 |  |                                                     |     +--S1221sl
+|  |  |                                                                 |  |                                                  +**| (71)
+|  |  |                                                                 |  |                                                  |  |                                         +--S0743
+|  |  |                                                                 |  |                                                  |  |                                      +--| (79)
+|  |  |                                                                 |  |                                                  |  |                                      |  |  +--S0726
+|  |  |                                                                 |  |                                                  |  |                                      |  +--| (92)
+|  |  |                                                                 |  |                                                  |  |                                      |     +--S1021
+|  |  |                                                                 |  |                                                  |  |                                   +**| (63)
+|  |  |                                                                 |  |                                                  |  |                                   |  +**S0315
+|  |  |                                                                 |  |                                                  |  |                                +--| (85)
+|  |  |                                                                 |  |                                                  |  |                                |  +--S0664
+|  |  |                                                                 |  |                                                  |  |                             +--| (88)
+|  |  |                                                                 |  |                                                  |  |                             |  +--S0617
+|  |  |                                                                 |  |                                                  |  |                          +--| (70)
+|  |  |                                                                 |  |                                                  |  |                          |  +--S0731sl
+|  |  |                                                                 |  |                                                  |  |                       +--| (72)
+|  |  |                                                                 |  |                                                  |  |                       |  |     +--S0954
+|  |  |                                                                 |  |                                                  |  |                       |  |  +**| (94)
+|  |  |                                                                 |  |                                                  |  |                       |  |  |  +**S0772
+|  |  |                                                                 |  |                                                  |  |                       |  +--| (100)
+|  |  |                                                                 |  |                                                  |  |                       |     |  +---S0464
+|  |  |                                                                 |  |                                                  |  |                       |     +**| (83)
+|  |  |                                                                 |  |                                                  |  |                       |        +**S1168
+|  |  |                                                                 |  |                                                  |  |                    +--| (36)
+|  |  |                                                                 |  |                                                  |  |                    |  +--S1314
+|  |  |                                                                 |  |                                                  |  |                 +**| (39)
+|  |  |                                                                 |  |                                                  |  |                 |  |  +--S0667
+|  |  |                                                                 |  |                                                  |  |                 |  +**| (35)
+|  |  |                                                                 |  |                                                  |  |                 |     +--S0851
+|  |  |                                                                 |  |                                                  |  |              +--| (65)
+|  |  |                                                                 |  |                                                  |  |              |  +--S0377
+|  |  |                                                                 |  |                                                  |  |           +**| (68)
+|  |  |                                                                 |  |                                                  |  |           |  +--S0323
+|  |  |                                                                 |  |                                                  |  |        +--| (76)
+|  |  |                                                                 |  |                                                  |  |        |  +--S1011sl
+|  |  |                                                                 |  |                                                  |  |     +**| (56)
+|  |  |                                                                 |  |                                                  |  |     |  +--S0897
+|  |  |                                                                 |  |                                                  |  |  +**| (44)
+|  |  |                                                                 |  |                                                  |  |  |  |              +--S0331
+|  |  |                                                                 |  |                                                  |  |  |  |           +--| (92)
+|  |  |                                                                 |  |                                                  |  |  |  |           |  +--S0660sl
+|  |  |                                                                 |  |                                                  |  |  |  |        +--| (79)
+|  |  |                                                                 |  |                                                  |  |  |  |        |  +--S0662
+|  |  |                                                                 |  |                                                  |  |  |  |     +**| (81)
+|  |  |                                                                 |  |                                                  |  |  |  |     |  +--S0752
+|  |  |                                                                 |  |                                                  |  |  |  |  +**| (49)
+|  |  |                                                                 |  |                                                  |  |  |  |  |  |  +**S1509
+|  |  |                                                                 |  |                                                  |  |  |  |  |  +--| (100)
+|  |  |                                                                 |  |                                                  |  |  |  |  |     +**S0590
+|  |  |                                                                 |  |                                                  |  |  |  +--| (97)
+|  |  |                                                                 |  |                                                  |  |  |     |     +--S0583
+|  |  |                                                                 |  |                                                  |  |  |     |  +--| (99)
+|  |  |                                                                 |  |                                                  |  |  |     |  |  +--S1408
+|  |  |                                                                 |  |                                                  |  |  |     +**| (82)
+|  |  |                                                                 |  |                                                  |  |  |        +--S0747sl
+|  |  |                                                                 |  |                                                  |  +--| (85)
+|  |  |                                                                 |  |                                                  |     |     +--S1442
+|  |  |                                                                 |  |                                                  |     |  +--| (82)
+|  |  |                                                                 |  |                                                  |     |  |  |  +**S1220
+|  |  |                                                                 |  |                                                  |     |  |  +--| (100)
+|  |  |                                                                 |  |                                                  |     |  |     +--S1208sl
+|  |  |                                                                 |  |                                                  |     +--| (82)
+|  |  |                                                                 |  |                                                  |        +--S1401
+|  |  |                                                                 |  |                                               +--| (76)
+|  |  |                                                                 |  |                                               |  +--S1331
+|  |  |                                                                 |  |                                            +--| (100)
+|  |  |                                                                 |  |                                            |  |  +--S0380
+|  |  |                                                                 |  |                                            |  +--| (77)
+|  |  |                                                                 |  |                                            |     |  +--S0669
+|  |  |                                                                 |  |                                            |     +--| (100)
+|  |  |                                                                 |  |                                            |        +--S1458
+|  |  |                                                                 |  |                                         +--| (99)
+|  |  |                                                                 |  |                                         |  +--SRR8528361
+|  |  |                                                                 |  |                                      +**| (73)
+|  |  |                                                                 |  |                                      |  +--S1319
+|  |  |                                                                 |  |                                   +**| (14)
+|  |  |                                                                 |  |                                   |  |                 +**S1464
+|  |  |                                                                 |  |                                   |  |              +**| (3)
+|  |  |                                                                 |  |                                   |  |              |  |        +--S1332
+|  |  |                                                                 |  |                                   |  |              |  |     +**| (86)
+|  |  |                                                                 |  |                                   |  |              |  |     |  +**S0754
+|  |  |                                                                 |  |                                   |  |              |  |  +--| (81)
+|  |  |                                                                 |  |                                   |  |              |  |  |  +**S1096
+|  |  |                                                                 |  |                                   |  |              |  +--| (14)
+|  |  |                                                                 |  |                                   |  |              |     +--SRR8528398
+|  |  |                                                                 |  |                                   |  |           +**| (11)
+|  |  |                                                                 |  |                                   |  |           |  +**S1040
+|  |  |                                                                 |  |                                   |  |        +**| (41)
+|  |  |                                                                 |  |                                   |  |        |  +**S1039
+|  |  |                                                                 |  |                                   |  |     +--| (48)
+|  |  |                                                                 |  |                                   |  |     |  +--S1201sl
+|  |  |                                                                 |  |                                   |  |  +**| (5)
+|  |  |                                                                 |  |                                   |  |  |  +**S1117
+|  |  |                                                                 |  |                                   |  +**| (4)
+|  |  |                                                                 |  |                                   |     +--S0345
+|  |  |                                                                 |  |                                +**| (9)
+|  |  |                                                                 |  |                                |  +**S1098
+|  |  |                                                                 |  |                             +**| (7)
+|  |  |                                                                 |  |                             |  +**S0727
+|  |  |                                                                 |  |                          +**| (13)
+|  |  |                                                                 |  |                          |  +**S1072
+|  |  |                                                                 |  |                       +**| (8)
+|  |  |                                                                 |  |                       |  +**S1044
+|  |  |                                                                 |  |                    +**| (4)
+|  |  |                                                                 |  |                    |  +**S1097
+|  |  |                                                                 |  |                 +**| (13)
+|  |  |                                                                 |  |                 |  +**S0346
+|  |  |                                                                 |  |              +**| (26)
+|  |  |                                                                 |  |              |  +**S0647-2
+|  |  |                                                                 |  |           +**| (19)
+|  |  |                                                                 |  |           |  +**S1106sl
+|  |  |                                                                 |  |        +**| (10)
+|  |  |                                                                 |  |        |  +--S0373
+|  |  |                                                                 |  |     +**| (28)
+|  |  |                                                                 |  |     |  |                             +--S1050
+|  |  |                                                                 |  |     |  |                          +**| (86)
+|  |  |                                                                 |  |     |  |                          |  +--S1258-2
+|  |  |                                                                 |  |     |  |                       +**| (92)
+|  |  |                                                                 |  |     |  |                       |  +--S0286
+|  |  |                                                                 |  |     |  |                    +**| (68)
+|  |  |                                                                 |  |     |  |                    |  +**S0521
+|  |  |                                                                 |  |     |  |                 +--| (100)
+|  |  |                                                                 |  |     |  |                 |  +--S1053sl
+|  |  |                                                                 |  |     |  |              +--| (86)
+|  |  |                                                                 |  |     |  |              |  +--S1459
+|  |  |                                                                 |  |     |  |           +**| (79)
+|  |  |                                                                 |  |     |  |           |  |  +--SRR8528341
+|  |  |                                                                 |  |     |  |           |  +--| (100)
+|  |  |                                                                 |  |     |  |           |     +**SRR8528389
+|  |  |                                                                 |  |     |  |        +--| (77)
+|  |  |                                                                 |  |     |  |        |  +**SRR8528388
+|  |  |                                                                 |  |     |  |     +--| (66)
+|  |  |                                                                 |  |     |  |     |  +----------S0512sl
+|  |  |                                                                 |  |     |  |  +**| (14)
+|  |  |                                                                 |  |     |  |  |  +**S1118
+|  |  |                                                                 |  |     |  +**| (2)
+|  |  |                                                                 |  |     |     |           +--S0371
+|  |  |                                                                 |  |     |     |        +--| (100)
+|  |  |                                                                 |  |     |     |        |  +--S1270
+|  |  |                                                                 |  |     |     |     +--| (100)
+|  |  |                                                                 |  |     |     |     |  +--S0768
+|  |  |                                                                 |  |     |     |  +--| (99)
+|  |  |                                                                 |  |     |     |  |  +--S0297
+|  |  |                                                                 |  |     |     +--| (98)
+|  |  |                                                                 |  |     |        +----SRR6441723
+|  |  |                                                                 |  |  +--| (100)
+|  |  |                                                                 |  |  |  |  +--S0335
+|  |  |                                                                 |  |  |  +--| (99)
+|  |  |                                                                 |  |  |     |     +--SRR8528365
+|  |  |                                                                 |  |  |     |  +**| (69)
+|  |  |                                                                 |  |  |     |  |  +--S0280
+|  |  |                                                                 |  |  |     +**| (98)
+|  |  |                                                                 |  |  |        +--SRR8528380
+|  |  |                                                                 |  +--| (100)
+|  |  |                                                                 |     |                 +--S0384
+|  |  |                                                                 |     |              +**| (82)
+|  |  |                                                                 |     |              |  +--S0744sl
+|  |  |                                                                 |     |           +--| (75)
+|  |  |                                                                 |     |           |  +--S1214sl
+|  |  |                                                                 |     |        +**| (63)
+|  |  |                                                                 |     |        |  +--S0745
+|  |  |                                                                 |     |     +**| (20)
+|  |  |                                                                 |     |     |  |        +--S0381
+|  |  |                                                                 |     |     |  |     +**| (59)
+|  |  |                                                                 |     |     |  |     |  +--S1422
+|  |  |                                                                 |     |     |  |  +**| (50)
+|  |  |                                                                 |     |     |  |  |  +--S0766
+|  |  |                                                                 |     |     |  +**| (31)
+|  |  |                                                                 |     |     |     |        +**S0292
+|  |  |                                                                 |     |     |     |     +**| (98)
+|  |  |                                                                 |     |     |     |     |  +--S1366
+|  |  |                                                                 |     |     |     |  +**| (66)
+|  |  |                                                                 |     |     |     |  |  +**S1419
+|  |  |                                                                 |     |     |     +**| (67)
+|  |  |                                                                 |     |     |        +--S1449
+|  |  |                                                                 |     |  +--| (99)
+|  |  |                                                                 |     |  |  |  +--S1376
+|  |  |                                                                 |     |  |  +--| (98)
+|  |  |                                                                 |     |  |     +--SRR8528336
+|  |  |                                                                 |     +--| (100)
+|  |  |                                                                 |        |  +**S1336
+|  |  |                                                                 |        +--| (100)
+|  |  |                                                                 |           +**S0416
+|  |  |                                                              +**| (93)
+|  |  |                                                              |  |              +--SRR11470320
+|  |  |                                                              |  |           +--| (100)
+|  |  |                                                              |  |           |  |  +--S1498
+|  |  |                                                              |  |           |  +--| (100)
+|  |  |                                                              |  |           |     +--S1083
+|  |  |                                                              |  |        +--| (100)
+|  |  |                                                              |  |        |  |                             +--S1462
+|  |  |                                                              |  |        |  |                          +**| (34)
+|  |  |                                                              |  |        |  |                          |  +--S1177
+|  |  |                                                              |  |        |  |                       +**| (14)
+|  |  |                                                              |  |        |  |                       |  +**S0419
+|  |  |                                                              |  |        |  |                    +**| (4)
+|  |  |                                                              |  |        |  |                    |  +**S0770
+|  |  |                                                              |  |        |  |                 +**| (12)
+|  |  |                                                              |  |        |  |                 |  +**S0760
+|  |  |                                                              |  |        |  |              +**| (66)
+|  |  |                                                              |  |        |  |              |  +--S0765
+|  |  |                                                              |  |        |  |           +--| (100)
+|  |  |                                                              |  |        |  |           |  +--S0196sl
+|  |  |                                                              |  |        |  |        +**| (11)
+|  |  |                                                              |  |        |  |        |  +---S0836
+|  |  |                                                              |  |        |  |     +**| (14)
+|  |  |                                                              |  |        |  |     |  |     +--S0795
+|  |  |                                                              |  |        |  |     |  |  +--| (97)
+|  |  |                                                              |  |        |  |     |  |  |  +**S0720
+|  |  |                                                              |  |        |  |     |  +**| (58)
+|  |  |                                                              |  |        |  |     |     +--S0281
+|  |  |                                                              |  |        |  |  +--| (89)
+|  |  |                                                              |  |        |  |  |  |     +--S0902
+|  |  |                                                              |  |        |  |  |  |  +--| (100)
+|  |  |                                                              |  |        |  |  |  |  |  |  +**S1113
+|  |  |                                                              |  |        |  |  |  |  |  +**| (100)
+|  |  |                                                              |  |        |  |  |  |  |     +**S1121
+|  |  |                                                              |  |        |  |  |  +--| (100)
+|  |  |                                                              |  |        |  |  |     |  +**S0834
+|  |  |                                                              |  |        |  |  |     +--| (100)
+|  |  |                                                              |  |        |  |  |        +**S0279
+|  |  |                                                              |  |        |  +**| (79)
+|  |  |                                                              |  |        |     +--S0901
+|  |  |                                                              |  |     +--| (99)
+|  |  |                                                              |  |     |  |  +--SRR8528384
+|  |  |                                                              |  |     |  +**| (99)
+|  |  |                                                              |  |     |     |  +---S0284
+|  |  |                                                              |  |     |     +--| (100)
+|  |  |                                                              |  |     |        +--SRR8528373
+|  |  |                                                              |  |  +**| (50)
+|  |  |                                                              |  |  |  |     +--S0688
+|  |  |                                                              |  |  |  |  +--| (75)
+|  |  |                                                              |  |  |  |  |  +----S0957
+|  |  |                                                              |  |  |  +**| (59)
+|  |  |                                                              |  |  |     |        +**S0757
+|  |  |                                                              |  |  |     |     +--| (100)
+|  |  |                                                              |  |  |     |     |  +**S0312
+|  |  |                                                              |  |  |     |  +--| (100)
+|  |  |                                                              |  |  |     |  |  +--S1238sl
+|  |  |                                                              |  |  |     +**| (89)
+|  |  |                                                              |  |  |        +--S0283
+|  |  |                                                              |  +--| (66)
+|  |  |                                                              |     |     +--SRR8528400
+|  |  |                                                              |     |  +--| (100)
+|  |  |                                                              |     |  |  |  +--S0906
+|  |  |                                                              |     |  |  +--| (100)
+|  |  |                                                              |     |  |     +--SRR8528379
+|  |  |                                                              |     +--| (69)
+|  |  |                                                              |        |     +--S0892
+|  |  |                                                              |        |  +--| (100)
+|  |  |                                                              |        |  |  |  +--S0577
+|  |  |                                                              |        |  |  +--| (100)
+|  |  |                                                              |        |  |     |  +--S1213
+|  |  |                                                              |        |  |     +--| (100)
+|  |  |                                                              |        |  |        +--S1069
+|  |  |                                                              |        +**| (87)
+|  |  |                                                              |           +--S1579
+|  |  |                                                           +--| (95)
+|  |  |                                                           |  |           +**S0562
+|  |  |                                                           |  |        +--| (100)
+|  |  |                                                           |  |        |  |  +--S1129sl
+|  |  |                                                           |  |        |  +--| (100)
+|  |  |                                                           |  |        |     |  +--S1128
+|  |  |                                                           |  |        |     +--| (100)
+|  |  |                                                           |  |        |        +--S0677
+|  |  |                                                           |  |     +--| (92)
+|  |  |                                                           |  |     |  +--S0758
+|  |  |                                                           |  |  +--| (91)
+|  |  |                                                           |  |  |  |           +--S1189
+|  |  |                                                           |  |  |  |        +--| (100)
+|  |  |                                                           |  |  |  |        |  +--S0613sl
+|  |  |                                                           |  |  |  |     +--| (87)
+|  |  |                                                           |  |  |  |     |  +--S0959
+|  |  |                                                           |  |  |  |  +--| (85)
+|  |  |                                                           |  |  |  |  |  |        +--S0956
+|  |  |                                                           |  |  |  |  |  |     +--| (100)
+|  |  |                                                           |  |  |  |  |  |     |  +--S0960
+|  |  |                                                           |  |  |  |  |  |  +--| (100)
+|  |  |                                                           |  |  |  |  |  |  |  +--S0552sl
+|  |  |                                                           |  |  |  |  |  +--| (97)
+|  |  |                                                           |  |  |  |  |     +--S0964
+|  |  |                                                           |  |  |  +**| (60)
+|  |  |                                                           |  |  |     |  +--S1103
+|  |  |                                                           |  |  |     +**| (84)
+|  |  |                                                           |  |  |        +--S0771
+|  |  |                                                           |  +--| (100)
+|  |  |                                                           |     +--SRR8528372
+|  |  |                                                        +**| (42)
+|  |  |                                                        |  +--SRR8528382
+|  |  |                                                     +**| (54)
+|  |  |                                                     |  |        +--SRR8528364
+|  |  |                                                     |  |     +--| (99)
+|  |  |                                                     |  |     |  +--S1102
+|  |  |                                                     |  |  +**| (51)
+|  |  |                                                     |  |  |  +--S1093sl
+|  |  |                                                     |  +--| (98)
+|  |  |                                                     |     |        +--S0753
+|  |  |                                                     |     |     +--| (68)
+|  |  |                                                     |     |     |  +----------SRR8528381
+|  |  |                                                     |     |  +**| (20)
+|  |  |                                                     |     |  |  |     +--SRR8528397
+|  |  |                                                     |     |  |  |  +**| (44)
+|  |  |                                                     |     |  |  |  |  +----SRR8528356
+|  |  |                                                     |     |  |  +**| (27)
+|  |  |                                                     |     |  |     +**S1095
+|  |  |                                                     |     +**| (14)
+|  |  |                                                     |        |  +--SRR8528394
+|  |  |                                                     |        +--| (95)
+|  |  |                                                     |           +--SRR8528385
+|  |  |                                                  +--| (85)
+|  |  |                                                  |  +--S1089
+|  |  |                                               +**| (77)
+|  |  |                                               |  |                            +----------S0564sl
+|  |  |                                               |  |          +-----------------| (100)
+|  |  |                                               |  |          |                 |  +--------------------S1384
+|  |  |                                               |  |          |                 +--| (99)
+|  |  |                                               |  |          |                    +----------PAFTOL_023515
+|  |  |                                               |  |      +---| (99)
+|  |  |                                               |  |      |   +---------PAFTOL_019361
+|  |  |                                               |  +------| (100)
+|  |  |                                               |         +----------S1386
+|  |  |                                            +--| (84)
+|  |  |                                            |  |                 +--S0735
+|  |  |                                            |  |              +--| (100)
+|  |  |                                            |  |              |  +**S1261
+|  |  |                                            |  |           +--| (100)
+|  |  |                                            |  |           |  |     +--S1180
+|  |  |                                            |  |           |  |  +--| (100)
+|  |  |                                            |  |           |  |  |  +--S1148
+|  |  |                                            |  |           |  +--| (100)
+|  |  |                                            |  |           |     +--S1223
+|  |  |                                            |  |        +--| (100)
+|  |  |                                            |  |        |  |  +**S1184
+|  |  |                                            |  |        |  +--| (99)
+|  |  |                                            |  |        |     +--S1100
+|  |  |                                            |  |  +-----| (100)
+|  |  |                                            |  |  |     +--S0890
+|  |  |                                            |  +--| (93)
+|  |  |                                            |     |     +--S1328sl
+|  |  |                                            |     |  +--| (100)
+|  |  |                                            |     |  |  |        +--S1188
+|  |  |                                            |     |  |  |     +--| (100)
+|  |  |                                            |     |  |  |     |  +--SRR8528339
+|  |  |                                            |     |  |  |  +--| (100)
+|  |  |                                            |     |  |  |  |  |        +--S0894
+|  |  |                                            |     |  |  |  |  |     +--| (100)
+|  |  |                                            |     |  |  |  |  |     |  |  +--S1246
+|  |  |                                            |     |  |  |  |  |     |  +**| (94)
+|  |  |                                            |     |  |  |  |  |     |     +**S1245
+|  |  |                                            |     |  |  |  |  |  +--| (99)
+|  |  |                                            |     |  |  |  |  |  |  |  +--S1539
+|  |  |                                            |     |  |  |  |  |  |  +--| (99)
+|  |  |                                            |     |  |  |  |  |  |     +--S0673
+|  |  |                                            |     |  |  |  |  +--| (100)
+|  |  |                                            |     |  |  |  |     +--SRR8528370
+|  |  |                                            |     |  |  +--| (79)
+|  |  |                                            |     |  |     |                                               +--S0645sl
+|  |  |                                            |     |  |     |                                            +--| (98)
+|  |  |                                            |     |  |     |                                            |  +--S0299
+|  |  |                                            |     |  |     |                                         +**| (78)
+|  |  |                                            |     |  |     |                                         |  |  +--S0624
+|  |  |                                            |     |  |     |                                         |  +--| (100)
+|  |  |                                            |     |  |     |                                         |     |  +**SRR8528347
+|  |  |                                            |     |  |     |                                         |     +--| (100)
+|  |  |                                            |     |  |     |                                         |        +--S0421
+|  |  |                                            |     |  |     |                                      +--| (66)
+|  |  |                                            |     |  |     |                                      |  +---S0951
+|  |  |                                            |     |  |     |                                   +**| (54)
+|  |  |                                            |     |  |     |                                   |  |  +--S1251
+|  |  |                                            |     |  |     |                                   |  +--| (80)
+|  |  |                                            |     |  |     |                                   |     +--S1241
+|  |  |                                            |     |  |     |                                +--| (57)
+|  |  |                                            |     |  |     |                                |  +--S0289
+|  |  |                                            |     |  |     |                             +--| (74)
+|  |  |                                            |     |  |     |                             |  |  +--S0424
+|  |  |                                            |     |  |     |                             |  +**| (76)
+|  |  |                                            |     |  |     |                             |     |  +--S1230
+|  |  |                                            |     |  |     |                             |     +--| (80)
+|  |  |                                            |     |  |     |                             |        +--S0320
+|  |  |                                            |     |  |     |                          +--| (74)
+|  |  |                                            |     |  |     |                          |  +--S1365
+|  |  |                                            |     |  |     |                       +**| (57)
+|  |  |                                            |     |  |     |                       |  +--S0327
+|  |  |                                            |     |  |     |                    +--| (63)
+|  |  |                                            |     |  |     |                    |  |     +--S1475
+|  |  |                                            |     |  |     |                    |  |  +--| (100)
+|  |  |                                            |     |  |     |                    |  |  |  +--S0407sl
+|  |  |                                            |     |  |     |                    |  +--| (100)
+|  |  |                                            |     |  |     |                    |     +--S0963
+|  |  |                                            |     |  |     |                 +**| (63)
+|  |  |                                            |     |  |     |                 |  +--S1451
+|  |  |                                            |     |  |     |              +--| (86)
+|  |  |                                            |     |  |     |              |  +--S1239
+|  |  |                                            |     |  |     |           +**| (50)
+|  |  |                                            |     |  |     |           |  +--S0417
+|  |  |                                            |     |  |     |        +--| (47)
+|  |  |                                            |     |  |     |        |  |  +--S1232sl
+|  |  |                                            |     |  |     |        |  +--| (93)
+|  |  |                                            |     |  |     |        |     +--S1368
+|  |  |                                            |     |  |     |     +--| (46)
+|  |  |                                            |     |  |     |     |  |                 +--S0656sl
+|  |  |                                            |     |  |     |     |  |              +**| (87)
+|  |  |                                            |     |  |     |     |  |              |  +--SRR8528354
+|  |  |                                            |     |  |     |     |  |           +--| (96)
+|  |  |                                            |     |  |     |     |  |           |  |     +--S0899
+|  |  |                                            |     |  |     |     |  |           |  |  +--| (100)
+|  |  |                                            |     |  |     |     |  |           |  |  |  +--S0657
+|  |  |                                            |     |  |     |     |  |           |  +**| (85)
+|  |  |                                            |     |  |     |     |  |           |     |  +--S0827
+|  |  |                                            |     |  |     |     |  |           |     +--| (97)
+|  |  |                                            |     |  |     |     |  |           |        +--S1234
+|  |  |                                            |     |  |     |     |  |        +**| (94)
+|  |  |                                            |     |  |     |     |  |        |  +--S1250sl
+|  |  |                                            |     |  |     |     |  |     +--| (100)
+|  |  |                                            |     |  |     |     |  |     |  +--SRR8528358
+|  |  |                                            |     |  |     |     |  |  +**| (77)
+|  |  |                                            |     |  |     |     |  |  |  +--S1405
+|  |  |                                            |     |  |     |     |  +--| (59)
+|  |  |                                            |     |  |     |     |     +--S0478
+|  |  |                                            |     |  |     |  +**| (67)
+|  |  |                                            |     |  |     |  |  +--S0278
+|  |  |                                            |     |  |     +--| (94)
+|  |  |                                            |     |  |        +--S1474
+|  |  |                                            |     +**| (93)
+|  |  |                                            |        |              +--S0746
+|  |  |                                            |        |           +--| (100)
+|  |  |                                            |        |           |  |  +--SRR8528399
+|  |  |                                            |        |           |  +--| (100)
+|  |  |                                            |        |           |     +**S1074
+|  |  |                                            |        |        +**| (56)
+|  |  |                                            |        |        |  +--S1077
+|  |  |                                            |        |     +--| (70)
+|  |  |                                            |        |     |  |                +**S1342
+|  |  |                                            |        |     |  |             +--| (100)
+|  |  |                                            |        |     |  |             |  +**S0420sl
+|  |  |                                            |        |     |  |  +----------| (100)
+|  |  |                                            |        |     |  |  |          +--S1341
+|  |  |                                            |        |     |  +--| (61)
+|  |  |                                            |        |     |     +----S1354
+|  |  |                                            |        |  +--| (70)
+|  |  |                                            |        |  |  |     +--S0560
+|  |  |                                            |        |  |  |  +--| (99)
+|  |  |                                            |        |  |  |  |  +--SRR8528338
+|  |  |                                            |        |  |  +**| (98)
+|  |  |                                            |        |  |     +--S0329
+|  |  |                                            |        +--| (100)
+|  |  |                                            |           |           +--S0277
+|  |  |                                            |           |        +**| (98)
+|  |  |                                            |           |        |  +**S0989
+|  |  |                                            |           |     +--| (100)
+|  |  |                                            |           |     |  |  +**S1043sl
+|  |  |                                            |           |     |  +--| (100)
+|  |  |                                            |           |     |     +**S1038
+|  |  |                                            |           |  +--| (99)
+|  |  |                                            |           |  |  +--S1045
+|  |  |                                            |           +--| (71)
+|  |  |                                            |              +-----S1378
+|  |  |                                         +--| (100)
+|  |  |                                         |  |              +--S0732
+|  |  |                                         |  |           +--| (99)
+|  |  |                                         |  |           |  |        +**S0739
+|  |  |                                         |  |           |  |     +--| (100)
+|  |  |                                         |  |           |  |     |  +**S1176
+|  |  |                                         |  |           |  |  +**| (99)
+|  |  |                                         |  |           |  |  |  +**S1260
+|  |  |                                         |  |           |  +--| (99)
+|  |  |                                         |  |           |     +--S1229-2
+|  |  |                                         |  |        +--| (100)
+|  |  |                                         |  |        |  +--S0616
+|  |  |                                         |  |     +--| (96)
+|  |  |                                         |  |     |  +--S1111
+|  |  |                                         |  |  +--| (100)
+|  |  |                                         |  |  |  |     +--S1519
+|  |  |                                         |  |  |  |  +**| (94)
+|  |  |                                         |  |  |  |  |  |                    +--S0748
+|  |  |                                         |  |  |  |  |  |                 +**| (100)
+|  |  |                                         |  |  |  |  |  |                 |  +--S0620
+|  |  |                                         |  |  |  |  |  |              +**| (43)
+|  |  |                                         |  |  |  |  |  |              |  +--S0355
+|  |  |                                         |  |  |  |  |  |           +**| (47)
+|  |  |                                         |  |  |  |  |  |           |  |  +--S0724sl
+|  |  |                                         |  |  |  |  |  |           |  +**| (98)
+|  |  |                                         |  |  |  |  |  |           |     +--S0322
+|  |  |                                         |  |  |  |  |  |        +--| (99)
+|  |  |                                         |  |  |  |  |  |        |  +--S0303
+|  |  |                                         |  |  |  |  |  |     +--| (100)
+|  |  |                                         |  |  |  |  |  |     |  |  +**S1269
+|  |  |                                         |  |  |  |  |  |     |  +--| (100)
+|  |  |                                         |  |  |  |  |  |     |     |     +**S0430
+|  |  |                                         |  |  |  |  |  |     |     |  +**| (82)
+|  |  |                                         |  |  |  |  |  |     |     |  |  +--S1249
+|  |  |                                         |  |  |  |  |  |     |     +**| (93)
+|  |  |                                         |  |  |  |  |  |     |        |  +**S1266sl
+|  |  |                                         |  |  |  |  |  |     |        +**| (84)
+|  |  |                                         |  |  |  |  |  |     |           +**S1409
+|  |  |                                         |  |  |  |  |  |  +--| (100)
+|  |  |                                         |  |  |  |  |  |  |  +--S0952
+|  |  |                                         |  |  |  |  |  +--| (98)
+|  |  |                                         |  |  |  |  |     +----S0308
+|  |  |                                         |  |  |  +--| (87)
+|  |  |                                         |  |  |     |        +--S0740
+|  |  |                                         |  |  |     |     +--| (100)
+|  |  |                                         |  |  |     |     |  +--S1120
+|  |  |                                         |  |  |     |  +--| (100)
+|  |  |                                         |  |  |     |  |  +--S1262
+|  |  |                                         |  |  |     +--| (89)
+|  |  |                                         |  |  |        |     +--S1110
+|  |  |                                         |  |  |        |  +--| (100)
+|  |  |                                         |  |  |        |  |  +**S1210
+|  |  |                                         |  |  |        +--| (100)
+|  |  |                                         |  |  |           |  +--S0888
+|  |  |                                         |  |  |           +--| (100)
+|  |  |                                         |  |  |              +--S1315
+|  |  |                                         |  +--| (99)
+|  |  |                                         |     +--S1374
+|  |  |                                      +--| (90)
+|  |  |                                      |  |     +--S0751
+|  |  |                                      |  |  +--| (100)
+|  |  |                                      |  |  |  |        +--S0591
+|  |  |                                      |  |  |  |     +--| (100)
+|  |  |                                      |  |  |  |     |  +--S1561
+|  |  |                                      |  |  |  |  +--| (90)
+|  |  |                                      |  |  |  |  |  +--S0547
+|  |  |                                      |  |  |  +--| (100)
+|  |  |                                      |  |  |     +**S1181-2
+|  |  |                                      |  +--| (99)
+|  |  |                                      |     +**S0717
+|  |  |                                   +**| (10)
+|  |  |                                   |  |  +--S0742
+|  |  |                                   |  +**| (73)
+|  |  |                                   |     +--S0412sl
+|  |  |                                +**| (75)
+|  |  |                                |  |                       +--S1541sl
+|  |  |                                |  |                    +**| (16)
+|  |  |                                |  |                    |  +--SRR8528391
+|  |  |                                |  |                 +**| (84)
+|  |  |                                |  |                 |  |        +--S0376
+|  |  |                                |  |                 |  |     +--| (100)
+|  |  |                                |  |                 |  |     |  +--S0672
+|  |  |                                |  |                 |  |  +--| (96)
+|  |  |                                |  |                 |  |  |  +--S0427
+|  |  |                                |  |                 |  +**| (18)
+|  |  |                                |  |                 |     |  +--S0893
+|  |  |                                |  |                 |     +--| (93)
+|  |  |                                |  |                 |        +--S1276
+|  |  |                                |  |              +--| (84)
+|  |  |                                |  |              |  +--S0593
+|  |  |                                |  |           +**| (60)
+|  |  |                                |  |           |  +--S0733sl
+|  |  |                                |  |        +**| (80)
+|  |  |                                |  |        |  |  +**S0298
+|  |  |                                |  |        |  +**| (91)
+|  |  |                                |  |        |     +--S0671
+|  |  |                                |  |     +--| (98)
+|  |  |                                |  |     |  +**S0689
+|  |  |                                |  |  +**| (79)
+|  |  |                                |  |  |  |     +--SRR8528359
+|  |  |                                |  |  |  |  +**| (82)
+|  |  |                                |  |  |  |  |  +**S0435
+|  |  |                                |  |  |  +--| (96)
+|  |  |                                |  |  |     +--S0947sl
+|  |  |                                |  +**| (12)
+|  |  |                                |     |        +--S0762-2
+|  |  |                                |     |     +--| (95)
+|  |  |                                |     |     |  +--S0558
+|  |  |                                |     |  +**| (75)
+|  |  |                                |     |  |  |  +**S1119
+|  |  |                                |     |  |  +--| (98)
+|  |  |                                |     |  |     |  +--S1381
+|  |  |                                |     |  |     +--| (100)
+|  |  |                                |     |  |        +--S1211
+|  |  |                                |     +**| (18)
+|  |  |                                |        +**S0722
+|  |  |                             +**| (35)
+|  |  |                             |  +--S1371
+|  |  |                          +**| (14)
+|  |  |                          |  |     +**SRR8528350
+|  |  |                          |  |  +--| (100)
+|  |  |                          |  |  |  +**S0612
+|  |  |                          |  +--| (91)
+|  |  |                          |     +**S0285
+|  |  |                       +**| (11)
+|  |  |                       |  |              +--S0383
+|  |  |                       |  |           +--| (100)
+|  |  |                       |  |           |  +--S0275
+|  |  |                       |  |        +--| (57)
+|  |  |                       |  |        |  +**S0300
+|  |  |                       |  |     +--| (98)
+|  |  |                       |  |     |  +--S0903
+|  |  |                       |  |  +--| (95)
+|  |  |                       |  |  |  +--S0764
+|  |  |                       |  +**| (6)
+|  |  |                       |     |  +--S0055
+|  |  |                       |     +--| (99)
+|  |  |                       |        +--S1375
+|  |  |                    +**| (36)
+|  |  |                    |  +**S1400
+|  |  |                 +--| (60)
+|  |  |                 |  +--SRR8528357
+|  |  |              +**| (42)
+|  |  |              |  |        +**S1460
+|  |  |              |  |     +--| (100)
+|  |  |              |  |     |  +--S1235sl
+|  |  |              |  |  +--| (100)
+|  |  |              |  |  |  +--S0809
+|  |  |              |  +--| (81)
+|  |  |              |     +--S0895
+|  |  |           +--| (68)
+|  |  |           |  |     +--S0721sl
+|  |  |           |  |  +**| (84)
+|  |  |           |  |  |  +--S1318-2
+|  |  |           |  +--| (85)
+|  |  |           |     |  +**S0718
+|  |  |           |     +--| (100)
+|  |  |           |        +--S0670
+|  |  |        +--| (67)
+|  |  |        |  |  +--S1052sl
+|  |  |        |  +--| (99)
+|  |  |        |     +--S0294
+|  |  |     +--| (68)
+|  |  |     |  |        +--S1204
+|  |  |     |  |     +--| (100)
+|  |  |     |  |     |  +--S0641
+|  |  |     |  |  +**| (98)
+|  |  |     |  |  |  +--SRR8528343
+|  |  |     |  +--| (100)
+|  |  |     |     +--S0756
+|  |  |  +**| (69)
+|  |  |  |  |        +--S0400
+|  |  |  |  |     +**| (100)
+|  |  |  |  |     |  |        +--S0301
+|  |  |  |  |     |  |     +**| (95)
+|  |  |  |  |     |  |     |  +--S_670
+|  |  |  |  |     |  |  +**| (11)
+|  |  |  |  |     |  |  |  +--S0690
+|  |  |  |  |     |  +**| (34)
+|  |  |  |  |     |     |  +--S0763
+|  |  |  |  |     |     +**| (32)
+|  |  |  |  |     |        +--S0282
+|  |  |  |  |  +--| (100)
+|  |  |  |  |  |  |  +--S0293
+|  |  |  |  |  |  +**| (84)
+|  |  |  |  |  |     |     +--S0268
+|  |  |  |  |  |     |  +**| (99)
+|  |  |  |  |  |     |  |  +--S1227
+|  |  |  |  |  |     +--| (100)
+|  |  |  |  |  |        +--S1369
+|  |  |  |  +--| (100)
+|  |  |  |     |     +--S0405
+|  |  |  |     |  +**| (41)
+|  |  |  |     |  |  +--S1370
+|  |  |  |     +--| (100)
+|  |  |  |        |     +**S1278
+|  |  |  |        |  +--| (100)
+|  |  |  |        |  |  +**S1279
+|  |  |  |        +**| (40)
+|  |  |  |           +--S0643
+|  |  +**| (97)
+|  |     +**S0509
++**| (94)
+|  +--S0741
+|
+|  +--S1116
++--| (95)
+   +--SRR8528376
+
+Tree in newick format:
+
+(S0941:0.0094543482,(((S0946:0.0015206631,(((S0949:0.0106399607,(ERR2789774:0.0196659743,S0728sl:0.0048869265)75:0.0016054922)74:0.0000021049,SRR8528342:0.0164064543)82:0.0004600335,S1424:0.0000011557)90:0.0000022441)99:0.0025699901,(((((((((((((((((((((((((S1114-2:0.0062449879,S0655sl:0.0015034638)100:0.0162006997,(((((((S0403sl:0.0079300235,S1182:0.0161669744)100:0.0028195710,S1428:0.0207425388)100:0.0079397379,(S0654:0.0060092677,S0156:0.0161785304)100:0.0031419972)100:0.0076925165,S0691:0.0292853695)71:0.0028351984,(S0450:0.0199747801,S0555:0.0476869747)57:0.0010831483)73:0.0027499502,S0642:0.0189706425)78:0.0031505915,S0436:0.0177180670)77:0.0000021476)100:0.0318465180,(((((((((((((((((((S0385:0.0193345820,(S1339:0.0306238655,S1221sl:0.0202368258)72:0.0024872392)68:0.0000029623,((((((((((((((S0743:0.0044630123,(S0726:0.0080185232,S1021:0.0132031600)92:0.0074041756)79:0.0042931126,S0315:0.0000025752)63:0.0000022236,S0664:0.0015191770)85:0.0043437725,S0617:0.0142248504)88:0.0018212584,S0731sl:0.0146024332)70:0.0014635222,((S0954:0.0028894762,S0772:0.0000011557)94:0.0000025795,(S0464:0.0317367155,S1168:0.0012413993)83:0.0002058581)100:0.0163062496)72:0.0015387649,S1314:0.0245569844)36:0.0014824546,(S0667:0.0103176839,S0851:0.0127197466)35:0.0000023028)39:0.0014343972,S0377:0.0177853299)65:0.0014621626,S0323:0.0117953767)68:0.0000022138,S1011sl:0.0014863704)76:0.0028881534,S0897:0.0058658707)56:0.0000021699,(((((S0331:0.0171416304,S0660sl:0.0094572075)92:0.0023977913,S0662:0.0266815511)79:0.0019133932,S0752:0.0088971597)81:0.0013655410,(S1509:0.0000023070,S0590:0.0000023186)100:0.0102952422)49:0.0000020915,((S0583:0.0064921092,S1408:0.0035432314)99:0.0021946422,S0747sl:0.0102780501)82:0.0014252324)97:0.0028787327)44:0.0000020959,((S1442:0.0091662474,(S1220:0.0000028440,S1208sl:0.0058257127)100:0.0146753342)82:0.0014425206,S1401:0.0117207985)82:0.0015309300)85:0.0043349759)71:0.0000020809,S1331:0.0135579753)76:0.0028943512,(S0380:0.0150273575,(S0669:0.0068520656,S1458:0.0017928475)100:0.0094083991)77:0.0027237446)100:0.0014549529,SRR8528361:0.0193912114)99:0.0029079260,S1319:0.0044712840)73:0.0014054932,((((((S1464:0.0000011557,(((S1332:0.0043958166,S0754:0.0000021942)86:0.0000023496,S1096:0.0000023367)81:0.0014739635,SRR8528398:0.0073969725)14:0.0027840604)3:0.0000024340,S1040:0.0000011557)11:0.0000023853,S1039:0.0000011557)41:0.0000011904,S1201sl:0.0179434559)48:0.0028505864,S1117:0.0000011557)5:0.0000022730,S0345:0.0179591610)4:0.0000023097)14:0.0000023290,S1098:0.0000011557)9:0.0000412359,S0727:0.0000011557)7:0.0000010632,S1072:0.0000011557)13:0.0000010569,S1044:0.0000011557)8:0.0000075447,S1097:0.0000011557)4:0.0000024833,S0346:0.0000011557)13:0.0013763915,S0647-2:0.0000011557)26:0.0000023393,S1106sl:0.0000011557)19:0.0000025224,S0373:0.0015486945)10:0.0000025186,((((((((((S1050:0.0087160943,S1258-2:0.0150027557)86:0.0000022000,S0286:0.0028857446)92:0.0000027650,S0521:0.0000011557)68:0.0000026020,S1053sl:0.0014782927)100:0.0038551461,S1459:0.0035761657)86:0.0019366504,(SRR8528341:0.0028817119,SRR8528389:0.0000024344)100:0.0014449707)79:0.0000023819,SRR8528388:0.0000020515)77:0.0052677431,S0512sl:0.0894326036)66:0.0048952450,S1118:0.0000011557)14:0.0000022322,((((S0371:0.0032974123,S1270:0.0017304145)100:0.0034101716,S0768:0.0119112802)100:0.0082109298,S0297:0.0159571060)99:0.0064905501,SRR6441723:0.0378951775)98:0.0094567224)2:0.0000020133)28:0.0000023104,(S0335:0.0057752174,((SRR8528365:0.0101604935,S0280:0.0057308698)69:0.0000028055,SRR8528380:0.0028841626)98:0.0000021612)99:0.0043244384)100:0.0102107906,((((((S0384:0.0116889435,S0744sl:0.0217980893)82:0.0000028967,S1214sl:0.0210125197)75:0.0014537796,S0745:0.0072774831)63:0.0000021715,(((S0381:0.0058926150,S1422:0.0072425858)59:0.0000023979,S0766:0.0102868669)50:0.0014294130,(((S0292:0.0000024846,S1366:0.0028612136)98:0.0000024175,S1419:0.0000011557)66:0.0014339351,S1449:0.0074157775)67:0.0014309876)31:0.0000023723)20:0.0000022725,(S1376:0.0226400744,SRR8528336:0.0073498932)98:0.0043116231)99:0.0028650334,(S1336:0.0000025288,S0416:0.0000023899)100:0.0058299012)100:0.0044749404)100:0.0057946800)86:0.0014455816,(((((SRR11470320:0.0028285172,(S1498:0.0028995588,S1083:0.0043638304)100:0.0059172767)100:0.0073531554,((((((((((S1462:0.0028844943,S1177:0.0014464309)34:0.0000021191,S0419:0.0000011557)14:0.0000021639,S0770:0.0000011557)4:0.0000011558,S0760:0.0000011557)12:0.0000021263,S0765:0.0014401917)66:0.0000024313,S0196sl:0.0081125934)100:0.0043445539,S0836:0.0318250147)11:0.0000021126,((S0795:0.0055346712,S0720:0.0000022660)97:0.0018081874,S0281:0.0075248184)58:0.0000022003)14:0.0000027699,((S0902:0.0029938004,(S1113:0.0000011557,S1121:0.0000025240)100:0.0014328010)100:0.0058960007,(S0834:0.0000022353,S0279:0.0000025168)100:0.0038149759)100:0.0035893407)89:0.0014503702,S0901:0.0091432952)79:0.0000024642)100:0.0075295300,(SRR8528384:0.0110596065,(S0284:0.0301808850,SRR8528373:0.0191159637)100:0.0234786043)99:0.0008587736)99:0.0042927032,((S0688:0.0065174331,S0957:0.0413332539)75:0.0017339838,(((S0757:0.0000024115,S0312:0.0000025735)100:0.0028561143,S1238sl:0.0102726656)100:0.0060606711,S0283:0.0150774246)89:0.0012814471)59:0.0000024833)50:0.0000024554,((SRR8528400:0.0071188173,(S0906:0.0054454798,SRR8528379:0.0091317189)100:0.0029949716)100:0.0119193307,((S0892:0.0272958532,(S0577:0.0128025415,(S1213:0.0134714018,S1069:0.0089726918)100:0.0030319929)100:0.0049393552)100:0.0141887260,S1579:0.0248059265)87:0.0011769983)69:0.0030348417)66:0.0014423811)93:0.0013800741,((((S0562:0.0000025512,(S1129sl:0.0104771170,(S1128:0.0074410004,S0677:0.0104543909)100:0.0042989006)100:0.0104461852)100:0.0014452242,S0758:0.0072836453)92:0.0029199205,((((S1189:0.0091904966,S0613sl:0.0054419991)100:0.0074365895,S0959:0.0113054891)87:0.0018514044,(((S0956:0.0092319612,S0960:0.0039511076)100:0.0043654917,S0552sl:0.0111004194)100:0.0021079772,S0964:0.0103381960)97:0.0044252943)85:0.0014517234,(S1103:0.0201469502,S0771:0.0228883587)84:0.0008124518)60:0.0000025317)91:0.0056161035,SRR8528372:0.0183895845)100:0.0120847808)95:0.0015100926,SRR8528382:0.0015717844)42:0.0000021085,(((SRR8528364:0.0104120319,S1102:0.0043794547)99:0.0045321959,S1093sl:0.0135888399)51:0.0012739383,(((S0753:0.0250935995,SRR8528381:0.0823785062)68:0.0050869256,((SRR8528397:0.0053554673,SRR8528356:0.0440051009)44:0.0007715843,S1095:0.0000022852)27:0.0000026954)20:0.0000023711,(SRR8528394:0.0132074731,SRR8528385:0.0136866147)95:0.0016333679)14:0.0000023327)98:0.0073230992)54:0.0000025259,S1089:0.0030446960)85:0.0030602948,(((S0564sl:0.0859797284,(S1384:0.1639123519,PAFTOL_023515:0.0847722360)99:0.0252261041)100:0.1407810586,PAFTOL_019361:0.0817836924)99:0.0329417804,S1386:0.0846529632)100:0.0538133943)77:0.0000026388,(((((S0735:0.0174803708,S1261:0.0014268208)100:0.0069198402,((S1180:0.0129796742,S1148:0.0049791454)100:0.0071387117,S1223:0.0083765052)100:0.0049805046)100:0.0053546607,(S1184:0.0013098222,S1100:0.0043757203)99:0.0064351958)100:0.0087678282,S0890:0.0134503898)100:0.0505210003,((S1328sl:0.0259475237,(((S1188:0.0044411963,SRR8528339:0.0050563124)100:0.0066420171,(((S0894:0.0043309524,(S1246:0.0014426689,S1245:0.0000011557)94:0.0000028066)100:0.0100280505,(S1539:0.0086635365,S0673:0.0074461174)99:0.0030336450)99:0.0014944977,SRR8528370:0.0178714316)100:0.0045425776)100:0.0107795833,((((((((((((((((S0645sl:0.0199211387,S0299:0.0106537896)98:0.0014663114,(S0624:0.0091363246,(SRR8528347:0.0000020337,S0421:0.0075754034)100:0.0076638894)100:0.0029269977)78:0.0000024464,S0951:0.0337841736)66:0.0016829013,(S1251:0.0209473151,S1241:0.0098795434)80:0.0031665080)54:0.0000022435,S0289:0.0074690615)57:0.0014958591,(S0424:0.0120530989,(S1230:0.0093515674,S0320:0.0120768141)80:0.0015968782)76:0.0012018661)74:0.0015927904,S1365:0.0030612442)74:0.0015916383,S0327:0.0146691884)57:0.0000028146,((S1475:0.0097569317,S0407sl:0.0075387974)100:0.0029496090,S0963:0.0014899987)100:0.0059703430)63:0.0029025987,S1451:0.0106116214)63:0.0000022555,S1239:0.0074812785)86:0.0029882298,S0417:0.0166444957)50:0.0013045659,(S1232sl:0.0089290196,S1368:0.0149122461)93:0.0028510877)47:0.0014489676,((((((S0656sl:0.0059484449,SRR8528354:0.0209857806)87:0.0012640893,((S0899:0.0028640765,S0657:0.0089233253)100:0.0073903638,(S0827:0.0088922413,S1234:0.0119201813)97:0.0027845323)85:0.0014126365)96:0.0043845772,S1250sl:0.0132937701)94:0.0000024859,SRR8528358:0.0141844721)100:0.0041832785,S1405:0.0184379781)77:0.0013369284,S0478:0.0250355256)59:0.0017701367)46:0.0028201119,S0278:0.0181146061)67:0.0013328355,S1474:0.0121477351)94:0.0072520568)79:0.0073072589)100:0.0064914129,(((((S0746:0.0146586801,(SRR8528399:0.0015265133,S1074:0.0000023496)100:0.0029194406)100:0.0114114691,S1077:0.0268981666)56:0.0000022594,(((S1342:0.0000023694,S0420sl:0.0000028850)100:0.0065747914,S1341:0.0040527422)100:0.0852070165,S1354:0.0427578201)61:0.0042468184)70:0.0017062708,((S0560:0.0275090569,SRR8528338:0.0233862354)99:0.0085410203,S0329:0.0234428362)98:0.0003172020)70:0.0014602545,((((S0277:0.0014465218,S0989:0.0000023354)98:0.0000021145,(S1043sl:0.0000020311,S1038:0.0000025954)100:0.0017536973)100:0.0085714136,S1045:0.0044804400)99:0.0024233903,S1378:0.0513290961)71:0.0023497701)100:0.0054331194)93:0.0013807263)93:0.0041422732)84:0.0029077751,(((((S0732:0.0022669953,(((S0739:0.0000024331,S1176:0.0000011557)100:0.0027729831,S1260:0.0000011557)99:0.0000022681,S1229-2:0.0133634603)99:0.0051351854)99:0.0069281096,S0616:0.0138233151)100:0.0276112818,S1111:0.0030725035)96:0.0016204160,((S1519:0.0138404671,(((((((S0748:0.0028898111,S0620:0.0029276134)100:0.0014324098,S0355:0.0028899821)43:0.0000024247,(S0724sl:0.0074069019,S0322:0.0103050297)98:0.0013511650)47:0.0000022856,S0303:0.0057975361)99:0.0028775023,(S1269:0.0000024851,((S0430:0.0014357262,S1249:0.0086962661)82:0.0000022865,(S1266sl:0.0000011557,S1409:0.0000011557)84:0.0000024444)93:0.0000021873)100:0.0028882486)100:0.0199677158,S0952:0.0039898736)100:0.0061271846,S0308:0.0434917153)98:0.0046266550)94:0.0000023846,(((S0740:0.0015244924,S1120:0.0122767708)100:0.0069844077,S1262:0.0074306235)100:0.0186438218,((S1110:0.0029202940,S1210:0.0000020585)100:0.0119252864,(S0888:0.0087889085,S1315:0.0073661535)100:0.0043396881)100:0.0137014732)89:0.0056578673)87:0.0042351752)100:0.0129594177,S1374:0.0085886700)99:0.0043325484)100:0.0089360786,((S0751:0.0029754468,(((S0591:0.0083300915,S1561:0.0015202035)100:0.0020226993,S0547:0.0074073630)90:0.0014727046,S1181-2:0.0000969194)100:0.0158042336)100:0.0029355268,S0717:0.0000025297)99:0.0020251322)90:0.0014509811,(S0742:0.0215997754,S0412sl:0.0265318184)73:0.0007567518)10:0.0000027423,((((((((S1541sl:0.0088018586,SRR8528391:0.0087624456)16:0.0000025308,(((S0376:0.0232492327,S0672:0.0102939410)100:0.0025074872,S0427:0.0154072652)96:0.0057101979,(S0893:0.0244179719,S1276:0.0124358751)93:0.0028430164)18:0.0000024054)84:0.0000024209,S0593:0.0154564856)84:0.0028819091,S0733sl:0.0132261693)60:0.0000024451,(S0298:0.0000021424,S0671:0.0014734398)91:0.0000023470)80:0.0000023458,S0689:0.0000020072)98:0.0177180052,((SRR8528359:0.0087866167,S0435:0.0000025237)82:0.0000023807,S0947sl:0.0045151597)96:0.0014452727)79:0.0014311208,(((S0762-2:0.0136804362,S0558:0.0216198268)95:0.0085628022,(S1119:0.0000026284,(S1381:0.0107909294,S1211:0.0058716529)100:0.0054977989)98:0.0018086630)75:0.0000024872,S0722:0.0000024317)18:0.0000022093)12:0.0000023044)75:0.0000019916,S1371:0.0015076500)35:0.0014326947,((SRR8528350:0.0000023337,S0612:0.0000024210)100:0.0148951101,S0285:0.0000028858)91:0.0014369450)14:0.0000023261,(((((S0383:0.0089282479,S0275:0.0150096783)100:0.0239293258,S0300:0.0000024278)57:0.0025425122,S0903:0.0164764242)98:0.0020622970,S0764:0.0018491973)95:0.0099528067,(S0055:0.0073930587,S1375:0.0134764666)99:0.0056938817)6:0.0000021386)11:0.0000022124,S1400:0.0000011557)36:0.0013584144,SRR8528357:0.0162304407)60:0.0044322322,(((S1460:0.0014060978,S1235sl:0.0118688638)100:0.0019637283,S0809:0.0014752095)100:0.0038841436,S0895:0.0015474137)81:0.0028823208)42:0.0000027527,((S0721sl:0.0136271125,S1318-2:0.0076716744)84:0.0000020973,(S0718:0.0000024337,S0670:0.0073170463)100:0.0014388878)85:0.0014401111)68:0.0058731276,(S1052sl:0.0266684788,S0294:0.0176657603)99:0.0065105529)67:0.0014719388,(((S1204:0.0029938876,S0641:0.0133021680)100:0.0043792439,SRR8528343:0.0073857510)98:0.0000022750,S0756:0.0147109149)100:0.0057427652)68:0.0014802544,(((S0400:0.0043325328,(((S0301:0.0058340585,S_670:0.0014780623)95:0.0014360565,S0690:0.0072568998)11:0.0000029652,(S0763:0.0101881474,S0282:0.0101584718)32:0.0000024282)34:0.0000023309)100:0.0014348263,(S0293:0.0073038626,((S0268:0.0029074244,S1227:0.0028911164)99:0.0000028015,S1369:0.0058374007)100:0.0072390568)84:0.0000022799)100:0.0014423930,((S0405:0.0043520170,S1370:0.0043599370)41:0.0000021402,((S1278:0.0000027247,S1279:0.0000022776)100:0.0117204879,S0643:0.0058018571)40:0.0000027369)100:0.0028803635)100:0.0028860814)69:0.0014306861,S0509:0.0000011557)97:0.0000023821)85:0.0000020586,S0741:0.0222926818)94:0.0007639727,(S1116:0.0219812115,SRR8528376:0.0199980721)95:0.0015294384);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -19784.802640
+Robinson-Foulds distance between ML tree and consensus tree: 58
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--S0941
+|
+|        +--S0946
+|     +--| (99)
+|     |  |        +--S0949
+|     |  |     +--| (74)
+|     |  |     |  |  +--ERR2789774
+|     |  |     |  +--| (75)
+|     |  |     |     +--S0728sl
+|     |  |  +--| (82)
+|     |  |  |  +--SRR8528342
+|     |  +--| (90)
+|     |     +--S1424
+|  +--| (85)
+|  |  |                                                                                 +--S1114-2
+|  |  |                                                                              +--| (100)
+|  |  |                                                                              |  +--S0655sl
+|  |  |                                                                          +---| (100)
+|  |  |                                                                          |   |                    +--S0403sl
+|  |  |                                                                          |   |                 +--| (100)
+|  |  |                                                                          |   |                 |  +--S1182
+|  |  |                                                                          |   |              +--| (100)
+|  |  |                                                                          |   |              |  +--S1428
+|  |  |                                                                          |   |           +--| (100)
+|  |  |                                                                          |   |           |  |  +--S0654
+|  |  |                                                                          |   |           |  +--| (100)
+|  |  |                                                                          |   |           |     +--S0156
+|  |  |                                                                          |   |        +--| (71)
+|  |  |                                                                          |   |        |  +--S0691
+|  |  |                                                                          |   |     +--| (73)
+|  |  |                                                                          |   |     |  |  +--S0450
+|  |  |                                                                          |   |     |  +--| (57)
+|  |  |                                                                          |   |     |     +-----S0555
+|  |  |                                                                          |   |  +--| (78)
+|  |  |                                                                          |   |  |  +--S0642
+|  |  |                                                                          |   +--| (77)
+|  |  |                                                                          |      +--S0436
+|  |  |                                                                       +--| (86)
+|  |  |                                                                       |  |                                                                 +--S0385
+|  |  |                                                                       |  |                                                              +--| (68)
+|  |  |                                                                       |  |                                                              |  |  +---S1339
+|  |  |                                                                       |  |                                                              |  +--| (72)
+|  |  |                                                                       |  |                                                              |     +--S1221sl
+|  |  |                                                                       |  |                                                           +--| (71)
+|  |  |                                                                       |  |                                                           |  |                                         +--S0743
+|  |  |                                                                       |  |                                                           |  |                                      +--| (79)
+|  |  |                                                                       |  |                                                           |  |                                      |  |  +--S0726
+|  |  |                                                                       |  |                                                           |  |                                      |  +--| (92)
+|  |  |                                                                       |  |                                                           |  |                                      |     +--S1021
+|  |  |                                                                       |  |                                                           |  |                                   +--| (63)
+|  |  |                                                                       |  |                                                           |  |                                   |  +--S0315
+|  |  |                                                                       |  |                                                           |  |                                +--| (85)
+|  |  |                                                                       |  |                                                           |  |                                |  +--S0664
+|  |  |                                                                       |  |                                                           |  |                             +--| (88)
+|  |  |                                                                       |  |                                                           |  |                             |  +--S0617
+|  |  |                                                                       |  |                                                           |  |                          +--| (70)
+|  |  |                                                                       |  |                                                           |  |                          |  +--S0731sl
+|  |  |                                                                       |  |                                                           |  |                       +--| (72)
+|  |  |                                                                       |  |                                                           |  |                       |  |     +--S0954
+|  |  |                                                                       |  |                                                           |  |                       |  |  +--| (94)
+|  |  |                                                                       |  |                                                           |  |                       |  |  |  +--S0772
+|  |  |                                                                       |  |                                                           |  |                       |  +--| (100)
+|  |  |                                                                       |  |                                                           |  |                       |     |  +---S0464
+|  |  |                                                                       |  |                                                           |  |                       |     +--| (83)
+|  |  |                                                                       |  |                                                           |  |                       |        +--S1168
+|  |  |                                                                       |  |                                                           |  |                    +--| (36)
+|  |  |                                                                       |  |                                                           |  |                    |  +--S1314
+|  |  |                                                                       |  |                                                           |  |                 +--| (39)
+|  |  |                                                                       |  |                                                           |  |                 |  |  +--S0667
+|  |  |                                                                       |  |                                                           |  |                 |  +--| (35)
+|  |  |                                                                       |  |                                                           |  |                 |     +--S0851
+|  |  |                                                                       |  |                                                           |  |              +--| (65)
+|  |  |                                                                       |  |                                                           |  |              |  +--S0377
+|  |  |                                                                       |  |                                                           |  |           +--| (68)
+|  |  |                                                                       |  |                                                           |  |           |  +--S0323
+|  |  |                                                                       |  |                                                           |  |        +--| (76)
+|  |  |                                                                       |  |                                                           |  |        |  +--S1011sl
+|  |  |                                                                       |  |                                                           |  |     +--| (56)
+|  |  |                                                                       |  |                                                           |  |     |  +--S0897
+|  |  |                                                                       |  |                                                           |  |  +--| (44)
+|  |  |                                                                       |  |                                                           |  |  |  |              +--S0331
+|  |  |                                                                       |  |                                                           |  |  |  |           +--| (92)
+|  |  |                                                                       |  |                                                           |  |  |  |           |  +--S0660sl
+|  |  |                                                                       |  |                                                           |  |  |  |        +--| (79)
+|  |  |                                                                       |  |                                                           |  |  |  |        |  +--S0662
+|  |  |                                                                       |  |                                                           |  |  |  |     +--| (81)
+|  |  |                                                                       |  |                                                           |  |  |  |     |  +--S0752
+|  |  |                                                                       |  |                                                           |  |  |  |  +--| (49)
+|  |  |                                                                       |  |                                                           |  |  |  |  |  |  +--S1509
+|  |  |                                                                       |  |                                                           |  |  |  |  |  +--| (100)
+|  |  |                                                                       |  |                                                           |  |  |  |  |     +--S0590
+|  |  |                                                                       |  |                                                           |  |  |  +--| (97)
+|  |  |                                                                       |  |                                                           |  |  |     |     +--S0583
+|  |  |                                                                       |  |                                                           |  |  |     |  +--| (99)
+|  |  |                                                                       |  |                                                           |  |  |     |  |  +--S1408
+|  |  |                                                                       |  |                                                           |  |  |     +--| (82)
+|  |  |                                                                       |  |                                                           |  |  |        +--S0747sl
+|  |  |                                                                       |  |                                                           |  +--| (85)
+|  |  |                                                                       |  |                                                           |     |     +--S1442
+|  |  |                                                                       |  |                                                           |     |  +--| (82)
+|  |  |                                                                       |  |                                                           |     |  |  |  +--S1220
+|  |  |                                                                       |  |                                                           |     |  |  +--| (100)
+|  |  |                                                                       |  |                                                           |     |  |     +--S1208sl
+|  |  |                                                                       |  |                                                           |     +--| (82)
+|  |  |                                                                       |  |                                                           |        +--S1401
+|  |  |                                                                       |  |                                                        +--| (76)
+|  |  |                                                                       |  |                                                        |  +--S1331
+|  |  |                                                                       |  |                                                     +--| (100)
+|  |  |                                                                       |  |                                                     |  |  +--S0380
+|  |  |                                                                       |  |                                                     |  +--| (77)
+|  |  |                                                                       |  |                                                     |     |  +--S0669
+|  |  |                                                                       |  |                                                     |     +--| (100)
+|  |  |                                                                       |  |                                                     |        +--S1458
+|  |  |                                                                       |  |                                                  +--| (99)
+|  |  |                                                                       |  |                                                  |  +--SRR8528361
+|  |  |                                                                       |  |                                               +--| (73)
+|  |  |                                                                       |  |                                               |  +--S1319
+|  |  |                                                                       |  |                                            +--| (35)
+|  |  |                                                                       |  |                                            |  |              +--S1464
+|  |  |                                                                       |  |                                            |  |           +--| (25)
+|  |  |                                                                       |  |                                            |  |           |  |        +--S1332
+|  |  |                                                                       |  |                                            |  |           |  |     +--| (86)
+|  |  |                                                                       |  |                                            |  |           |  |     |  +--S0754
+|  |  |                                                                       |  |                                            |  |           |  |  +--| (81)
+|  |  |                                                                       |  |                                            |  |           |  |  |  +--S1096
+|  |  |                                                                       |  |                                            |  |           |  +--| (25)
+|  |  |                                                                       |  |                                            |  |           |     +--S1039
+|  |  |                                                                       |  |                                            |  |        +--| (27)
+|  |  |                                                                       |  |                                            |  |        |  +--S1040
+|  |  |                                                                       |  |                                            |  |     +--| (41)
+|  |  |                                                                       |  |                                            |  |     |  +--SRR8528398
+|  |  |                                                                       |  |                                            |  |  +--| (48)
+|  |  |                                                                       |  |                                            |  |  |  +--S1201sl
+|  |  |                                                                       |  |                                            |  +--| (36)
+|  |  |                                                                       |  |                                            |     +--S0345
+|  |  |                                                                       |  |                                         +--| (14)
+|  |  |                                                                       |  |                                         |  +--S1117
+|  |  |                                                                       |  |                                      +--| (9)
+|  |  |                                                                       |  |                                      |  +--S1098
+|  |  |                                                                       |  |                                   +--| (7)
+|  |  |                                                                       |  |                                   |  +--S0727
+|  |  |                                                                       |  |                                +--| (13)
+|  |  |                                                                       |  |                                |  +--S1072
+|  |  |                                                                       |  |                             +--| (13)
+|  |  |                                                                       |  |                             |  +--S1097
+|  |  |                                                                       |  |                          +--| (20)
+|  |  |                                                                       |  |                          |  +--S0647-2
+|  |  |                                                                       |  |                       +--| (20)
+|  |  |                                                                       |  |                       |  +--S1044
+|  |  |                                                                       |  |                    +--| (26)
+|  |  |                                                                       |  |                    |  +--S0346
+|  |  |                                                                       |  |                 +--| (19)
+|  |  |                                                                       |  |                 |  +--S1106sl
+|  |  |                                                                       |  |              +--| (33)
+|  |  |                                                                       |  |              |  +--S1118
+|  |  |                                                                       |  |           +--| (36)
+|  |  |                                                                       |  |           |  +--S0373
+|  |  |                                                                       |  |        +--| (14)
+|  |  |                                                                       |  |        |  |                       +--S1050
+|  |  |                                                                       |  |        |  |                    +--| (86)
+|  |  |                                                                       |  |        |  |                    |  +--S1258-2
+|  |  |                                                                       |  |        |  |                 +--| (92)
+|  |  |                                                                       |  |        |  |                 |  +--S0286
+|  |  |                                                                       |  |        |  |              +--| (68)
+|  |  |                                                                       |  |        |  |              |  +--S0521
+|  |  |                                                                       |  |        |  |           +--| (100)
+|  |  |                                                                       |  |        |  |           |  +--S1053sl
+|  |  |                                                                       |  |        |  |        +--| (86)
+|  |  |                                                                       |  |        |  |        |  +--S1459
+|  |  |                                                                       |  |        |  |     +--| (79)
+|  |  |                                                                       |  |        |  |     |  |  +--SRR8528341
+|  |  |                                                                       |  |        |  |     |  +--| (100)
+|  |  |                                                                       |  |        |  |     |     +--SRR8528389
+|  |  |                                                                       |  |        |  |  +--| (77)
+|  |  |                                                                       |  |        |  |  |  +--SRR8528388
+|  |  |                                                                       |  |        |  +--| (66)
+|  |  |                                                                       |  |        |     +----------S0512sl
+|  |  |                                                                       |  |     +--| (28)
+|  |  |                                                                       |  |     |  |           +--S0371
+|  |  |                                                                       |  |     |  |        +--| (100)
+|  |  |                                                                       |  |     |  |        |  +--S1270
+|  |  |                                                                       |  |     |  |     +--| (100)
+|  |  |                                                                       |  |     |  |     |  +--S0768
+|  |  |                                                                       |  |     |  |  +--| (99)
+|  |  |                                                                       |  |     |  |  |  +--S0297
+|  |  |                                                                       |  |     |  +--| (98)
+|  |  |                                                                       |  |     |     +----SRR6441723
+|  |  |                                                                       |  |  +--| (100)
+|  |  |                                                                       |  |  |  |  +--S0335
+|  |  |                                                                       |  |  |  +--| (99)
+|  |  |                                                                       |  |  |     |     +--SRR8528365
+|  |  |                                                                       |  |  |     |  +--| (69)
+|  |  |                                                                       |  |  |     |  |  +--S0280
+|  |  |                                                                       |  |  |     +--| (98)
+|  |  |                                                                       |  |  |        +--SRR8528380
+|  |  |                                                                       |  +--| (100)
+|  |  |                                                                       |     |                 +--S0384
+|  |  |                                                                       |     |              +--| (82)
+|  |  |                                                                       |     |              |  +--S0744sl
+|  |  |                                                                       |     |           +--| (75)
+|  |  |                                                                       |     |           |  +--S1214sl
+|  |  |                                                                       |     |        +--| (63)
+|  |  |                                                                       |     |        |  +--S0745
+|  |  |                                                                       |     |     +--| (20)
+|  |  |                                                                       |     |     |  |        +--S0381
+|  |  |                                                                       |     |     |  |     +--| (59)
+|  |  |                                                                       |     |     |  |     |  +--S1422
+|  |  |                                                                       |     |     |  |  +--| (50)
+|  |  |                                                                       |     |     |  |  |  +--S0766
+|  |  |                                                                       |     |     |  +--| (31)
+|  |  |                                                                       |     |     |     |        +--S0292
+|  |  |                                                                       |     |     |     |     +--| (98)
+|  |  |                                                                       |     |     |     |     |  +--S1366
+|  |  |                                                                       |     |     |     |  +--| (66)
+|  |  |                                                                       |     |     |     |  |  +--S1419
+|  |  |                                                                       |     |     |     +--| (67)
+|  |  |                                                                       |     |     |        +--S1449
+|  |  |                                                                       |     |  +--| (99)
+|  |  |                                                                       |     |  |  |  +--S1376
+|  |  |                                                                       |     |  |  +--| (98)
+|  |  |                                                                       |     |  |     +--SRR8528336
+|  |  |                                                                       |     +--| (100)
+|  |  |                                                                       |        |  +--S1336
+|  |  |                                                                       |        +--| (100)
+|  |  |                                                                       |           +--S0416
+|  |  |                                                                    +--| (93)
+|  |  |                                                                    |  |              +--SRR11470320
+|  |  |                                                                    |  |           +--| (100)
+|  |  |                                                                    |  |           |  |  +--S1498
+|  |  |                                                                    |  |           |  +--| (100)
+|  |  |                                                                    |  |           |     +--S1083
+|  |  |                                                                    |  |        +--| (100)
+|  |  |                                                                    |  |        |  |                    +--S1462
+|  |  |                                                                    |  |        |  |                 +--| (34)
+|  |  |                                                                    |  |        |  |                 |  +--S1177
+|  |  |                                                                    |  |        |  |              +--| (14)
+|  |  |                                                                    |  |        |  |              |  +--S0419
+|  |  |                                                                    |  |        |  |           +--| (12)
+|  |  |                                                                    |  |        |  |           |  |  +--S0760
+|  |  |                                                                    |  |        |  |           |  +--| (18)
+|  |  |                                                                    |  |        |  |           |     +--S0770
+|  |  |                                                                    |  |        |  |        +--| (66)
+|  |  |                                                                    |  |        |  |        |  +--S0765
+|  |  |                                                                    |  |        |  |     +--| (100)
+|  |  |                                                                    |  |        |  |     |  +--S0196sl
+|  |  |                                                                    |  |        |  |  +--| (89)
+|  |  |                                                                    |  |        |  |  |  |           +--S0902
+|  |  |                                                                    |  |        |  |  |  |        +--| (100)
+|  |  |                                                                    |  |        |  |  |  |        |  |  +--S1113
+|  |  |                                                                    |  |        |  |  |  |        |  +--| (100)
+|  |  |                                                                    |  |        |  |  |  |        |     +--S1121
+|  |  |                                                                    |  |        |  |  |  |     +--| (100)
+|  |  |                                                                    |  |        |  |  |  |     |  |  +--S0834
+|  |  |                                                                    |  |        |  |  |  |     |  +--| (100)
+|  |  |                                                                    |  |        |  |  |  |     |     +--S0279
+|  |  |                                                                    |  |        |  |  |  |  +--| (32)
+|  |  |                                                                    |  |        |  |  |  |  |  +---S0836
+|  |  |                                                                    |  |        |  |  |  +--| (27)
+|  |  |                                                                    |  |        |  |  |     |     +--S0795
+|  |  |                                                                    |  |        |  |  |     |  +--| (97)
+|  |  |                                                                    |  |        |  |  |     |  |  +--S0720
+|  |  |                                                                    |  |        |  |  |     +--| (58)
+|  |  |                                                                    |  |        |  |  |        +--S0281
+|  |  |                                                                    |  |        |  +--| (79)
+|  |  |                                                                    |  |        |     +--S0901
+|  |  |                                                                    |  |     +--| (99)
+|  |  |                                                                    |  |     |  |  +--SRR8528384
+|  |  |                                                                    |  |     |  +--| (99)
+|  |  |                                                                    |  |     |     |  +---S0284
+|  |  |                                                                    |  |     |     +--| (100)
+|  |  |                                                                    |  |     |        +--SRR8528373
+|  |  |                                                                    |  |  +--| (50)
+|  |  |                                                                    |  |  |  |     +--S0688
+|  |  |                                                                    |  |  |  |  +--| (75)
+|  |  |                                                                    |  |  |  |  |  +----S0957
+|  |  |                                                                    |  |  |  +--| (59)
+|  |  |                                                                    |  |  |     |        +--S0757
+|  |  |                                                                    |  |  |     |     +--| (100)
+|  |  |                                                                    |  |  |     |     |  +--S0312
+|  |  |                                                                    |  |  |     |  +--| (100)
+|  |  |                                                                    |  |  |     |  |  +--S1238sl
+|  |  |                                                                    |  |  |     +--| (89)
+|  |  |                                                                    |  |  |        +--S0283
+|  |  |                                                                    |  +--| (66)
+|  |  |                                                                    |     |     +--SRR8528400
+|  |  |                                                                    |     |  +--| (100)
+|  |  |                                                                    |     |  |  |  +--S0906
+|  |  |                                                                    |     |  |  +--| (100)
+|  |  |                                                                    |     |  |     +--SRR8528379
+|  |  |                                                                    |     +--| (69)
+|  |  |                                                                    |        |     +--S0892
+|  |  |                                                                    |        |  +--| (100)
+|  |  |                                                                    |        |  |  |  +--S0577
+|  |  |                                                                    |        |  |  +--| (100)
+|  |  |                                                                    |        |  |     |  +--S1213
+|  |  |                                                                    |        |  |     +--| (100)
+|  |  |                                                                    |        |  |        +--S1069
+|  |  |                                                                    |        +--| (87)
+|  |  |                                                                    |           +--S1579
+|  |  |                                                                 +--| (95)
+|  |  |                                                                 |  |           +--S0562
+|  |  |                                                                 |  |        +--| (100)
+|  |  |                                                                 |  |        |  |  +--S1129sl
+|  |  |                                                                 |  |        |  +--| (100)
+|  |  |                                                                 |  |        |     |  +--S1128
+|  |  |                                                                 |  |        |     +--| (100)
+|  |  |                                                                 |  |        |        +--S0677
+|  |  |                                                                 |  |     +--| (92)
+|  |  |                                                                 |  |     |  +--S0758
+|  |  |                                                                 |  |  +--| (91)
+|  |  |                                                                 |  |  |  |           +--S1189
+|  |  |                                                                 |  |  |  |        +--| (100)
+|  |  |                                                                 |  |  |  |        |  +--S0613sl
+|  |  |                                                                 |  |  |  |     +--| (87)
+|  |  |                                                                 |  |  |  |     |  +--S0959
+|  |  |                                                                 |  |  |  |  +--| (85)
+|  |  |                                                                 |  |  |  |  |  |        +--S0956
+|  |  |                                                                 |  |  |  |  |  |     +--| (100)
+|  |  |                                                                 |  |  |  |  |  |     |  +--S0960
+|  |  |                                                                 |  |  |  |  |  |  +--| (100)
+|  |  |                                                                 |  |  |  |  |  |  |  +--S0552sl
+|  |  |                                                                 |  |  |  |  |  +--| (97)
+|  |  |                                                                 |  |  |  |  |     +--S0964
+|  |  |                                                                 |  |  |  +--| (60)
+|  |  |                                                                 |  |  |     |  +--S1103
+|  |  |                                                                 |  |  |     +--| (84)
+|  |  |                                                                 |  |  |        +--S0771
+|  |  |                                                                 |  +--| (100)
+|  |  |                                                                 |     +--SRR8528372
+|  |  |                                                              +--| (42)
+|  |  |                                                              |  +--SRR8528382
+|  |  |                                                           +--| (54)
+|  |  |                                                           |  |              +--SRR8528364
+|  |  |                                                           |  |           +--| (99)
+|  |  |                                                           |  |           |  +--S1102
+|  |  |                                                           |  |        +--| (51)
+|  |  |                                                           |  |        |  +--S1093sl
+|  |  |                                                           |  |     +--| (23)
+|  |  |                                                           |  |     |  |  +--SRR8528394
+|  |  |                                                           |  |     |  +--| (95)
+|  |  |                                                           |  |     |     +--SRR8528385
+|  |  |                                                           |  |  +--| (53)
+|  |  |                                                           |  |  |  |     +--S0753
+|  |  |                                                           |  |  |  |  +--| (68)
+|  |  |                                                           |  |  |  |  |  +---------SRR8528381
+|  |  |                                                           |  |  |  +--| (14)
+|  |  |                                                           |  |  |     |  +--SRR8528397
+|  |  |                                                           |  |  |     +--| (44)
+|  |  |                                                           |  |  |        +----SRR8528356
+|  |  |                                                           |  +--| (98)
+|  |  |                                                           |     +--S1095
+|  |  |                                                        +--| (85)
+|  |  |                                                        |  +--S1089
+|  |  |                                                     +--| (77)
+|  |  |                                                     |  |                            +----------S0564sl
+|  |  |                                                     |  |          +-----------------| (100)
+|  |  |                                                     |  |          |                 |  +--------------------S1384
+|  |  |                                                     |  |          |                 +--| (99)
+|  |  |                                                     |  |          |                    +----------PAFTOL_023515
+|  |  |                                                     |  |      +---| (99)
+|  |  |                                                     |  |      |   +---------PAFTOL_019361
+|  |  |                                                     |  +------| (100)
+|  |  |                                                     |         +----------S1386
+|  |  |                                                  +--| (84)
+|  |  |                                                  |  |                 +--S0735
+|  |  |                                                  |  |              +--| (100)
+|  |  |                                                  |  |              |  +--S1261
+|  |  |                                                  |  |           +--| (100)
+|  |  |                                                  |  |           |  |     +--S1180
+|  |  |                                                  |  |           |  |  +--| (100)
+|  |  |                                                  |  |           |  |  |  +--S1148
+|  |  |                                                  |  |           |  +--| (100)
+|  |  |                                                  |  |           |     +--S1223
+|  |  |                                                  |  |        +--| (100)
+|  |  |                                                  |  |        |  |  +--S1184
+|  |  |                                                  |  |        |  +--| (99)
+|  |  |                                                  |  |        |     +--S1100
+|  |  |                                                  |  |  +-----| (100)
+|  |  |                                                  |  |  |     +--S0890
+|  |  |                                                  |  +--| (93)
+|  |  |                                                  |     |     +--S1328sl
+|  |  |                                                  |     |  +--| (100)
+|  |  |                                                  |     |  |  |        +--S1188
+|  |  |                                                  |     |  |  |     +--| (100)
+|  |  |                                                  |     |  |  |     |  +--SRR8528339
+|  |  |                                                  |     |  |  |  +--| (100)
+|  |  |                                                  |     |  |  |  |  |        +--S0894
+|  |  |                                                  |     |  |  |  |  |     +--| (100)
+|  |  |                                                  |     |  |  |  |  |     |  |  +--S1246
+|  |  |                                                  |     |  |  |  |  |     |  +--| (94)
+|  |  |                                                  |     |  |  |  |  |     |     +--S1245
+|  |  |                                                  |     |  |  |  |  |  +--| (99)
+|  |  |                                                  |     |  |  |  |  |  |  |  +--S1539
+|  |  |                                                  |     |  |  |  |  |  |  +--| (99)
+|  |  |                                                  |     |  |  |  |  |  |     +--S0673
+|  |  |                                                  |     |  |  |  |  +--| (100)
+|  |  |                                                  |     |  |  |  |     +--SRR8528370
+|  |  |                                                  |     |  |  +--| (79)
+|  |  |                                                  |     |  |     |                                               +--S0645sl
+|  |  |                                                  |     |  |     |                                            +--| (98)
+|  |  |                                                  |     |  |     |                                            |  +--S0299
+|  |  |                                                  |     |  |     |                                         +--| (78)
+|  |  |                                                  |     |  |     |                                         |  |  +--S0624
+|  |  |                                                  |     |  |     |                                         |  +--| (100)
+|  |  |                                                  |     |  |     |                                         |     |  +--SRR8528347
+|  |  |                                                  |     |  |     |                                         |     +--| (100)
+|  |  |                                                  |     |  |     |                                         |        +--S0421
+|  |  |                                                  |     |  |     |                                      +--| (66)
+|  |  |                                                  |     |  |     |                                      |  +---S0951
+|  |  |                                                  |     |  |     |                                   +--| (54)
+|  |  |                                                  |     |  |     |                                   |  |  +--S1251
+|  |  |                                                  |     |  |     |                                   |  +--| (80)
+|  |  |                                                  |     |  |     |                                   |     +--S1241
+|  |  |                                                  |     |  |     |                                +--| (57)
+|  |  |                                                  |     |  |     |                                |  +--S0289
+|  |  |                                                  |     |  |     |                             +--| (74)
+|  |  |                                                  |     |  |     |                             |  |  +--S0424
+|  |  |                                                  |     |  |     |                             |  +--| (76)
+|  |  |                                                  |     |  |     |                             |     |  +--S1230
+|  |  |                                                  |     |  |     |                             |     +--| (80)
+|  |  |                                                  |     |  |     |                             |        +--S0320
+|  |  |                                                  |     |  |     |                          +--| (74)
+|  |  |                                                  |     |  |     |                          |  +--S1365
+|  |  |                                                  |     |  |     |                       +--| (57)
+|  |  |                                                  |     |  |     |                       |  +--S0327
+|  |  |                                                  |     |  |     |                    +--| (63)
+|  |  |                                                  |     |  |     |                    |  |     +--S1475
+|  |  |                                                  |     |  |     |                    |  |  +--| (100)
+|  |  |                                                  |     |  |     |                    |  |  |  +--S0407sl
+|  |  |                                                  |     |  |     |                    |  +--| (100)
+|  |  |                                                  |     |  |     |                    |     +--S0963
+|  |  |                                                  |     |  |     |                 +--| (63)
+|  |  |                                                  |     |  |     |                 |  +--S1451
+|  |  |                                                  |     |  |     |              +--| (86)
+|  |  |                                                  |     |  |     |              |  +--S1239
+|  |  |                                                  |     |  |     |           +--| (50)
+|  |  |                                                  |     |  |     |           |  +--S0417
+|  |  |                                                  |     |  |     |        +--| (47)
+|  |  |                                                  |     |  |     |        |  |  +--S1232sl
+|  |  |                                                  |     |  |     |        |  +--| (93)
+|  |  |                                                  |     |  |     |        |     +--S1368
+|  |  |                                                  |     |  |     |     +--| (46)
+|  |  |                                                  |     |  |     |     |  |                 +--S0656sl
+|  |  |                                                  |     |  |     |     |  |              +--| (87)
+|  |  |                                                  |     |  |     |     |  |              |  +--SRR8528354
+|  |  |                                                  |     |  |     |     |  |           +--| (96)
+|  |  |                                                  |     |  |     |     |  |           |  |     +--S0899
+|  |  |                                                  |     |  |     |     |  |           |  |  +--| (100)
+|  |  |                                                  |     |  |     |     |  |           |  |  |  +--S0657
+|  |  |                                                  |     |  |     |     |  |           |  +--| (85)
+|  |  |                                                  |     |  |     |     |  |           |     |  +--S0827
+|  |  |                                                  |     |  |     |     |  |           |     +--| (97)
+|  |  |                                                  |     |  |     |     |  |           |        +--S1234
+|  |  |                                                  |     |  |     |     |  |        +--| (94)
+|  |  |                                                  |     |  |     |     |  |        |  +--S1250sl
+|  |  |                                                  |     |  |     |     |  |     +--| (100)
+|  |  |                                                  |     |  |     |     |  |     |  +--SRR8528358
+|  |  |                                                  |     |  |     |     |  |  +--| (77)
+|  |  |                                                  |     |  |     |     |  |  |  +--S1405
+|  |  |                                                  |     |  |     |     |  +--| (59)
+|  |  |                                                  |     |  |     |     |     +--S0478
+|  |  |                                                  |     |  |     |  +--| (67)
+|  |  |                                                  |     |  |     |  |  +--S0278
+|  |  |                                                  |     |  |     +--| (94)
+|  |  |                                                  |     |  |        +--S1474
+|  |  |                                                  |     +--| (93)
+|  |  |                                                  |        |              +--S0746
+|  |  |                                                  |        |           +--| (100)
+|  |  |                                                  |        |           |  |  +--SRR8528399
+|  |  |                                                  |        |           |  +--| (100)
+|  |  |                                                  |        |           |     +--S1074
+|  |  |                                                  |        |        +--| (56)
+|  |  |                                                  |        |        |  +--S1077
+|  |  |                                                  |        |     +--| (70)
+|  |  |                                                  |        |     |  |                +--S1342
+|  |  |                                                  |        |     |  |             +--| (100)
+|  |  |                                                  |        |     |  |             |  +--S0420sl
+|  |  |                                                  |        |     |  |  +----------| (100)
+|  |  |                                                  |        |     |  |  |          +--S1341
+|  |  |                                                  |        |     |  +--| (61)
+|  |  |                                                  |        |     |     +----S1354
+|  |  |                                                  |        |  +--| (70)
+|  |  |                                                  |        |  |  |     +--S0560
+|  |  |                                                  |        |  |  |  +--| (99)
+|  |  |                                                  |        |  |  |  |  +--SRR8528338
+|  |  |                                                  |        |  |  +--| (98)
+|  |  |                                                  |        |  |     +--S0329
+|  |  |                                                  |        +--| (100)
+|  |  |                                                  |           |           +--S0277
+|  |  |                                                  |           |        +--| (98)
+|  |  |                                                  |           |        |  +--S0989
+|  |  |                                                  |           |     +--| (100)
+|  |  |                                                  |           |     |  |  +--S1043sl
+|  |  |                                                  |           |     |  +--| (100)
+|  |  |                                                  |           |     |     +--S1038
+|  |  |                                                  |           |  +--| (99)
+|  |  |                                                  |           |  |  +--S1045
+|  |  |                                                  |           +--| (71)
+|  |  |                                                  |              +-----S1378
+|  |  |                                               +--| (100)
+|  |  |                                               |  |              +--S0732
+|  |  |                                               |  |           +--| (99)
+|  |  |                                               |  |           |  |        +--S0739
+|  |  |                                               |  |           |  |     +--| (100)
+|  |  |                                               |  |           |  |     |  +--S1176
+|  |  |                                               |  |           |  |  +--| (99)
+|  |  |                                               |  |           |  |  |  +--S1260
+|  |  |                                               |  |           |  +--| (99)
+|  |  |                                               |  |           |     +--S1229-2
+|  |  |                                               |  |        +--| (100)
+|  |  |                                               |  |        |  +--S0616
+|  |  |                                               |  |     +--| (96)
+|  |  |                                               |  |     |  +--S1111
+|  |  |                                               |  |  +--| (100)
+|  |  |                                               |  |  |  |     +--S1519
+|  |  |                                               |  |  |  |  +--| (94)
+|  |  |                                               |  |  |  |  |  |                    +--S0748
+|  |  |                                               |  |  |  |  |  |                 +--| (100)
+|  |  |                                               |  |  |  |  |  |                 |  +--S0620
+|  |  |                                               |  |  |  |  |  |              +--| (43)
+|  |  |                                               |  |  |  |  |  |              |  +--S0355
+|  |  |                                               |  |  |  |  |  |           +--| (47)
+|  |  |                                               |  |  |  |  |  |           |  |  +--S0724sl
+|  |  |                                               |  |  |  |  |  |           |  +--| (98)
+|  |  |                                               |  |  |  |  |  |           |     +--S0322
+|  |  |                                               |  |  |  |  |  |        +--| (99)
+|  |  |                                               |  |  |  |  |  |        |  +--S0303
+|  |  |                                               |  |  |  |  |  |     +--| (100)
+|  |  |                                               |  |  |  |  |  |     |  |  +--S1269
+|  |  |                                               |  |  |  |  |  |     |  +--| (100)
+|  |  |                                               |  |  |  |  |  |     |     |     +--S0430
+|  |  |                                               |  |  |  |  |  |     |     |  +--| (82)
+|  |  |                                               |  |  |  |  |  |     |     |  |  +--S1249
+|  |  |                                               |  |  |  |  |  |     |     +--| (93)
+|  |  |                                               |  |  |  |  |  |     |        |  +--S1266sl
+|  |  |                                               |  |  |  |  |  |     |        +--| (84)
+|  |  |                                               |  |  |  |  |  |     |           +--S1409
+|  |  |                                               |  |  |  |  |  |  +--| (100)
+|  |  |                                               |  |  |  |  |  |  |  +--S0952
+|  |  |                                               |  |  |  |  |  +--| (98)
+|  |  |                                               |  |  |  |  |     +----S0308
+|  |  |                                               |  |  |  +--| (87)
+|  |  |                                               |  |  |     |        +--S0740
+|  |  |                                               |  |  |     |     +--| (100)
+|  |  |                                               |  |  |     |     |  +--S1120
+|  |  |                                               |  |  |     |  +--| (100)
+|  |  |                                               |  |  |     |  |  +--S1262
+|  |  |                                               |  |  |     +--| (89)
+|  |  |                                               |  |  |        |     +--S1110
+|  |  |                                               |  |  |        |  +--| (100)
+|  |  |                                               |  |  |        |  |  +--S1210
+|  |  |                                               |  |  |        +--| (100)
+|  |  |                                               |  |  |           |  +--S0888
+|  |  |                                               |  |  |           +--| (100)
+|  |  |                                               |  |  |              +--S1315
+|  |  |                                               |  +--| (99)
+|  |  |                                               |     +--S1374
+|  |  |                                            +--| (90)
+|  |  |                                            |  |     +--S0751
+|  |  |                                            |  |  +--| (100)
+|  |  |                                            |  |  |  |        +--S0591
+|  |  |                                            |  |  |  |     +--| (100)
+|  |  |                                            |  |  |  |     |  +--S1561
+|  |  |                                            |  |  |  |  +--| (90)
+|  |  |                                            |  |  |  |  |  +--S0547
+|  |  |                                            |  |  |  +--| (100)
+|  |  |                                            |  |  |     +--S1181-2
+|  |  |                                            |  +--| (99)
+|  |  |                                            |     +--S0717
+|  |  |                                         +--| (59)
+|  |  |                                         |  +--S0722
+|  |  |                                      +--| (31)
+|  |  |                                      |  |                       +--S1541sl
+|  |  |                                      |  |                    +--| (42)
+|  |  |                                      |  |                    |  |     +--S0376
+|  |  |                                      |  |                    |  |  +--| (100)
+|  |  |                                      |  |                    |  |  |  +--S0672
+|  |  |                                      |  |                    |  +--| (96)
+|  |  |                                      |  |                    |     +--S0427
+|  |  |                                      |  |                 +--| (84)
+|  |  |                                      |  |                 |  |     +--S0893
+|  |  |                                      |  |                 |  |  +--| (93)
+|  |  |                                      |  |                 |  |  |  +--S1276
+|  |  |                                      |  |                 |  +--| (68)
+|  |  |                                      |  |                 |     +--SRR8528391
+|  |  |                                      |  |              +--| (84)
+|  |  |                                      |  |              |  +--S0593
+|  |  |                                      |  |           +--| (60)
+|  |  |                                      |  |           |  +--S0733sl
+|  |  |                                      |  |        +--| (80)
+|  |  |                                      |  |        |  |  +--S0298
+|  |  |                                      |  |        |  +--| (91)
+|  |  |                                      |  |        |     +--S0671
+|  |  |                                      |  |     +--| (98)
+|  |  |                                      |  |     |  +--S0689
+|  |  |                                      |  |  +--| (79)
+|  |  |                                      |  |  |  |     +--SRR8528359
+|  |  |                                      |  |  |  |  +--| (82)
+|  |  |                                      |  |  |  |  |  +--S0435
+|  |  |                                      |  |  |  +--| (96)
+|  |  |                                      |  |  |     +--S0947sl
+|  |  |                                      |  +--| (37)
+|  |  |                                      |     |     +--S0762-2
+|  |  |                                      |     |  +--| (95)
+|  |  |                                      |     |  |  +--S0558
+|  |  |                                      |     +--| (75)
+|  |  |                                      |        |  +--S1119
+|  |  |                                      |        +--| (98)
+|  |  |                                      |           |  +--S1381
+|  |  |                                      |           +--| (100)
+|  |  |                                      |              +--S1211
+|  |  |                                   +--| (75)
+|  |  |                                   |  |  +--S0742
+|  |  |                                   |  +--| (73)
+|  |  |                                   |     +--S0412sl
+|  |  |                                +--| (35)
+|  |  |                                |  +--S1371
+|  |  |                             +--| (41)
+|  |  |                             |  +--S1400
+|  |  |                          +--| (31)
+|  |  |                          |  |     +--SRR8528350
+|  |  |                          |  |  +--| (100)
+|  |  |                          |  |  |  +--S0612
+|  |  |                          |  +--| (91)
+|  |  |                          |     +--S0285
+|  |  |                       +--| (33)
+|  |  |                       |  |           +--S0383
+|  |  |                       |  |        +--| (100)
+|  |  |                       |  |        |  +--S0275
+|  |  |                       |  |     +--| (57)
+|  |  |                       |  |     |  +--S0300
+|  |  |                       |  |  +--| (98)
+|  |  |                       |  |  |  +--S0903
+|  |  |                       |  +--| (95)
+|  |  |                       |     +--S0764
+|  |  |                    +--| (36)
+|  |  |                    |  |  +--S0055
+|  |  |                    |  +--| (99)
+|  |  |                    |     +--S1375
+|  |  |                 +--| (60)
+|  |  |                 |  +--SRR8528357
+|  |  |              +--| (42)
+|  |  |              |  |        +--S1460
+|  |  |              |  |     +--| (100)
+|  |  |              |  |     |  +--S1235sl
+|  |  |              |  |  +--| (100)
+|  |  |              |  |  |  +--S0809
+|  |  |              |  +--| (81)
+|  |  |              |     +--S0895
+|  |  |           +--| (68)
+|  |  |           |  |     +--S0721sl
+|  |  |           |  |  +--| (84)
+|  |  |           |  |  |  +--S1318-2
+|  |  |           |  +--| (85)
+|  |  |           |     |  +--S0718
+|  |  |           |     +--| (100)
+|  |  |           |        +--S0670
+|  |  |        +--| (67)
+|  |  |        |  |  +--S1052sl
+|  |  |        |  +--| (99)
+|  |  |        |     +--S0294
+|  |  |     +--| (68)
+|  |  |     |  |        +--S1204
+|  |  |     |  |     +--| (100)
+|  |  |     |  |     |  +--S0641
+|  |  |     |  |  +--| (98)
+|  |  |     |  |  |  +--SRR8528343
+|  |  |     |  +--| (100)
+|  |  |     |     +--S0756
+|  |  |  +**| (69)
+|  |  |  |  |        +--S0400
+|  |  |  |  |     +--| (100)
+|  |  |  |  |     |  |        +--S0301
+|  |  |  |  |     |  |     +--| (95)
+|  |  |  |  |     |  |     |  +--S_670
+|  |  |  |  |     |  |  +--| (37)
+|  |  |  |  |     |  |  |  +--S0282
+|  |  |  |  |     |  +--| (34)
+|  |  |  |  |     |     |  +--S0763
+|  |  |  |  |     |     +--| (37)
+|  |  |  |  |     |        +--S0690
+|  |  |  |  |  +--| (100)
+|  |  |  |  |  |  |  +--S0293
+|  |  |  |  |  |  +--| (84)
+|  |  |  |  |  |     |     +--S0268
+|  |  |  |  |  |     |  +--| (99)
+|  |  |  |  |  |     |  |  +--S1227
+|  |  |  |  |  |     +--| (100)
+|  |  |  |  |  |        +--S1369
+|  |  |  |  +--| (100)
+|  |  |  |     |     +--S0405
+|  |  |  |     |  +--| (44)
+|  |  |  |     |  |  |  +--S1278
+|  |  |  |     |  |  +--| (100)
+|  |  |  |     |  |     +--S1279
+|  |  |  |     +--| (100)
+|  |  |  |        |  +--S1370
+|  |  |  |        +--| (41)
+|  |  |  |           +--S0643
+|  |  +--| (97)
+|  |     +--S0509
++--| (94)
+|  +--S0741
+|
+|  +--S1116
++--| (95)
+   +--SRR8528376
+
+
+Consensus tree in newick format: 
+
+(S0941:0.0094332407,(((S0946:0.0015176630,(((S0949:0.0106199924,(ERR2789774:0.0196276095,S0728sl:0.0048781276)75:0.0016024330)74:0.0000024081,SRR8528342:0.0163753424)82:0.0003253026,S1424:0.0000024048)90:0.0001362226)99:0.0025676328,(((((((((((((((((((((((((((S1114-2:0.0062271979,S0655sl:0.0015000722)100:0.0161560052,(((((((S0403sl:0.0079083292,S1182:0.0161207599)100:0.0028127544,S1428:0.0206841672)100:0.0079185235,(S0654:0.0059921714,S0156:0.0161320783)100:0.0031339339)100:0.0076702883,S0691:0.0291998522)71:0.0028296539,(S0450:0.0199174748,S0555:0.0475492772)57:0.0010828281)73:0.0027431837,S0642:0.0189176300)78:0.0031426355,S0436:0.0176679253)77:0.0000024285)100:0.0317540393,((((((((((((((((((((((S0385:0.0192769698,(S1339:0.0305296997,S1221sl:0.0201756501)72:0.0024833079)68:0.0000024081,((((((((((((((S0743:0.0044505823,(S0726:0.0079952839,S1021:0.0131629955)92:0.0073824491)79:0.0042799857,S0315:0.0000024048)63:0.0000024081,S0664:0.0015146986)85:0.0043308640,S0617:0.0141814766)88:0.0018158763,S0731sl:0.0145581002)70:0.0014591110,((S0954:0.0028753499,S0772:0.0000024048)94:0.0000024048,(S0464:0.0316356010,S1168:0.0008952237)83:0.0005475287)100:0.0162605559)72:0.0015341264,S1314:0.0244810456)36:0.0014781006,(S0667:0.0102862340,S0851:0.0126813415)35:0.0000020582)39:0.0014301518,S0377:0.0177314506)65:0.0014577535,S0323:0.0117594635)68:0.0000024081,S1011sl:0.0014819097)76:0.0028799754,S0897:0.0058488030)56:0.0000024048,(((((S0331:0.0170871648,S0660sl:0.0094298843)92:0.0023908010,S0662:0.0265958053)79:0.0019130958,S0752:0.0088716519)81:0.0013613093,(S1509:0.0000024048,S0590:0.0000024048)100:0.0102639342)49:0.0000024048,((S0583:0.0064727907,S1408:0.0035327147)99:0.0021898459,S0747sl:0.0102470398)82:0.0014209474)97:0.0028708513)44:0.0000024048,((S1442:0.0091385231,(S1220:0.0000024048,S1208sl:0.0058087940)100:0.0146309096)82:0.0014394887,S1401:0.0116854822)82:0.0015264221)85:0.0043221546)71:0.0000024048,S1331:0.0135178954)76:0.0028863422,(S0380:0.0149824066,(S0669:0.0068320138,S1458:0.0017876767)100:0.0093828840)77:0.0027170560)100:0.0014504444,SRR8528361:0.0193339251)99:0.0028972329,S1319:0.0044580232)73:0.0013999164,(((((S1464:0.0000024048,(((S1332:0.0043918898,S0754:0.0000024048)86:0.0013234431,S1096:0.0000024048)81:0.0000020360,S1039:0.0000024048)25:0.0000024048)25:0.0000024048,S1040:0.0000024048)27:0.0001211114,SRR8528398:0.0073616510)41:0.0028045982,S1201sl:0.0178821683)48:0.0028593118,S0345:0.0179059102)36:0.0000024048)35:0.0000024048,S1117:0.0000024048)14:0.0000024048,S1098:0.0000024048)9:0.0000024048,S0727:0.0000024048)7:0.0000024048,S1072:0.0000024048)13:0.0000024048,S1097:0.0000024048)13:0.0000024048,S0647-2:0.0000024048)20:0.0000024048,S1044:0.0000024048)20:0.0000024048,S0346:0.0000024048)26:0.0000024048,S1106sl:0.0000024048)19:0.0000024048,S1118:0.0000024048)33:0.0000021778,S0373:0.0015436203)36:0.0014045413,((((((((S1050:0.0086914773,S1258-2:0.0149588306)86:0.0000024048,S0286:0.0028780522)92:0.0000024048,S0521:0.0000024048)68:0.0000024048,S1053sl:0.0014739931)100:0.0039056220,S1459:0.0035661932)86:0.0019635211,(SRR8528341:0.0028740549,SRR8528389:0.0000024048)100:0.0013489040)79:0.0051966881,SRR8528388:0.0000024048)77:0.0000027423,S0512sl:0.0889987448)66:0.0049947309)14:0.0000024048,((((S0371:0.0032887956,S1270:0.0017254129)100:0.0034007997,S0768:0.0118775301)100:0.0081889151,S0297:0.0159113334)99:0.0064717731,SRR6441723:0.0377854540)98:0.0094314227)28:0.0000024048,(S0335:0.0057587276,((SRR8528365:0.0101311740,S0280:0.0057144639)69:0.0000024048,SRR8528380:0.0028765886)98:0.0000024081)99:0.0043120108)100:0.0101814667,((((((S0384:0.0116549109,S0744sl:0.0217348566)82:0.0000027708,S1214sl:0.0209523844)75:0.0014505201,S0745:0.0072569591)63:0.0000024081,(((S0381:0.0058758542,S1422:0.0072224290)59:0.0000024048,S0766:0.0102570749)50:0.0014262278,(((S0292:0.0000024048,S1366:0.0028537592)98:0.0014288332,S1419:0.0000024048)66:0.0000020557,S1449:0.0073971343)67:0.0014256012)31:0.0000024048)20:0.0000024048,(S1376:0.0225751223,SRR8528336:0.0073292467)98:0.0042995492)99:0.0028575207,(S1336:0.0000024048,S0416:0.0000024048)100:0.0058131301)100:0.0044621829)100:0.0057780044)86:0.0014426270,(((((SRR11470320:0.0028209738,(S1498:0.0028919107,S1083:0.0043528851)100:0.0059013670)100:0.0073339609,(((((((S1462:0.0028769179,S1177:0.0014432767)34:0.0000024048,S0419:0.0000024048)14:0.0000024048,(S0760:0.0000024048,S0770:0.0000024048)18:0.0000024048)12:0.0000024048,S0765:0.0014370664)66:0.0000024048,S0196sl:0.0080912274)100:0.0043337494,((((S0902:0.0029859116,(S1113:0.0000024048,S1121:0.0000024048)100:0.0014296750)100:0.0058800863,(S0834:0.0000024048,S0279:0.0000024048)100:0.0038052955)100:0.0035804853,S0836:0.0317383885)32:0.0000024048,((S0795:0.0055197787,S0720:0.0000024048)97:0.0018044306,S0281:0.0075045274)58:0.0000024048)27:0.0000024048)89:0.0014471879,S0901:0.0091187365)79:0.0000024048)100:0.0075089856,(SRR8528384:0.0110238066,(S0284:0.0300969931,SRR8528373:0.0190619616)100:0.0234157960)99:0.0008616802)99:0.0042823406,((S0688:0.0065007160,S0957:0.0412205937)75:0.0017285156,(((S0757:0.0000024048,S0312:0.0000024048)100:0.0028483397,S1238sl:0.0102453614)100:0.0060450562,S0283:0.0150360441)89:0.0012782492)59:0.0000024048)50:0.0000027703,((SRR8528400:0.0070992361,(S0906:0.0054313862,SRR8528379:0.0091065486)100:0.0029873087)100:0.0118866308,((S0892:0.0272187762,(S0577:0.0127652218,(S1213:0.0134376283,S1069:0.0089462914)100:0.0030241336)100:0.0049297304)100:0.0141474704,S1579:0.0247324355)87:0.0011773143)69:0.0030272675)66:0.0014390959)93:0.0013784177,((((S0562:0.0000024048,(S1129sl:0.0104495313,(S1128:0.0074208988,S0677:0.0104268582)100:0.0042885480)100:0.0104187255)100:0.0014420134,S0758:0.0072642206)92:0.0029122758,((((S1189:0.0091670014,S0613sl:0.0054274053)100:0.0074169830,S0959:0.0112749802)87:0.0018474725,(((S0956:0.0092088970,S0960:0.0039413644)100:0.0043547188,S0552sl:0.0110711501)100:0.0021036382,S0964:0.0103113559)97:0.0044142300)85:0.0014486300,(S1103:0.0200909188,S0771:0.0228252463)84:0.0008132014)60:0.0000024048)91:0.0056008371,SRR8528372:0.0183396782)100:0.0120508134)95:0.0015047176,SRR8528382:0.0015680387)42:0.0000022227,(((((SRR8528364:0.0103848868,S1102:0.0043686915)99:0.0045204768,S1093sl:0.0135516686)51:0.0012721790,(SRR8528394:0.0131726159,SRR8528385:0.0136505844)95:0.0016299024)23:0.0000024048,((S0753:0.0250154913,SRR8528381:0.0821428344)68:0.0050880593,(SRR8528397:0.0053373176,SRR8528356:0.0438834652)44:0.0007763033)14:0.0000024081)53:0.0000029961,S1095:0.0000024048)98:0.0073002293)54:0.0000029766,S1089:0.0030360050)85:0.0030523697,(((S0564sl:0.0857579733,(S1384:0.1634782975,PAFTOL_023515:0.0845270024)99:0.0251987712)100:0.1404224214,PAFTOL_019361:0.0815703630)99:0.0328756314,S1386:0.0844204660)100:0.0536996595)77:0.0000020396,(((((S0735:0.0174360521,S1261:0.0014234652)100:0.0069076566,((S1180:0.0129488174,S1148:0.0049674152)100:0.0071213200,S1223:0.0083558178)100:0.0049696342)100:0.0053404876,(S1184:0.0013077247,S1100:0.0043645075)99:0.0064218016)100:0.0087457372,S0890:0.0134210170)100:0.0503940072,((S1328sl:0.0258848325,(((S1188:0.0044308253,SRR8528339:0.0050448400)100:0.0066270953,(((S0894:0.0043208885,(S1246:0.0014394696,S1245:0.0000024048)94:0.0000024048)100:0.0100045046,(S1539:0.0086427041,S0673:0.0074285109)99:0.0030265135)99:0.0014924664,SRR8528370:0.0178280571)100:0.0045324581)100:0.0107547669,((((((((((((((((S0645sl:0.0198757566,S0299:0.0106301466)98:0.0014632512,(S0624:0.0091162547,(SRR8528347:0.0000024048,S0421:0.0075581446)100:0.0076494621)100:0.0029203451)78:0.0000024048,S0951:0.0337071372)66:0.0016791816,(S1251:0.0209008092,S1241:0.0098570700)80:0.0031604151)54:0.0000024048,S0289:0.0074523067)57:0.0014926099,(S0424:0.0120253718,(S1230:0.0093296666,S0320:0.0120491742)80:0.0015943433)76:0.0012007843)74:0.0015895341,S1365:0.0030542778)74:0.0015885052,S0327:0.0146364244)57:0.0000024081,((S1475:0.0097346174,S0407sl:0.0075216496)100:0.0029425713,S0963:0.0014868670)100:0.0059586826)63:0.0028959401,S1451:0.0105877728)63:0.0000024081,S1239:0.0074643086)86:0.0029813558,S0417:0.0166051967)50:0.0013026445,(S1232sl:0.0089080236,S1368:0.0148785516)93:0.0028458500)47:0.0014458652,((((((S0656sl:0.0059340459,SRR8528354:0.0209369766)87:0.0012625363,((S0899:0.0028574551,S0657:0.0089027717)100:0.0073733353,(S0827:0.0088721436,S1234:0.0118941480)97:0.0027788863)85:0.0014096905)96:0.0043746864,S1250sl:0.0132635828)94:0.0000020582,SRR8528358:0.0141519624)100:0.0041734999,S1405:0.0183943219)77:0.0013351903,S0478:0.0249768111)59:0.0017664703)46:0.0028149331,S0278:0.0180711292)67:0.0013298433,S1474:0.0121194515)94:0.0072346375)79:0.0072905193)100:0.0064782490,(((((S0746:0.0146241652,(SRR8528399:0.0015234032,S1074:0.0000024081)100:0.0029120359)100:0.0113851078,S1077:0.0268327613)56:0.0000022444,(((S1342:0.0000024048,S0420sl:0.0000024048)100:0.0065574610,S1341:0.0040452430)100:0.0849851963,S1354:0.0426398186)61:0.0042557106)70:0.0017026958,((S0560:0.0274420888,SRR8528338:0.0233302968)99:0.0085203300,S0329:0.0233843016)98:0.0003198462)70:0.0014573518,((((S0277:0.0014426077,S0989:0.0000024048)98:0.0000029021,(S1043sl:0.0000024048,S1038:0.0000024048)100:0.0017502189)100:0.0085506086,S1045:0.0044689155)99:0.0024187512,S1378:0.0511992574)71:0.0023474754)100:0.0054207189)93:0.0013759395)93:0.0041344211)84:0.0029001740,(((((S0732:0.0022635169,(((S0739:0.0000024048,S1176:0.0000024048)100:0.0027680573,S1260:0.0000024048)99:0.0000020582,S1229-2:0.0133342064)99:0.0051238702)99:0.0069124790,S0616:0.0137938534)100:0.0275504608,S1111:0.0030653273)96:0.0016187532,((S1519:0.0138107036,(((((((S0748:0.0028844814,S0620:0.0029222319)100:0.0014293833,S0355:0.0028846464)43:0.0000024048,(S0724sl:0.0073904347,S0322:0.0102825370)98:0.0013493893)47:0.0000024048,S0303:0.0057857501)99:0.0028722816,(S1269:0.0000024048,((S0430:0.0014326871,S1249:0.0086776449)82:0.0000024048,(S1266sl:0.0000024048,S1409:0.0000024048)84:0.0000024048)93:0.0000024048)100:0.0028828800)100:0.0199245027,S0952:0.0039814222)100:0.0061148704,S0308:0.0433933541)98:0.0046193672)94:0.0000020646,(((S0740:0.0015212975,S1120:0.0122498737)100:0.0069714567,S1262:0.0074146882)100:0.0186026650,((S1110:0.0029148779,S1210:0.0000024048)100:0.0118996131,(S0888:0.0087697320,S1315:0.0073498540)100:0.0043304049)100:0.0136725789)89:0.0056460834)87:0.0042255009)100:0.0129284981,S1374:0.0085715889)99:0.0043256312)100:0.0089029289,((S0751:0.0029688814,(((S0591:0.0083118744,S1561:0.0015169774)100:0.0020194530,S0547:0.0073926007)90:0.0014695966,S1181-2:0.0000969712)100:0.0157570578)100:0.0029487260,S0717:0.0000024048)99:0.0020339519)90:0.0001128594,S0722:0.0000024048)59:0.0013178772,((((((((S1541sl:0.0087835589,((S0376:0.0231996216,S0672:0.0102722252)100:0.0025037239,S0427:0.0153752699)96:0.0057004108)42:0.0000024048,((S0893:0.0243656972,S1276:0.0124098952)93:0.0028394451,SRR8528391:0.0087440225)68:0.0000024048)84:0.0000024048,S0593:0.0154243113)84:0.0028759129,S0733sl:0.0131990207)60:0.0000024048,(S0298:0.0000024048,S0671:0.0014705788)91:0.0000022941)80:0.0000023871,S0689:0.0000024048)98:0.0176705919,((SRR8528359:0.0087660882,S0435:0.0000024048)82:0.0008377672,S0947sl:0.0045082689)96:0.0005807626)79:0.0014389577,((S0762-2:0.0136524513,S0558:0.0215727990)95:0.0085490974,(S1119:0.0000024048,(S1381:0.0107690654,S1211:0.0058600365)100:0.0054868069)98:0.0018063150)75:0.0000024048)37:0.0000024048)31:0.0000024048,(S0742:0.0215515165,S0412sl:0.0264740363)73:0.0007576197)75:0.0000024048,S1371:0.0015047247)35:0.0000022239,S1400:0.0000024048)41:0.0014272584,((SRR8528350:0.0000024081,S0612:0.0000024048)100:0.0148650044,S0285:0.0000024048)91:0.0014344419)31:0.0000024048,((((S0383:0.0089106512,S0275:0.0149795779)100:0.0238792702,S0300:0.0000024048)57:0.0025375249,S0903:0.0164433163)98:0.0020623197,S0764:0.0018453200)95:0.0099380318)33:0.0012400053,(S0055:0.0073694672,S1375:0.0134189037)99:0.0044330138)36:0.0013769507,SRR8528357:0.0148886033)60:0.0044291108,(((S1460:0.0014034810,S1235sl:0.0118453149)100:0.0019634099,S0809:0.0014703404)100:0.0038749718,S0895:0.0015431799)81:0.0016331775)42:0.0012187589,((S0721sl:0.0136004660,S1318-2:0.0076561254)84:0.0000024081,(S0718:0.0000024048,S0670:0.0073032812)100:0.0014362558)85:0.0014616780)68:0.0058953991,(S1052sl:0.0266083003,S0294:0.0176296711)99:0.0065116938)67:0.0014712996,(((S1204:0.0029889654,S0641:0.0132764883)100:0.0043708492,SRR8528343:0.0073720725)98:0.0000024048,S0756:0.0146822604)100:0.0057324302)68:0.0014766708,(((S0400:0.0043242636,(((S0301:0.0058233898,S_670:0.0014753428)95:0.0014333629,S0282:0.0101387857)37:0.0000024048,(S0763:0.0101683726,S0690:0.0072435958)37:0.0000024048)34:0.0000024048)100:0.0014321956,(S0293:0.0072903694,((S0268:0.0029026379,S1227:0.0028863748)99:0.0000024081,S1369:0.0058266439)100:0.0072259248)84:0.0000024048)100:0.0014397363,((S0405:0.0043437074,(S1278:0.0000028400,S1279:0.0000024048)100:0.0116976423)44:0.0000024048,(S1370:0.0043515651,S0643:0.0057911448)41:0.0000024048)100:0.0028756240)100:0.0028821172)69:0.0000010180,S0509:0.0000024048)97:0.0014284810)85:0.0000024048,S0741:0.0222498530)94:0.0007652018,(S1116:0.0219387623,SRR8528376:0.0199566586)95:0.0015278128);
+
+TIME STAMP
+----------
+
+Date and time: Wed Mar 30 13:53:30 2022
+Total CPU time used: 8153.288 seconds (2h:15m:53s)
+Total wall-clock time used: 10003.00162 seconds (2h:46m:43s)
+

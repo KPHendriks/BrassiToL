@@ -1,0 +1,583 @@
+IQ-TREE multicore version 2.1.3 COVID-edition for Linux 64-bit built Apr 21 2021
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    hpc-high-memory-multi-user (AVX2, FMA3, 1007 GB RAM)
+Command: /home/kasper.hendriks/iqtree-2.1.3-Linux/bin/iqtree2 -s results_treePL_calibration/output_concatenated_sequences/allseqs.fas -o S1321 -m GTR+F+R --prefix results_treePL_calibration/output_iqtree/ -bb 1000 -wbtl -nt 47
+Seed:    572326 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Mar  9 14:09:10 2022
+Kernel:  AVX+FMA - 47 threads (48 CPU cores detected)
+
+Reading alignment file results_treePL_calibration/output_concatenated_sequences/allseqs.fas ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 403 sequences with 205542 columns, 191989 distinct patterns
+121806 parsimony-informative, 28314 singleton sites, 55422 constant sites
+               Gap/Ambiguity  Composition  p-value
+   1  8009952         91.74%    failed      0.06%
+   2  PAFTOL_019361   26.56%    failed      0.00%
+   3  S0055            2.49%    passed     29.67%
+   4  S0156           17.21%    passed     94.08%
+   5  S0196sl         20.77%    passed      6.11%
+   6  S0268            2.78%    passed     14.25%
+   7  S0275            6.13%    failed      0.00%
+   8  S0277           14.30%    failed      0.33%
+   9  S0279           13.82%    failed      0.00%
+  10  S0280            4.06%    failed      0.00%
+  11  S0281            5.53%    passed     43.27%
+  12  S0282            1.30%    passed     30.76%
+  13  S0283            8.40%    passed     18.18%
+  14  S0284           27.99%    failed      0.58%
+  15  S0285           13.09%    failed      0.21%
+  16  S0286           15.76%    passed     56.65%
+  17  S0288           30.74%    failed      0.00%
+  18  S0289            4.36%    failed      3.37%
+  19  S0292            2.79%    failed      0.00%
+  20  S0293            9.08%    failed      0.08%
+  21  S0294            5.89%    failed      0.00%
+  22  S0297           15.72%    failed      1.51%
+  23  S0298            8.80%    failed      0.00%
+  24  S0300            9.85%    failed      0.00%
+  25  S0301            1.83%    passed     46.83%
+  26  S0303           12.69%    passed     28.43%
+  27  S0305           22.94%    failed      0.03%
+  28  S0306           32.23%    failed      0.00%
+  29  S0308            5.49%    failed      0.01%
+  30  S0312            7.78%    failed      0.00%
+  31  S0315            6.30%    failed      0.00%
+  32  S0316sl         77.30%    failed      0.07%
+  33  S0317            6.72%    failed      0.00%
+  34  S0322           11.06%    passed     14.83%
+  35  S0323            7.80%    failed      0.00%
+  36  S0326-2         94.69%    failed      0.95%
+  37  S0329            5.22%    passed     48.10%
+  38  S0331           23.46%    failed      0.00%
+  39  S0335            3.61%    failed      0.00%
+  40  S0345           34.47%    failed      0.04%
+  41  S0355           27.20%    failed      0.05%
+  42  S0371           26.03%    failed      0.04%
+  43  S0373            5.54%    failed      0.40%
+  44  S0376            9.44%    failed      0.00%
+  45  S0377            8.46%    failed      0.00%
+  46  S0380            6.72%    failed      0.00%
+  47  S0381           15.10%    failed      0.00%
+  48  S0383           12.38%    failed      0.00%
+  49  S0384            8.92%    failed      0.00%
+  50  S0385            7.01%    failed      0.01%
+  51  S0400            3.51%    passed     78.45%
+  52  S0403sl         14.31%    failed      0.00%
+  53  S0405            2.25%    passed     15.98%
+  54  S0412sl          6.57%    failed      0.03%
+  55  S0416            3.71%    failed      0.06%
+  56  S0419            6.04%    passed     93.16%
+  57  S0420sl         20.51%    failed      0.00%
+  58  S0421            6.40%    passed     12.43%
+  59  S0427            1.66%    failed      0.00%
+  60  S0428sl         34.28%    failed      0.01%
+  61  S0430            9.64%    passed     11.54%
+  62  S0435           13.61%    passed     73.31%
+  63  S0436            6.12%    passed     85.63%
+  64  S0450            3.67%    passed     66.22%
+  65  S0464            7.22%    passed      8.43%
+  66  S0478           10.15%    passed     18.42%
+  67  S0509            4.18%    passed     16.07%
+  68  S0512sl         39.49%    failed      0.00%
+  69  S0521           13.23%    passed     89.97%
+  70  S0547           13.75%    failed      0.00%
+  71  S0552sl          2.41%    failed      0.00%
+  72  S0555            7.86%    failed      0.00%
+  73  S0558            2.70%    passed     13.37%
+  74  S0560           13.86%    failed      0.00%
+  75  S0562            7.88%    failed      0.00%
+  76  S0577           23.65%    failed      0.00%
+  77  S0583            9.06%    failed      0.00%
+  78  S0590           20.68%    failed      0.00%
+  79  S0591            8.42%    failed      0.00%
+  80  S0593           15.39%    failed      0.00%
+  81  S0612            6.80%    failed      4.20%
+  82  S0613sl          4.36%    failed      0.00%
+  83  S0616           10.60%    failed      0.29%
+  84  S0617           29.88%    failed      0.00%
+  85  S0620           38.86%    failed      0.03%
+  86  S0624            8.92%    passed     14.51%
+  87  S0641            1.20%    passed     38.09%
+  88  S0642            7.87%    passed     82.56%
+  89  S0643            5.91%    failed      4.34%
+  90  S0645sl          3.01%    failed      0.16%
+  91  S0647-2          8.65%    passed     13.04%
+  92  S0654           13.30%    passed     29.73%
+  93  S0655sl          7.50%    passed     68.61%
+  94  S0656sl         10.90%    passed     34.35%
+  95  S0660sl         36.92%    failed      0.00%
+  96  S0662            6.96%    failed      0.00%
+  97  S0664            7.63%    failed      0.01%
+  98  S0667           13.76%    failed      0.00%
+  99  S0669            4.29%    failed      0.05%
+ 100  S0670            5.67%    failed      1.88%
+ 101  S0671            7.05%    failed      0.00%
+ 102  S0672            7.12%    failed      0.00%
+ 103  S0677            6.80%    failed      2.28%
+ 104  S0688            9.42%    failed      4.92%
+ 105  S0689            7.80%    passed     22.60%
+ 106  S0690           11.79%    passed     53.52%
+ 107  S0691            5.94%    passed     93.59%
+ 108  S0717            8.10%    failed      0.00%
+ 109  S0718            7.18%    failed      4.39%
+ 110  S0720            3.67%    passed     80.13%
+ 111  S0721sl          4.08%    passed     66.85%
+ 112  S0722           10.64%    passed      8.86%
+ 113  S0724sl          6.39%    passed     18.32%
+ 114  S0726           12.29%    failed      0.00%
+ 115  S0727           15.71%    passed     63.46%
+ 116  S0728sl         24.39%    failed      3.96%
+ 117  S0731sl          6.41%    failed      0.68%
+ 118  S0732            5.44%    passed     83.64%
+ 119  S0733sl         13.30%    failed      0.00%
+ 120  S0735            3.11%    failed      0.00%
+ 121  S0739            4.04%    passed     47.02%
+ 122  S0740            6.42%    failed      0.08%
+ 123  S0741            4.97%    failed      0.11%
+ 124  S0742            1.76%    passed     43.38%
+ 125  S0743            6.43%    failed      0.00%
+ 126  S0744sl         56.31%    failed      0.01%
+ 127  S0745            2.76%    failed      0.00%
+ 128  S0746            6.12%    failed      0.00%
+ 129  S0747sl          4.15%    failed      0.00%
+ 130  S0748            5.18%    passed     12.69%
+ 131  S0751           12.52%    failed      0.00%
+ 132  S0752            6.47%    failed      0.00%
+ 133  S0753           27.36%    passed     32.32%
+ 134  S0756            1.25%    passed     41.40%
+ 135  S0757            9.15%    failed      0.00%
+ 136  S0758           17.73%    failed      0.00%
+ 137  S0760            3.16%    passed     57.97%
+ 138  S0762-2          3.94%    passed     23.24%
+ 139  S0763            2.61%    passed     61.78%
+ 140  S0764            3.37%    failed      0.00%
+ 141  S0765            8.79%    passed     93.50%
+ 142  S0766            6.96%    failed      0.00%
+ 143  S0768           11.42%    failed      0.56%
+ 144  S0770            4.15%    passed     97.82%
+ 145  S0771            5.08%    failed      0.00%
+ 146  S0772            8.30%    passed     13.91%
+ 147  S0791           26.36%    passed     17.03%
+ 148  S0795            5.00%    passed     88.72%
+ 149  S0809           10.26%    failed      2.68%
+ 150  S0834           17.81%    failed      0.00%
+ 151  S0836           12.20%    failed      0.00%
+ 152  S0851            9.73%    failed      0.00%
+ 153  S0888            3.93%    passed     14.04%
+ 154  S0890           33.57%    failed      0.00%
+ 155  S0892           13.09%    failed      0.00%
+ 156  S0893           24.03%    failed      0.00%
+ 157  S0895            6.50%    failed      0.29%
+ 158  S0897           20.13%    failed      0.00%
+ 159  S0901           11.61%    failed      0.00%
+ 160  S0902           19.97%    failed      0.01%
+ 161  S0903            3.84%    failed      0.00%
+ 162  S0906            5.32%    failed      0.01%
+ 163  S0941           10.96%    failed      0.39%
+ 164  S0946           10.40%    failed      0.05%
+ 165  S0949            4.24%    passed      5.30%
+ 166  S0952            8.11%    passed      7.28%
+ 167  S0954            5.29%    failed      2.93%
+ 168  S0956           11.77%    failed      0.00%
+ 169  S0957           12.33%    failed      0.97%
+ 170  S0959            6.00%    failed      0.00%
+ 171  S0960            3.81%    failed      0.00%
+ 172  S0963           15.23%    passed     31.57%
+ 173  S0964            9.95%    failed      0.00%
+ 174  S0989           34.05%    failed      0.68%
+ 175  S1011sl         33.29%    failed      0.05%
+ 176  S1021            7.69%    failed      0.00%
+ 177  S1038           13.44%    passed     23.49%
+ 178  S1039           13.34%    passed     17.22%
+ 179  S1040           11.23%    passed     39.52%
+ 180  S1043sl         12.19%    passed     11.52%
+ 181  S1044            9.79%    passed      8.28%
+ 182  S1045            3.25%    failed      0.13%
+ 183  S1052sl         19.04%    failed      0.00%
+ 184  S1053sl         14.77%    passed     28.80%
+ 185  S1069            5.02%    failed      0.00%
+ 186  S1072           11.68%    passed     49.03%
+ 187  S1074            4.69%    failed      0.00%
+ 188  S1077            7.24%    failed      0.00%
+ 189  S1083            1.53%    failed      0.81%
+ 190  S1089            9.18%    passed     46.00%
+ 191  S1093sl          3.81%    passed     35.43%
+ 192  S1095            8.96%    passed     67.98%
+ 193  S1096           11.50%    failed      0.31%
+ 194  S1097           13.40%    failed      3.65%
+ 195  S1098           14.85%    passed      7.49%
+ 196  S1100            6.94%    failed      0.00%
+ 197  S1102            8.73%    passed     14.54%
+ 198  S1103            6.44%    failed      3.18%
+ 199  S1107-2         79.58%    failed      0.00%
+ 200  S1110           13.19%    passed      9.48%
+ 201  S1111           13.72%    passed     13.19%
+ 202  S1113           13.99%    failed      0.04%
+ 203  S1114-2         20.68%    failed      0.40%
+ 204  S1116            4.72%    failed      0.37%
+ 205  S1117           12.43%    passed     32.07%
+ 206  S1118           15.78%    passed     58.33%
+ 207  S1119           15.15%    failed      0.12%
+ 208  S1120           10.92%    passed     12.18%
+ 209  S1121           11.37%    failed      0.00%
+ 210  S1128            3.86%    failed      0.03%
+ 211  S1129sl          2.67%    failed      0.06%
+ 212  S1148            3.38%    failed      0.00%
+ 213  S1168            5.97%    passed     11.08%
+ 214  S1176            8.06%    passed     13.01%
+ 215  S1177            6.22%    passed     95.75%
+ 216  S1180            5.40%    failed      0.00%
+ 217  S1181-2         16.61%    failed      0.00%
+ 218  S1182           11.68%    failed      0.00%
+ 219  S1184           11.25%    failed      0.00%
+ 220  S1189            2.14%    failed      0.00%
+ 221  S1201sl          1.73%    failed      0.01%
+ 222  S1204            8.23%    passed     15.61%
+ 223  S1208sl         23.48%    failed      0.00%
+ 224  S1210            8.37%    passed     52.45%
+ 225  S1211            1.10%    failed      0.38%
+ 226  S1213            7.75%    failed      0.00%
+ 227  S1214sl          2.74%    failed      0.00%
+ 228  S1220           22.39%    failed      0.00%
+ 229  S1221sl          7.88%    failed      0.00%
+ 230  S1223            7.30%    failed      0.00%
+ 231  S1227            0.92%    passed     70.54%
+ 232  S1229-2          3.87%    passed     53.86%
+ 233  S1234            5.56%    passed     22.19%
+ 234  S1235sl          2.21%    failed      0.67%
+ 235  S1238sl          8.25%    failed      0.00%
+ 236  S1241           11.30%    failed      0.07%
+ 237  S1249           10.63%    passed     17.98%
+ 238  S1250sl          7.32%    passed      7.98%
+ 239  S1251            6.35%    failed      4.52%
+ 240  S1258-2          8.33%    passed     83.08%
+ 241  S1260            5.85%    passed     44.13%
+ 242  S1261           17.16%    failed      0.00%
+ 243  S1262           13.48%    failed      0.00%
+ 244  S1266sl          9.51%    passed     14.82%
+ 245  S1269           10.57%    passed     11.31%
+ 246  S1270           11.66%    failed      0.06%
+ 247  S1276            9.22%    failed      0.00%
+ 248  S1278            1.96%    passed     37.52%
+ 249  S1279            5.13%    passed     10.52%
+ 250  S1314            7.38%    failed      0.11%
+ 251  S1315            4.66%    passed     16.68%
+ 252  S1318-2          3.21%    failed      0.23%
+ 253  S1319           12.67%    failed      1.69%
+ 254  S1328sl          9.32%    passed     12.63%
+ 255  S1331            7.67%    passed     11.44%
+ 256  S1332            1.68%    failed      0.00%
+ 257  S1336            6.86%    passed      6.50%
+ 258  S1339           10.60%    passed     17.95%
+ 259  S1341           21.61%    failed      0.00%
+ 260  S1342           22.98%    failed      0.00%
+ 261  S1354            5.64%    failed      0.00%
+ 262  S1365            8.97%    passed     12.69%
+ 263  S1366            6.20%    failed      0.00%
+ 264  S1368            9.28%    failed      4.00%
+ 265  S1369            1.66%    passed     46.53%
+ 266  S1370            2.42%    passed     18.55%
+ 267  S1371           10.15%    failed      0.00%
+ 268  S1374           10.54%    passed     28.69%
+ 269  S1375            2.01%    passed     86.71%
+ 270  S1376            2.64%    failed      0.00%
+ 271  S1378            8.59%    failed      0.00%
+ 272  S1381            2.03%    passed     27.43%
+ 273  S1386           53.92%    failed      0.00%
+ 274  S1387           53.14%    failed      0.00%
+ 275  S1389           63.50%    failed      0.01%
+ 276  S1400           11.66%    passed     45.34%
+ 277  S1401            6.07%    failed      0.00%
+ 278  S1407           19.30%    passed     25.06%
+ 279  S1408            8.44%    failed      0.00%
+ 280  S1409           13.49%    failed      4.03%
+ 281  S1417           76.35%    failed      0.00%
+ 282  S1419            6.60%    failed      0.00%
+ 283  S1421           15.78%    failed      0.00%
+ 284  S1422            2.23%    failed      0.00%
+ 285  S1424            4.57%    passed      5.24%
+ 286  S1428            7.17%    failed      0.00%
+ 287  S1442            9.57%    passed     26.30%
+ 288  S1449            1.06%    failed      0.00%
+ 289  S1451            6.41%    failed      3.34%
+ 290  S1458           43.12%    failed      0.19%
+ 291  S1459           12.32%    passed     41.37%
+ 292  S1460            1.12%    failed      1.84%
+ 293  S1462            1.34%    passed     46.46%
+ 294  S1464           11.44%    failed      0.35%
+ 295  S1488           94.11%    passed     22.91%
+ 296  S1498            2.66%    failed      0.46%
+ 297  S1506           30.34%    passed     11.55%
+ 298  S1509            8.47%    failed      0.00%
+ 299  S1519           14.49%    failed      0.00%
+ 300  S1539            3.31%    passed      8.08%
+ 301  S1541sl          7.47%    failed      0.00%
+ 302  S1561           11.34%    failed      0.00%
+ 303  S1579            7.54%    failed      0.13%
+ 304  S_670            1.58%    passed     43.39%
+ 305  SRR11470320     30.14%    passed     11.56%
+ 306  SRR8528336      18.21%    failed      0.00%
+ 307  SRR8528338      17.96%    passed     10.03%
+ 308  SRR8528339      21.02%    failed      0.52%
+ 309  SRR8528341      17.98%    failed      0.00%
+ 310  SRR8528342      20.30%    failed      0.03%
+ 311  SRR8528343      18.38%    failed      0.40%
+ 312  SRR8528347      19.00%    passed     42.94%
+ 313  SRR8528350      17.85%    failed      1.42%
+ 314  SRR8528354      19.39%    passed     50.47%
+ 315  SRR8528356      24.83%    failed      0.00%
+ 316  SRR8528357       4.87%    passed     44.64%
+ 317  SRR8528358      20.16%    passed     44.82%
+ 318  SRR8528359      18.86%    passed     30.47%
+ 319  SRR8528361      19.79%    failed      0.12%
+ 320  SRR8528364      20.44%    passed     71.09%
+ 321  SRR8528365      18.12%    failed      0.00%
+ 322  SRR8528370      20.38%    passed     38.63%
+ 323  SRR8528372      18.14%    failed      2.24%
+ 324  SRR8528373      22.62%    passed     48.06%
+ 325  SRR8528376      20.07%    failed      0.00%
+ 326  SRR8528379      17.76%    failed      0.06%
+ 327  SRR8528380      19.68%    failed      0.00%
+ 328  SRR8528381      27.29%    failed      0.00%
+ 329  SRR8528382      23.52%    passed     33.66%
+ 330  SRR8528384      18.10%    passed      8.35%
+ 331  SRR8528385      23.16%    failed      0.00%
+ 332  SRR8528386      63.36%    failed      1.61%
+ 333  SRR8528388      22.93%    passed     73.37%
+ 334  SRR8528389      18.99%    failed      0.39%
+ 335  SRR8528391      17.98%    failed      0.00%
+ 336  SRR8528394      21.77%    failed      0.03%
+ 337  SRR8528397      21.76%    passed     57.89%
+ 338  SRR8528398      19.42%    failed      0.03%
+ 339  SRR8528399      20.34%    failed      0.00%
+ 340  SRR8528400      18.25%    failed      0.01%
+ 341  PAFTOL_023515   61.35%    failed      0.00%
+ 342  PAFTOL_023519   59.85%    failed      0.01%
+ 343  S0278           11.63%    failed      4.66%
+ 344  S0299            8.44%    failed      0.25%
+ 345  S0320            8.60%    failed      3.24%
+ 346  S0407sl         18.19%    passed      8.66%
+ 347  S0417            4.00%    failed      0.02%
+ 348  S0424           23.02%    passed     74.24%
+ 349  S0657           10.27%    passed     63.60%
+ 350  S0673            8.96%    passed     35.14%
+ 351  S0761sl         70.05%    failed      3.44%
+ 352  S0827           10.77%    passed     41.93%
+ 353  S0894           10.13%    passed     23.38%
+ 354  S0896           16.27%    failed      0.15%
+ 355  S0899           10.29%    passed     13.71%
+ 356  S0904           33.50%    failed      2.96%
+ 357  S0947sl          9.56%    passed     29.37%
+ 358  S0951           38.71%    failed      0.00%
+ 359  S1050           14.15%    passed     13.01%
+ 360  S1106sl         11.72%    failed      0.10%
+ 361  S1188            9.07%    failed      0.49%
+ 362  S1230            3.62%    failed      0.81%
+ 363  S1232sl          6.80%    failed      0.27%
+ 364  S1239            3.09%    failed      0.08%
+ 365  S1245            5.48%    failed      2.70%
+ 366  S1246            8.31%    passed      6.11%
+ 367  S1405            9.45%    passed     10.11%
+ 368  S1474           14.69%    passed     29.42%
+ 369  S1475           14.34%    passed     32.16%
+ 370  S0327            8.94%    passed     25.10%
+ 371  S0346           14.42%    failed      0.58%
+ 372  S0738sl         69.72%    failed      0.00%
+ 373  S0754           10.55%    passed     11.70%
+ 374  S1187sl         46.75%    passed     19.51%
+ 375  S1481sl         89.28%    passed     14.12%
+ 376  8008999         95.30%    failed      4.30%
+ 377  PAFTOL_023477   91.71%    failed      0.00%
+ 378  PAFTOL_023511   83.72%    failed      0.00%
+ 379  PAFTOL_023513   67.81%    failed      0.02%
+ 380  S0564sl         54.66%    failed      0.06%
+ 381  S0629-2         93.59%    failed      2.75%
+ 382  S0734sl         78.83%    failed      0.00%
+ 383  S1388           74.56%    failed      0.00%
+ 384  S1398           73.81%    failed      0.00%
+ 385  S1412           90.68%    failed      0.02%
+ 386  PAFTOL_019459   64.87%    failed      0.01%
+ 387  S1321           81.12%    failed      0.81%
+ 388  S0759           95.07%    failed      0.04%
+ 389  SRR11470309     71.96%    failed      0.00%
+ 390  8000070         96.49%    passed     54.35%
+ 391  S1384           84.97%    failed      0.09%
+ 392  PAFTOL_023503   97.05%    failed      0.28%
+ 393  S1049sl         99.92%    failed      0.86%
+ 394  PAFTOL_008053   84.87%    failed      0.00%
+ 395  CRNC            82.57%    passed     15.60%
+ 396  MYZV            81.95%    failed      1.99%
+ 397  SRR6441723      79.67%    failed      0.00%
+ 398  ERR4210213      93.69%    failed      0.00%
+ 399  ERR2789774      80.35%    failed      0.30%
+ 400  PAFTOL_005410   89.80%    failed      0.01%
+ 401  PAFTOL_005411   97.63%    failed      0.00%
+ 402  PAFTOL_014331   87.47%    failed      0.03%
+ 403  HYZL            81.57%    failed      1.75%
+WARNING: 44 sequences contain more than 50% gaps/ambiguity
+****  TOTAL           18.88%  258 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: minimal branch length is reduced to 0.000000486519 for long alignment
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 13.982 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 572326)...
+
+NOTE: 10767 MB RAM (10 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -8345029.917
+2. Current log-likelihood: -7859615.821
+3. Current log-likelihood: -7851143.305
+4. Current log-likelihood: -7849808.815
+5. Current log-likelihood: -7849367.192
+6. Current log-likelihood: -7849196.503
+7. Current log-likelihood: -7849132.214
+8. Current log-likelihood: -7849108.634
+9. Current log-likelihood: -7849099.121
+10. Current log-likelihood: -7849095.804
+11. Current log-likelihood: -7849094.510
+12. Current log-likelihood: -7849094.053
+13. Current log-likelihood: -7849093.833
+14. Current log-likelihood: -7849093.719
+Optimal log-likelihood: -7849093.592
+Rate parameters:  A-C: 1.30303  A-G: 3.65551  A-T: 1.12645  C-G: 1.16059  C-T: 4.56695  G-T: 1.00000
+Base frequencies:  A: 0.281  C: 0.189  G: 0.244  T: 0.285
+Site proportion and rates:  (0.460,0.083) (0.289,0.837) (0.200,2.253) (0.050,5.354)
+Parameters optimization took 14 rounds (1043.272 sec)
+Computing ML distances based on estimated model parameters...
+Computing ML distances took 1.985412 sec (of wall-clock time) 77.792000 sec(of CPU time)
+Computing RapidNJ tree took 0.406331 sec (of wall-clock time) 16.456000 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -7935711.496
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 2074.954 second
+Computing log-likelihood of 98 initial trees ... 575.468 seconds
+Current best score: -7849093.592
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -7846466.330
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 9: -7846357.308
+Iteration 10 / LogL: -7846658.407 / Time: 1h:37m:28s
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 13: -7846128.473
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 19: -7846043.929
+Iteration 20 / LogL: -7846284.800 / Time: 2h:4m:30s
+Finish initializing candidate tree set (20)
+Current best tree score: -7846043.929 / CPU time: 5941.096
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -7846182.736 / Time: 2h:23m:44s (7h:19m:59s left)
+Iteration 40 / LogL: -7846251.319 / Time: 2h:43m:57s (5h:31m:21s left)
+Iteration 50 / LogL: -7846095.005 / Time: 3h:3m:22s (4h:17m:41s left)
+Log-likelihood cutoff on original alignment: -7846430.517
+UFBoot trees printed to results_treePL_calibration/output_iqtree/.ufboot
+Iteration 60 / LogL: -7846155.269 / Time: 3h:20m:45s (3h:20m:22s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 68: -7846037.646
+Iteration 70 / LogL: -7846632.057 / Time: 3h:43m:11s (5h:16m:28s left)
+Iteration 80 / LogL: -7846058.834 / Time: 4h:2m:50s (4h:30m:5s left)
+Iteration 90 / LogL: -7847194.513 / Time: 4h:22m:7s (3h:49m:23s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 95: -7846037.316
+Iteration 100 / LogL: -7846178.535 / Time: 4h:45m:13s (4h:33m:20s left)
+Log-likelihood cutoff on original alignment: -7846408.801
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.993
+UFBoot trees printed to results_treePL_calibration/output_iqtree/.ufboot
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 104: -7846035.992
+Iteration 110 / LogL: -7846145.869 / Time: 5h:8m:12s (4h:25m:28s left)
+Iteration 120 / LogL: -7846144.049 / Time: 5h:29m:3s (3h:52m:0s left)
+Iteration 130 / LogL: -7846039.338 / Time: 5h:50m:5s (3h:20m:36s left)
+Iteration 140 / LogL: -7846413.760 / Time: 6h:10m:10s (2h:50m:15s left)
+Iteration 150 / LogL: -7846330.930 / Time: 6h:30m:11s (2h:21m:16s left)
+Log-likelihood cutoff on original alignment: -7846408.801
+UFBoot trees printed to results_treePL_calibration/output_iqtree/.ufboot
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 152: -7846034.526
+Iteration 160 / LogL: -7846056.955 / Time: 6h:52m:8s (3h:58m:15s left)
+Iteration 170 / LogL: -7846043.942 / Time: 7h:12m:40s (3h:29m:45s left)
+Iteration 180 / LogL: -7846057.295 / Time: 7h:33m:54s (3h:2m:25s left)
+Iteration 190 / LogL: -7846051.507 / Time: 7h:54m:46s (2h:35m:37s left)
+Iteration 200 / LogL: -7846222.645 / Time: 8h:12m:23s (2h:8m:34s left)
+Log-likelihood cutoff on original alignment: -7846408.801
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+UFBoot trees printed to results_treePL_calibration/output_iqtree/.ufboot
+Iteration 210 / LogL: -7846342.143 / Time: 8h:31m:54s (3h:40m:16s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 217: -7846034.330
+Iteration 220 / LogL: -7846036.731 / Time: 8h:51m:43s (3h:55m:20s left)
+Iteration 230 / LogL: -7846425.586 / Time: 9h:11m:25s (3h:29m:20s left)
+Iteration 240 / LogL: -7846442.118 / Time: 9h:31m:7s (3h:3m:52s left)
+Iteration 250 / LogL: -7846315.962 / Time: 9h:50m:59s (2h:38m:55s left)
+Log-likelihood cutoff on original alignment: -7846396.973
+UFBoot trees printed to results_treePL_calibration/output_iqtree/.ufboot
+Iteration 260 / LogL: -7846046.085 / Time: 10h:11m:0s (2h:14m:23s left)
+Iteration 270 / LogL: -7846044.807 / Time: 10h:31m:6s (1h:50m:12s left)
+Iteration 280 / LogL: -7846049.364 / Time: 10h:52m:42s (1h:26m:30s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 286: -7846034.305
+Iteration 290 / LogL: -7846426.045 / Time: 11h:13m:38s (3h:43m:38s left)
+Iteration 300 / LogL: -7846108.745 / Time: 11h:33m:38s (3h:19m:24s left)
+Log-likelihood cutoff on original alignment: -7846396.973
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+UFBoot trees printed to results_treePL_calibration/output_iqtree/.ufboot
+Iteration 310 / LogL: -7846062.810 / Time: 11h:53m:44s (3h:27m:46s left)
+Iteration 320 / LogL: -7846258.349 / Time: 12h:13m:25s (3h:3m:50s left)
+Iteration 330 / LogL: -7846037.939 / Time: 12h:32m:58s (2h:40m:7s left)
+Iteration 340 / LogL: -7846038.327 / Time: 12h:53m:16s (2h:16m:47s left)
+Iteration 350 / LogL: -7846036.379 / Time: 13h:15m:56s (1h:53m:58s left)
+Log-likelihood cutoff on original alignment: -7846396.973
+UFBoot trees printed to results_treePL_calibration/output_iqtree/.ufboot
+Iteration 360 / LogL: -7846282.417 / Time: 13h:35m:26s (1h:30m:48s left)
+Iteration 370 / LogL: -7846070.405 / Time: 13h:56m:39s (1h:7m:59s left)
+Iteration 380 / LogL: -7846036.226 / Time: 14h:18m:47s (0h:45m:17s left)
+TREE SEARCH COMPLETED AFTER 387 ITERATIONS / Time: 14h:32m:49s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -7846034.305
+Optimal log-likelihood: -7846034.304
+Rate parameters:  A-C: 1.30539  A-G: 3.66166  A-T: 1.12714  C-G: 1.16310  C-T: 4.57621  G-T: 1.00000
+Base frequencies:  A: 0.281  C: 0.189  G: 0.244  T: 0.285
+Site proportion and rates:  (0.461,0.083) (0.290,0.839) (0.200,2.256) (0.050,5.359)
+Parameters optimization took 1 rounds (36.047 sec)
+BEST SCORE FOUND : -7846034.304
+Creating bootstrap support values...
+Split supports printed to NEXUS file results_treePL_calibration/output_iqtree/.splits.nex
+Total tree length: 10.598
+
+Total number of iterations: 387
+CPU time used for tree search: 2264981.656 sec (629h:9m:41s)
+Wall-clock time used for tree search: 50839.981 sec (14h:7m:19s)
+Total CPU time used: 2335171.060 sec (648h:39m:31s)
+Total wall-clock time used: 52408.228 sec (14h:33m:28s)
+UFBoot trees printed to results_treePL_calibration/output_iqtree/.ufboot
+
+Computing bootstrap consensus tree...
+Reading input file results_treePL_calibration/output_iqtree/.splits.nex...
+403 taxa and 1055 splits.
+Consensus tree written to results_treePL_calibration/output_iqtree/.contree
+Reading input trees file results_treePL_calibration/output_iqtree/.contree
+Log-likelihood of consensus tree: -7846043.716
+
+Analysis results written to: 
+  IQ-TREE report:                results_treePL_calibration/output_iqtree/.iqtree
+  Maximum-likelihood tree:       results_treePL_calibration/output_iqtree/.treefile
+  Likelihood distances:          results_treePL_calibration/output_iqtree/.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          results_treePL_calibration/output_iqtree/.splits.nex
+  Consensus tree:                results_treePL_calibration/output_iqtree/.contree
+  UFBoot trees:                  results_treePL_calibration/output_iqtree/.ufboot
+  Screen log file:               results_treePL_calibration/output_iqtree/.log
+
+Date and Time: Thu Mar 10 04:45:04 2022
