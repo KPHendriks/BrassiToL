@@ -20,3 +20,4 @@ The shell and R scripts to start analyses are all within the main directory. The
 The various scripts have commonly been written for use on an HPC that allows parallel computing. Whenever you start using these scripts, make sure to first install all relevant tools and to update the scripts to direct to the location of these tools on you specific machine. 
 
 [![DOI](https://zenodo.org/badge/647656354.svg)](https://zenodo.org/badge/latestdoi/647656354)
+
