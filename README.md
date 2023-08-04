@@ -18,3 +18,5 @@ The mustard family (Brassicaceae) is a scientifically and economically important
 The shell and R scripts to start analyses are all within the main directory. The subdirectories hold either input data, functions, reference files, and resulting figures and tables. Directories that will contain (intermediate) results have been pre-created, but are empty to save on the amount of storage on GitHub. The scripts will create the revelant files in the process.
 
 The various scripts have commonly been written for use on an HPC that allows parallel computing. Whenever you start using these scripts, make sure to first install all relevant tools and to update the scripts to direct to the location of these tools on you specific machine. 
+
+[![DOI](https://zenodo.org/badge/647656354.svg)](https://zenodo.org/badge/latestdoi/647656354)
